@@ -8,14 +8,16 @@
 #import "OnLineResponModel.h"
 #import "OnLineAdapter.h"
 #import "VoiceController.h"
+#import "AdressViewModel.h"
 
 @interface OnLineController ()
-
+@property(nonatomic,strong)NSMutableArray *dataArr;
 @end
 
 @implementation OnLineController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _dataArr = [[NSMutableArray alloc]init];
     [self setHeaderRefresh:YES footerRefresh:NO];
     self.title = @"在线客服";
 }
@@ -34,6 +36,7 @@
     [super refreshData];
     if (![ZteNetWorkUtils isNetworkExist]) {
         [LYToast showBottomWithText:@"没有网络，请检查网络设置" duration:2.0];
+        return;
     }else{
         NSString *urlStr = @"http://test2.mobile.care.ztehealth.com/health/MyService/qryCustomerArea";
         NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
@@ -46,7 +49,13 @@
             if (olrm.isSuccess) {
                 NSLog(@"数据请求成功！！！");
             }
-            [self onSuccessWithData:olrm.data];  // 数据请求成功之后 基类需要刷新UI
+            // model 转 viewModel
+            for (AddressModel *model in olrm.data) {
+                AdressViewModel *aViewModel = [[AdressViewModel alloc]init];
+                aViewModel.adressModel = model;
+                [_dataArr addObject:aViewModel];
+            }
+            [self onSuccessWithData:_dataArr];  // 数据请求成功之后 基类需要刷新UI
             [LYToast showBottomWithText:@"网络数据加载成功" duration:4.0];
         } failure:^(id error) {
             [LYHud hideAtView:self.navigationController.view];

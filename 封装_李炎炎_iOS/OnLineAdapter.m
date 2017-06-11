@@ -9,6 +9,7 @@
 #import "OnLineAdapter.h"
 #import "OnLineCell.h"
 #import "OnLineResponModel.h"
+#import "AdressViewModel.h"
 
 @interface OnLineAdapter ()
 @end
@@ -18,9 +19,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     OnLineCell *cell = [OnLineCell cellWithTableView:tableView];
     cell.backgroundColor = randomColor;
-    AddressModel *model = self.serverData[indexPath.row];
+    AdressViewModel *viewModel = self.serverData[indexPath.row];
     // cell 传入数据模型 进行UI展示 
-    [cell configCellWithModel:model indexPath:indexPath];
+    [cell configCellWithModel:viewModel indexPath:indexPath];
     
     cell.btnBlock = ^(int tag){
         if (self.cellBtnClickBlock) {
@@ -28,7 +29,7 @@
         }
     };
     cell.clickContentLabelBlock = ^(NSIndexPath *indexPath_select){
-        model.isExpand = !model.isExpand;
+        viewModel.isExpand = !viewModel.isExpand;
         [tableView reloadRowsAtIndexPaths:@[indexPath_select] withRowAnimation:(UITableViewRowAnimationNone)];
     };
 
@@ -37,8 +38,13 @@
 
 #pragma mark 根据返回的数据内容动态计算cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    OnLineCell *cell = (OnLineCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
-    return cell.cellHeight;
+//    OnLineCell *cell = (OnLineCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    AdressViewModel *viewModel = self.serverData[indexPath.row];
+    return viewModel.cellHeight;
+}
+
+#pragma mark cell加载出现的动画效果
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
 }
 
 @end

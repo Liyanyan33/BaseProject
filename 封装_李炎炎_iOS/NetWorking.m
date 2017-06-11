@@ -69,6 +69,26 @@
     }];
 }
 
++ (void)POSTWithUrl:(NSString*)url paramas:(NSDictionary*)paramas resultClass:(Class)resultClass  resultViewModel:(Class)resultViewModel success:(void(^)(id json))success failure:(void(^)(id error))failure{
+    NSLog(@" url = %@",url);
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.requestSerializer.timeoutInterval = 10.0f;
+    [manager POST:url parameters:paramas progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (success) {
+            success([resultClass mj_objectWithKeyValues:responseObject]);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error = %@",error);
+        if (failure) {
+            failure(error);
+        }
+    }];
+}
+
+
+
 
 + (void)POSTWithUrl:(NSString*)url paramas:(NSDictionary*)paramas success:(void(^)(id json))success failure:(void(^)(id error))failure{
     

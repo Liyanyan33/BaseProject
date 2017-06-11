@@ -8,14 +8,8 @@
 
 #import "OnLineCell.h"
 #import "OnLineResponModel.h"
+#import "AdressViewModel.h"
 #import "ZTELabel.h"
-
-static CGFloat marginTop = 15;
-static CGFloat marginLeft = 12;
-static CGFloat marginRight = 12;
-static CGFloat marginBottom = 15;
-static CGFloat btnWidth = 60;
-static CGFloat btnHeight = 25;
 
 @interface OnLineCell ()
 @property(nonatomic,strong)ZTELabel *nameLabel;
@@ -44,33 +38,20 @@ static CGFloat btnHeight = 25;
 
 - (void)configCellWithModel:(id)model indexPath:(NSIndexPath *)indexPath{
     _indexPath = indexPath;
-    AddressModel *adressModel = (AddressModel*)model;
+    AdressViewModel *adressViewModel = (AdressViewModel*)model;
+    AddressModel *adressModel = adressViewModel.adressModel;
+    
     _nameLabel.text = adressModel.customerName;
-    CGSize name_size = [NSString getBoundSizeWithText:_nameLabel.text font:_nameLabel.font];
-    _nameLabel.frame = CGRectMake(marginLeft, marginTop, name_size.width, name_size.height);
+    _nameLabel.frame = adressViewModel.name_frame;
     
     _numberLabel.text = adressModel.phoneNumber;
-    CGSize number_size = [NSString getBoundSizeWithText:_numberLabel.text font:_numberLabel.font];
-    _numberLabel.frame = CGRectMake(kScreenWidth - marginRight - number_size.width, marginTop, number_size.width, number_size.height);
+    _numberLabel.frame = adressViewModel.number_frame;
     
     _contentLabel.text = adressModel.detailAddress;
-    if (adressModel.isExpand) { // 展开
-        CGSize content_size = [_contentLabel.text sizeWithFont:_contentLabel.font withWidth:kScreenWidth - marginLeft - marginRight];
-        _contentLabel.frame = CGRectMake(marginLeft, CGRectGetMaxY(_nameLabel.frame) + marginTop, content_size.width, content_size.height);
-    }else{ // 不展开
-        /** 计算一行文本的高度 */
-        CGSize one_row_size = [@"one" sizeWithFont:_contentLabel.font withWidth:kScreenWidth - marginLeft*2];
-        /** 计算整体文本的高度 */
-        CGSize text_size = [adressModel.detailAddress sizeWithFont:_contentLabel.font withWidth:kScreenWidth - 12*2];
-        /** 整个文本的高度大于三行 三行显示 否则 有多高显示多高 */
-        CGFloat  text_height = text_size.height >= one_row_size.height*3 ? one_row_size.height*3:text_size.height;
-        CGFloat text_width =  text_size.height >= one_row_size.height*3 ? kScreenWidth - marginLeft*2:text_size.width;
-       _contentLabel.frame = CGRectMake(marginLeft, CGRectGetMaxY(_nameLabel.frame) + marginTop, text_width, text_height);
-    }
-    _chaBtn.frame = CGRectMake(kScreenWidth - marginRight - btnWidth - btnWidth - marginLeft, CGRectGetMaxY(_contentLabel.frame)+marginTop, btnWidth, btnHeight);
-    _deleBtn.frame = CGRectMake(CGRectGetMaxX(_chaBtn.frame)+marginLeft, _chaBtn.frame.origin.y, btnWidth, btnHeight);
+    _contentLabel.frame = adressViewModel.content_frame;
     
-    self.cellHeight = CGRectGetMaxY(_chaBtn.frame) + marginBottom;
+    _chaBtn.frame = adressViewModel.chakan_frame;
+    _deleBtn.frame = adressViewModel.dele_frame;
 }
 
 #pragma mark 监听事件

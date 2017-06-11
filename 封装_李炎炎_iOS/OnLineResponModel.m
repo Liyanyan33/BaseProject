@@ -40,5 +40,4 @@
     return text_height;
 }
 
-
 @end
