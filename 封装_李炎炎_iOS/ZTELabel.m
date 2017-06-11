@@ -8,6 +8,9 @@
 
 #import "ZTELabel.h"
 
+// 默认字体大小
+#define defaultFont 17
+
 @interface ZTELabel ()
 @property(nonatomic,copy)NSString *txt;
 @property(nonatomic,assign)CGFloat fontSize;
@@ -16,7 +19,7 @@
 @implementation ZTELabel
 
 - (instancetype)initWithText:(NSString *)text{
-    return [self initWithText:text withFontSize:17];
+    return [self initWithText:text withFontSize:defaultFont];
 }
 
 - (instancetype)initWithFontSize:(CGFloat)fontSize{

@@ -38,7 +38,7 @@
 
 - (id)createAdapter{
 
-    VoiceAdapter *adapter = [[VoiceAdapter alloc]initWithServerData:[self getData] andCellIdentifiers:@"voiceCell" withCellBlock:^(id obj) {
+    VoiceAdapter *adapter = [[VoiceAdapter alloc]initWithSourceData:[self getData] andCellIdentifiers:@"voiceCell" withCellBlock:^(id obj) {
         NSLog(@"%@",obj);
     }];
     return adapter;

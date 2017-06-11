@@ -18,7 +18,7 @@
     VoiceCell *cell = [VoiceCell cellWithTableView:tableView];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    RecordPlayManager *rpm = self.serverData[indexPath.row];
+    RecordPlayManager *rpm = self.sourceData[indexPath.row];
     cell.sdModel = rpm.sdModel;
     
     return cell;

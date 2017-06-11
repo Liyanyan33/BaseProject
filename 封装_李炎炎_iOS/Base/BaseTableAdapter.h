@@ -9,14 +9,14 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^BaseTableCellSelectedBlock)(id obj);            // 点击cell的回调
+typedef void(^BaseTableCellSelectedBlock)(NSIndexPath *indexPath);            // 点击cell的回调
 typedef void(^BaseTableCellBtnBlock)(int row,int tag);        // 点击cell中按钮的回调
 
 
 @interface BaseTableAdapter : NSObject<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, copy) NSString *cellIdentifiers;                // cell样式选择
-@property (nonatomic, copy) NSMutableArray *serverData;                     // cell数据
+@property (nonatomic, copy) NSMutableArray *sourceData;                     // cell数据
 @property (nonatomic, copy) BaseTableCellSelectedBlock cellSelectedBlock;   // cell点击事件
 @property(nonatomic,copy)BaseTableCellBtnBlock cellBtnClickBlock;
 
@@ -28,6 +28,6 @@ typedef void(^BaseTableCellBtnBlock)(int row,int tag);        // 点击cell中�
  *
  *  @return Datasource
  */
-- (instancetype)initWithServerData:(NSArray *)serverData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock;
+- (instancetype)initWithSourceData:(NSMutableArray *)sourceData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock;
 
 @end

@@ -41,6 +41,7 @@
     AdressViewModel *adressViewModel = (AdressViewModel*)model;
     AddressModel *adressModel = adressViewModel.adressModel;
     
+    // 数据 + frame 
     _nameLabel.text = adressModel.customerName;
     _nameLabel.frame = adressViewModel.name_frame;
     
@@ -88,7 +89,7 @@
 }
 - (UIButton*)chaBtn{
     if (!_chaBtn) {
-        _chaBtn = [[UIButton alloc]initWithFrame:CGRectMake(kScreenWidth - 75 - 20 - 10 - 75, 10, 75, 30)];
+        _chaBtn = [[UIButton alloc]init];
         [_chaBtn setTitle:@"查看" forState:(UIControlStateNormal)];
         [_chaBtn setTitleColor:[UIColor greenColor] forState:(UIControlStateNormal)];
         _chaBtn.backgroundColor = randomColor;
@@ -99,7 +100,7 @@
 }
 - (UIButton*)deleBtn{
     if (!_deleBtn) {
-        _deleBtn = [[UIButton alloc]initWithFrame:CGRectMake(kScreenWidth - 75 - 20, 10, 75, 30)];
+        _deleBtn = [[UIButton alloc]init];
         [_deleBtn setTitle:@"删除" forState:(UIControlStateNormal)];
         [_deleBtn setTitleColor:[UIColor greenColor] forState:(UIControlStateNormal)];
         _deleBtn.backgroundColor = randomColor;

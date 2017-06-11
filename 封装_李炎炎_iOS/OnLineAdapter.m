@@ -19,7 +19,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     OnLineCell *cell = [OnLineCell cellWithTableView:tableView];
     cell.backgroundColor = randomColor;
-    AdressViewModel *viewModel = self.serverData[indexPath.row];
+    AdressViewModel *viewModel = self.sourceData[indexPath.row];
     // cell 传入数据模型 进行UI展示 
     [cell configCellWithModel:viewModel indexPath:indexPath];
     
@@ -38,8 +38,7 @@
 
 #pragma mark 根据返回的数据内容动态计算cell高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    OnLineCell *cell = (OnLineCell*)[self tableView:tableView cellForRowAtIndexPath:indexPath];
-    AdressViewModel *viewModel = self.serverData[indexPath.row];
+    AdressViewModel *viewModel = self.sourceData[indexPath.row];
     return viewModel.cellHeight;
 }
 

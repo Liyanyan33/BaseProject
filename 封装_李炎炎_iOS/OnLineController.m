@@ -19,11 +19,11 @@
     [super viewDidLoad];
     _dataArr = [[NSMutableArray alloc]init];
     [self setHeaderRefresh:YES footerRefresh:NO];
-    self.title = @"在线客服";
+    self.title = @"地址列表";
 }
 
 - (id)createAdapter{
-    OnLineAdapter *oAdapter = [[OnLineAdapter alloc]initWithServerData:[self getData] andCellIdentifiers:@"OnLineCell" withCellBlock:^(id obj) {
+    OnLineAdapter *oAdapter = [[OnLineAdapter alloc]initWithSourceData:[self getData] andCellIdentifiers:@"OnLineCell" withCellBlock:^(id obj) {
         NSLog(@"%@",obj);
     }];
     oAdapter.cellBtnClickBlock = ^(int index,int tag){

@@ -10,18 +10,18 @@
 
 @implementation BaseTableAdapter
 // 初始化
-- (instancetype)initWithServerData:(NSMutableArray *)serverData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock{
+- (instancetype)initWithSourceData:(NSMutableArray *)sourceData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock{
     self = [super init];
     if(self){
-        self.serverData = serverData;           // 数据
-        self.cellIdentifiers = identifiers;         // 复用
-        self.cellSelectedBlock = cellBlock;   //cell点击事件
+        self.sourceData = sourceData;           // 数据
+        self.cellIdentifiers = identifiers;           // 复用
+        self.cellSelectedBlock = cellBlock;     // cell点击事件
     }
     return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.serverData.count;
+    return self.sourceData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
