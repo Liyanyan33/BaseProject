@@ -11,7 +11,6 @@
 @implementation NSString (Extension)
 
 + (NSString*)birthdayStrFromIdentityCard:(NSString *)iDNumberStr{
-
     NSMutableString *result = [NSMutableString stringWithCapacity:0];
     NSString *year = nil;
     NSString *month = nil;
@@ -48,14 +47,12 @@
 }
 
 + (NSString *)getIdentityCardAge:(NSString *)numberStr{
-    
     NSDateFormatter *formatterTow = [[NSDateFormatter alloc]init];
     formatterTow.dateFormat = @"yyyy-mm-dd";
     NSString *str = [self birthdayStrFromIdentityCard:numberStr];
     NSDate *bsyDate = [formatterTow dateFromString:str];
     NSTimeInterval dateDiff = [bsyDate timeIntervalSinceNow];
     int age = trunc(dateDiff/(60*60*24))/365;
-    
     return [NSString stringWithFormat:@"%d",-age];
 }
 
@@ -82,5 +79,4 @@
     CGSize size = [self boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
     return size;
 }
-
 @end

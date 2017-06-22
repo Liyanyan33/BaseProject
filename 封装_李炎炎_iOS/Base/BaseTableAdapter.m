@@ -10,7 +10,7 @@
 
 @implementation BaseTableAdapter
 // 初始化
-- (instancetype)initWithSourceData:(NSMutableArray *)sourceData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock{
+- (instancetype)initWithSourceData:(NSArray *)sourceData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock{
     self = [super init];
     if(self){
         self.sourceData = sourceData;           // 数据

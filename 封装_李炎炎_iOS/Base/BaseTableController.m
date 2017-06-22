@@ -24,7 +24,6 @@
     [super viewDidLoad];
     _array = [[NSMutableArray alloc]init];
     _loadType = 1;
-    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     [self.tableView addSubview:self.noDataImageView];
     // 默认情况下 上拉和下拉刷新都存在
@@ -75,7 +74,7 @@
         self.tableView.mj_header = nil;
     }
     if (footerRefresh) {
-        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+        self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     }else{
         self.tableView.mj_footer = nil;
     }
@@ -111,7 +110,7 @@
 }
 
 //上拉加载更多数据
-- (void)loadData{
+- (void)loadMoreData{
     _loadType = 2;
     _pageNum++;
 }
@@ -202,5 +201,4 @@
     }
     return _noDataImageView;
 }
-
 @end

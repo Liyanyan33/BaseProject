@@ -25,7 +25,7 @@
 
 - (void)refreshData;
 
-- (void)loadData;
+- (void)loadMoreData;
 
 /** 设置是否 上 下拉刷新 */
 - (void)setHeaderRefresh:(BOOL)headerRefresh footerRefresh:(BOOL)footerRefresh;

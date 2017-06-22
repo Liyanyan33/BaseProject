@@ -31,7 +31,6 @@
 @property(nonatomic,assign)CGFloat normal_height;
 @property(nonatomic,assign)CGFloat expand_height;
 @property(nonatomic,assign)BOOL isExpand;
-
 @end
 
 

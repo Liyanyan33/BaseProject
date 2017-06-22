@@ -51,7 +51,7 @@
 #define kScreenMinLength         (MIN(kScreenWidth,kScreenHeight))                  //获取屏幕的最小尺寸
 
 /** 设备类型判断宏 */
-#define isPad         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define isiPad_ZTE         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define isiPhone    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define isRetain     ([[UIScreen mainScreen] scale] >= 2.0)
 
@@ -66,10 +66,19 @@
 #define isiPhone5   (isiPhone && kScreenMaxLength == 568.0)
 #define isiPhone6   (isiPhone && kScreenMaxLength  == 667.0)
 #define isiPhone6P (isiPhone && kScreenMaxLength  == 736.0)
-#define isiPad          (isPad && kScreenMaxLength  == 1024.0)
+#define isiPad          (isiPad_ZTE && kScreenMaxLength  == 1024.0)
 
 /** 判断设备系统宏 */
 #define is_iOS8   [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0
 
 #define loadTitle  @"正在加载中......"
 #define busyTitle @"网络繁忙请稍后...."
+
+/** 新浪微博的key,密钥,回调地址 */
+#define XLAppKey       @"677145421"
+#define XLAppSecret   @"704facabd462129f68afaca2a3d04f72"
+#define XLRedirectUR @"http://baidu.com"
+
+
+
+

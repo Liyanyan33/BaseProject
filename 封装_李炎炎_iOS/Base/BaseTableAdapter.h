@@ -16,7 +16,7 @@ typedef void(^BaseTableCellBtnBlock)(int row,int tag);        // 点击cell中�
 @interface BaseTableAdapter : NSObject<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, copy) NSString *cellIdentifiers;                // cell样式选择
-@property (nonatomic, copy) NSMutableArray *sourceData;                     // cell数据
+@property (nonatomic, copy) NSArray *sourceData;                     // cell数据
 @property (nonatomic, copy) BaseTableCellSelectedBlock cellSelectedBlock;   // cell点击事件
 @property(nonatomic,copy)BaseTableCellBtnBlock cellBtnClickBlock;
 
@@ -28,6 +28,6 @@ typedef void(^BaseTableCellBtnBlock)(int row,int tag);        // 点击cell中�
  *
  *  @return Datasource
  */
-- (instancetype)initWithSourceData:(NSMutableArray *)sourceData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock;
+- (instancetype)initWithSourceData:(NSArray *)sourceData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock;
 
 @end

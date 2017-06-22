@@ -36,4 +36,16 @@
     }
     return nil;
 }
+
+- (void)deletVCInNavStackWithVCName:(NSString *)vcName{
+    NSMutableArray *marr = [[NSMutableArray alloc]initWithArray:self.navigationController.viewControllers];
+    Class class = NSClassFromString(vcName);
+    for (UIViewController *vc in marr) {
+        if ([vc isKindOfClass:class]) {
+            [marr removeObject:vc];
+            break;
+        }
+    }
+    self.navigationController.viewControllers = marr;
+}
 @end

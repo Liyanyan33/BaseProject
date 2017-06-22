@@ -7,17 +7,17 @@
 //
 
 #import "TestAdapter.h"
+#import "OneLabelCell.h"
 
 @implementation TestAdapter
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifiers];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:self.cellIdentifiers];
-    }
-    cell.textLabel.text = self.sourceData[indexPath.row];
+    OneLabelCell *cell = [OneLabelCell cellWithTableView:tableView withReuseIdentify:self.cellIdentifiers];
+    [cell configCellWithModel:self.sourceData[indexPath.row] indexPath:indexPath];
     return cell;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [OneLabelCell calCellHeightWithModel:self.sourceData[indexPath.row]];
+}
 @end

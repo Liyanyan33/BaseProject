@@ -11,4 +11,8 @@
 @interface UIViewController (Extension)
 #pragma mark  获取应用程序当前正在显示的视图控制器
 + (UIViewController *)currentViewController;
+
+/** 在导航控制器栈中 删除指定的视图控制器 */
+- (void)deletVCInNavStackWithVCName:(NSString*)vcName;
+
 @end

@@ -40,7 +40,7 @@
     }else{
         NSString *urlStr = @"http://test2.mobile.care.ztehealth.com/health/MyService/qryCustomerArea";
         NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-        params[@"authMark"] = @"mwuserwrriruytis";
+        params[@"authMark"] = @"deeevabgksugcqxu";
         params[@"customerId"] = @"493058";
         [LYHud showAtView:self.navigationController.view title:@"正在加载数据" dimBackground:NO];
         [NetWorking POSTWithUrl:urlStr paramas:params resultClass:[OnLineResponModel class] success:^(id json) {

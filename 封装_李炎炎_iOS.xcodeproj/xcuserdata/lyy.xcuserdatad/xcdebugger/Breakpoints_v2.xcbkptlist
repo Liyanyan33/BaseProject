@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/Base/BaseTableController.m"
-            timestampString = "518601577.068878"
+            timestampString = "518928018.251847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "-onSuccessWithData:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/Base/BaseTableController.m"
-            timestampString = "518601577.068878"
+            timestampString = "518928018.251847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "-onSuccessWithData:"
             landmarkType = "7">
          </BreakpointContent>
@@ -112,7 +112,7 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "-navBarLeftClick"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/Base/BaseNavController.m"
-            timestampString = "518663002.103904"
+            timestampString = "519811851.817298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "-more:"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/Base/BaseNavController.m"
-            timestampString = "518663002.103904"
+            timestampString = "519811851.817298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "-more:"
             landmarkType = "7">
          </BreakpointContent>
@@ -179,13 +179,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/OnLineCell.m"
-            timestampString = "518690976.547102"
+            filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/AdressViewModel.m"
+            timestampString = "518868530.39068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "-configCellWithModel:indexPath:"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-setIsExpand:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -195,29 +195,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/OnLineCell.m"
-            timestampString = "518690976.547102"
+            filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/AdressViewModel.m"
+            timestampString = "518868530.39068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-configCellWithModel:indexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x5c01;&#x88c5;_&#x674e;&#x708e;&#x708e;_iOS/OnLineAdapter.m"
-            timestampString = "518691227.6894"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-setIsExpand:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

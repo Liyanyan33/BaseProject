@@ -10,6 +10,7 @@
 #import "LYNavController.h"
 #import "OnLineController.h"
 #import "TestController.h"
+#import "FPSDisplayUtils.h"
 
 @interface AppDelegate ()
 
@@ -19,13 +20,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self detectionNetWorking];
+    /** 监听网络变化 */
+//    [self detectionNetWorking];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     TestController *tvc = [[TestController alloc]init];
     
     LYNavController *nav = [[LYNavController alloc]initWithRootViewController:tvc];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
+    
+    [FPSDisplayUtils shareFPSDisplay];
     return YES;
 }
 

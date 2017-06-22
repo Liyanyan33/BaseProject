@@ -17,7 +17,7 @@
 @implementation OnLineAdapter
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    OnLineCell *cell = [OnLineCell cellWithTableView:tableView];
+    OnLineCell *cell = [OnLineCell cellWithTableView:tableView withReuseIdentify:self.cellIdentifiers];
     cell.backgroundColor = randomColor;
     AdressViewModel *viewModel = self.sourceData[indexPath.row];
     // cell 传入数据模型 进行UI展示 

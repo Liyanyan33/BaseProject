@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface ZteNetWorkUtils : NSObject
+/** 判断是否有网络 */
 + (BOOL)isNetworkExist;
 @end

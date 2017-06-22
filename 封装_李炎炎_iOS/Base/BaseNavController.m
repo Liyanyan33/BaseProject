@@ -79,6 +79,11 @@
 - (void)back:(UIButton*)sender{
     
     BaseViewController *bvc = (BaseViewController*)[self.viewControllers lastObject];
+    
+    for (UIViewController *vc in self.viewControllers) {
+        NSLog(@"vc = %@",vc);
+    }
+    
     [bvc navBarLeftClick];
     [self popViewControllerAnimated:YES];
 }

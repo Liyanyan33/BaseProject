@@ -59,7 +59,11 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
-            success([resultClass mj_objectWithKeyValues:responseObject]);
+            if (resultClass) {
+                success([resultClass mj_objectWithKeyValues:responseObject]);
+            }else{
+                success(responseObject);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error = %@",error);

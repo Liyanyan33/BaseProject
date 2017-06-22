@@ -13,13 +13,16 @@
 /** 实例化构造方法 */
 + (instancetype)cellWithTableView:(UITableView*)tableView;
 
-/** 创建内部的组件 */
-- (void)createUI;
+/** 实例化构造方法 */
++ (instancetype)cellWithTableView:(UITableView*)tableView withReuseIdentify:(NSString*)reuseIdentify;
 
-/** cell的高度 */
-@property(nonatomic,assign)float cellHeight;
+/** 创建内部的组件 让子类去实现 */
+- (void)createUI;
 
 /** 根据模型数据来配置cell */
 - (void)configCellWithModel:(id)model indexPath:(NSIndexPath*)indexPath;
+
+/** 通过模型来计算cell的高度 */
++ (CGFloat)calCellHeightWithModel:(id)modelData;
 
 @end

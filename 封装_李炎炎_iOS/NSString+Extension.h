@@ -24,6 +24,6 @@
  *  在计算 UILabel自适应高度时, 计算区域尺寸时的Font一定要与Label的font保持一致
  */
 - (CGSize)sizeWithFont:(UIFont *)font withWidth:(CGFloat)width;
-
 - (CGSize)sizeWithFont:(UIFont *)font withHeight:(CGFloat)height;
+
 @end

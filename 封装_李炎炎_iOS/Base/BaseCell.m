@@ -19,10 +19,19 @@
     return cell;
 }
 
++ (instancetype)cellWithTableView:(UITableView*)tableView withReuseIdentify:(NSString*)reuseIdentify{
+    BaseCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentify];
+    if (cell == nil) {
+        cell = [[[self class] alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:NSStringFromClass([self class])];
+    }
+    return cell;
+}
+
 /** 系统的构造方法 */
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+         self.selectionStyle = UITableViewCellSelectionStyleNone; //cell点击不变色
         [self createUI];
     }
     return self;
@@ -46,5 +55,9 @@
     
 }
 
++ (CGFloat)calCellHeightWithModel:(id)modelData{
+    CGFloat cellHeight = 0;
+    return cellHeight;
+}
 
 @end
