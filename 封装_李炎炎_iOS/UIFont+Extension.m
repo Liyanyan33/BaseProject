@@ -13,7 +13,6 @@
 
 // 根据屏幕的尺寸 设置控件的字体大小
 + (UIFont*)getFont{
-
     if (kScreenWidth == 320) {
         return [UIFont systemFontOfSize:16];
     }else if (kScreenWidth == 375){
@@ -26,5 +25,4 @@
         return nil;
     }
 }
-
 @end

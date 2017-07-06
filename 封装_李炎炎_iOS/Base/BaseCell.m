@@ -55,9 +55,12 @@
     
 }
 
+- (void)configCellWithViewModel:(id)viewModel indexPath:(NSIndexPath *)indexPath{
+    
+}
+
 + (CGFloat)calCellHeightWithModel:(id)modelData{
     CGFloat cellHeight = 0;
     return cellHeight;
 }
-
 @end

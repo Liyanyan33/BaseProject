@@ -53,11 +53,9 @@
 }
 
 - (void)setTitle:(NSArray *)titleArray rowHeight:(CGFloat)rowHeight{
-
     if (!self) {
         return;
     }
-    
     _titleArray = titleArray;
     _rowHeight = rowHeight;
     

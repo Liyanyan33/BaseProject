@@ -64,20 +64,16 @@
 }
 
 - (void)createUI{
-
-//    [self addSubview:self.backgroundImageView];
     [self addSubview:self.imageView];
     [self addSubview:self.label];
 }
 
 - (void)setTitle:(NSString *)text image:(NSString *)image{
-
     _label.text = text;
     _imageView.image = [UIImage imageNamed:image];
 }
 
 - (void)layoutSubviews{
-    
     [super layoutSubviews];
     CGFloat w = self.frame.size.width;
     CGFloat h = self.frame.size.height;
@@ -87,25 +83,20 @@
     if (_imageWidth >= iPadWidth) {
         imageY = h - _imageWidth - labelHeight - imageYOffset;
     }
-
     NSLog(@"imageX = %f---imageY = %f--imageWidth = %f--w = %f",imageX,imageY,_imageWidth,w);
-    
     self.imageView.frame = CGRectMake(imageX, imageY, _imageWidth, _imageWidth);
     self.label.frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame), w, labelHeight);
 }
 
 #pragma mark 懒加载
 - (UIImageView*)backgroundImageView{
-    
     if (!_backgroundImageView) {
         _backgroundImageView = [[UIImageView alloc]init];
-        
     }
     return _backgroundImageView;
 }
 
 - (UIImageView*)imageView{
-    
     if (!_imageView) {
         _imageView = [[UIImageView alloc]init];
         _imageView.backgroundColor = [UIColor redColor];
@@ -115,7 +106,6 @@
 }
 
 - (UILabel*)label{
-    
     if (!_label) {
         _label = [[UILabel alloc]init];
         _label.textAlignment = NSTextAlignmentCenter;

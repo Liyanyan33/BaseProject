@@ -19,8 +19,11 @@
 /** 创建内部的组件 让子类去实现 */
 - (void)createUI;
 
-/** 根据模型数据来配置cell */
+/** 根据普通模型(model 只包含数据)来配置cell */
 - (void)configCellWithModel:(id)model indexPath:(NSIndexPath*)indexPath;
+
+/** 根据特殊模型(viewModel 包含数据与frame) 来配置cell */
+- (void)configCellWithViewModel:(id)viewModel indexPath:(NSIndexPath*)indexPath;
 
 /** 通过模型来计算cell的高度 */
 + (CGFloat)calCellHeightWithModel:(id)modelData;

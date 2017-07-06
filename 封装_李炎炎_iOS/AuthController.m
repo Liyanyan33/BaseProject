@@ -78,6 +78,7 @@
     // 2.发送请求
     [NetWorking POSTWithUrl:@"https://api.weibo.com/oauth2/access_token" paramas:params resultClass:[AccoutModel class] success:^(id json) {
         AccoutModel *aModel = json;
+        NSLog(@"access_token = %@",aModel.access_token);
         // 账号数据缓存
         [AccountDB saveAccountModel:aModel];
         // 页面跳转

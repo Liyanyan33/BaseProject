@@ -156,5 +156,4 @@
     FriendController *fc = [[FriendController alloc]init];
     [self.navigationController pushViewController:fc animated:YES];
 }
-
 @end

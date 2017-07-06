@@ -12,6 +12,7 @@
 #import "MJExtension.h"
 #import "LYHud.h"
 #import "LYDefine.h"
+#import "RegularExDefine.h"
 #import "URLDefine.h"
 #import "NetWorking.h"
 #import "LYExtension.h"
@@ -20,6 +21,8 @@
 #import "ZteNetWorkUtils.h"
 #import <YYKit.h>
 #import <Masonry.h>
+#import "UIImageView+WebCache.h"
+
 
 #define kNotificationCategoryIdentifile @"kNotificationCategoryIdentifile"
 #define kNotificationActionIdentifileStar @"kNotificationActionIdentifileStar"

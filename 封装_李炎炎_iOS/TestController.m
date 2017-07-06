@@ -13,6 +13,7 @@
 #import "NewFeatureController.h"
 #import "AccountDB.h"
 
+
 @interface TestController ()
 @property(nonatomic,strong)NSMutableArray *dataArr;
 @property(nonatomic,strong)NSMutableArray *vcNameArr;
@@ -52,11 +53,18 @@
     [_dataArr addObject:@"拆分controller中的代码 --\n1> 继承思想 cell - Controller - model 分别建立基类; \n2> 抽离tableView的协议方法 高仿Android适配器思想(Adapter) 为tableView创建一个适配器(其实现协议代理方法);\n3> model -- viewModel 进一步拆分 model内部的功能 将model的frame计算拆分出来 MVVM思想的使用"];
     [_dataArr addObject:@"iOS开发之多种Cell高度自适应实现方案的UI流畅度分析  >>"];
     [_dataArr addObject:@"高仿新浪微博app朋友圈--不同UI实现方式的性能分析"];
+    [_dataArr addObject:@"测试富文本显示"];
+    [_dataArr addObject:@"html——cell 显示"];
+    [_dataArr addObject:@"用于测试的控制器"];
     [self onSuccessWithData:_dataArr];
     
     _vcNameArr = [[NSMutableArray alloc]init];
     [_vcNameArr addObject:@"OnLineController"];
     [_vcNameArr addObject:@"CellHeightMainController"];
+    [_vcNameArr addObject:@"kkk"];
+    [_vcNameArr addObject:@"MyViewController"];
+    [_vcNameArr addObject:@"HtmlController"];
+    [_vcNameArr addObject:@"TestViewController"];
 }
 
 - (void)switchVC{

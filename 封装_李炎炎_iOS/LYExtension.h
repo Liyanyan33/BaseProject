@@ -15,6 +15,7 @@
 #import "UIFont+Extension.h"
 #import "AppDelegate+Extension.h"
 #import "NSString+Extension.h"
+#import "NSDate+Extension.h"
 
 #endif 
 
