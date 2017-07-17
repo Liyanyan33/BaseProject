@@ -20,6 +20,15 @@
     return self;
 }
 
+- (instancetype)initWithCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock{
+    self = [super init];
+    if (self) {
+        self.cellIdentifiers = identifiers;
+        self.cellSelectedBlock = cellBlock;
+    }
+    return self;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.sourceData.count;
 }

@@ -80,6 +80,16 @@
         }
         // 设置这一页的表情
         pageView.emojiArr = [emojiArr subarrayWithRange:range];
+        pageView.emojiBtnClick = ^(ZTEEmotionModel* emojiModel){
+            if (_emojiBtnClick) {
+                _emojiBtnClick(emojiModel);
+            }
+        };
+        pageView.deleteBtnClick = ^(){
+            if (_deleteBtnClick) {
+                _deleteBtnClick();
+            }
+        };
         [self.scrollView addSubview:pageView];
     }
     
@@ -91,10 +101,22 @@
     [self setNeedsLayout];
 }
 
-#pragma mark UIScrollView
+#pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     double pageNo = scrollView.contentOffset.x / scrollView.width;
-    self.pageControl.currentPage = (int)(pageNo + 0.5);
+    int currentPage = (int)(pageNo + 0.5);
+    self.pageControl.currentPage = currentPage;
+}
+
+/** 滚动结束（手势导致） */
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    NNSLog(@"%s",__func__);
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    int index = scrollView.contentOffset.x / scrollView.width;
+    NNSLog(@"index = %d",index);
 }
 
 #pragma mak 懒加载

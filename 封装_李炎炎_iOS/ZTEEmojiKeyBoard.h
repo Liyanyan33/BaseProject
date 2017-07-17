@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZTEEmojiKeyBoard : UIView
+@class ZTEEmojiKeyBoard;
+@class ZTEEmotionModel;
 
+@protocol ZTEEmojiKeyBoardDelegate <NSObject>
+/** 监听表情按钮的点击 */
+- (void)zteEmojiKeyBoard:(ZTEEmojiKeyBoard*)zteEmojiKeyBoard emojiBtnClickModel:(ZTEEmotionModel*)model;
+/** 监听删除按钮的点击 */
+- (void)deleteBtnClickZteEmojiKeyBoard:(ZTEEmojiKeyBoard *)zteEmojiKeyBoard;
+/** 发送按钮的点击 */
+- (void)zteEmojiKeyBoard:(ZTEEmojiKeyBoard*)zteEmojiKeyBoard sendBtnClick:(UIButton*)sendButton;
+@end
+
+@interface ZTEEmojiKeyBoard : UIView
+@property(nonatomic,weak)id<ZTEEmojiKeyBoardDelegate> delegate;
 @end

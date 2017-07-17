@@ -22,11 +22,11 @@
     [super viewDidLoad];
     self.title = @"朋友圈";
     [self deletVCInNavStackWithVCName:@"NewFeatureController"];
-    _dataArr = [[NSMutableArray alloc]init];
+    
 }
 
 - (id)createAdapter{
-    FriendAdapter *fAdapter = [[FriendAdapter alloc]initWithSourceData:[self getData] andCellIdentifiers:@"friend_cell" withCellBlock:^(NSIndexPath *indexPath) {
+    FriendAdapter *fAdapter = [[FriendAdapter alloc]initWithCellIdentifiers:@"friend_cell" withCellBlock:^(NSIndexPath *indexPath) {
         
     }];
     return fAdapter;
@@ -48,6 +48,7 @@
             [LYToast showBottomWithText:@"网络数据加载成功" duration:4.0];
             WBTimelineModel *response = (WBTimelineModel*)json;
             // 模型转化 model --> viewModel
+            _dataArr = [[NSMutableArray alloc]init];
             for (WBStatuModel *sModel in response.statuses) {
                 WBStatuViewModel *sViewModel = [[WBStatuViewModel alloc]initWithStatuModel:sModel];
                 [_dataArr addObject:sViewModel];

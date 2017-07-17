@@ -24,6 +24,10 @@
     [self loadTextDetail];
 }
 
+- (void)dealloc{
+    NSLog(@"%s",__func__);
+}
+
 - (id)createAdapter{
     HtmlAdapter *a = [[HtmlAdapter alloc]initWithSourceData:[self getData] andCellIdentifiers:@"html_cell" withCellBlock:^(NSIndexPath *indexPath) {
         

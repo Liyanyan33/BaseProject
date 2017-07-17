@@ -43,7 +43,7 @@ static NSArray *_emojiEmotions, *_defaultEmotions, *_lxhEmotions;
 }
 
 + (ZTEEmotionModel*)emotionWithChs:(NSString *)chs{
-    /** 表情数据 */
+    /** emoji表情数据 */
     NSArray *emotionArr = [self emojiEmotions];
     for (ZTEEmotionModel *emotionModel in emotionArr) {
         if ([emotionModel.chs isEqualToString:chs]) {

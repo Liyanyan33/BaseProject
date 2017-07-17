@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZTEEmotionModel;
+/** 表情按钮点击 回调 */
+typedef void(^emojiBtnClick)(ZTEEmotionModel *emojiModel);
+/** 删除按钮点击 回调 */
+typedef void(^deleteBtnClick)(void);
+
 @interface ZTEEmojiModuleView : UIView
 @property(nonatomic,strong)NSArray *emojiArr;
+@property(nonatomic,copy)emojiBtnClick emojiBtnClick;
+@property(nonatomic,copy)deleteBtnClick deleteBtnClick;
 @end

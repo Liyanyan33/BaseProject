@@ -28,8 +28,12 @@
     [self initData];
 }
 
+- (UITableViewStyle)getTableViewStytle{
+    return UITableViewStyleGrouped;
+}
+
 - (id)createAdapter{
-    TestAdapter *oAdapter = [[TestAdapter alloc]initWithSourceData:_dataArr andCellIdentifiers:@"test_cell" withCellBlock:^(NSIndexPath *indexPath) {
+    TestAdapter *oAdapter = [[TestAdapter alloc]initWithCellIdentifiers:@"test_cell" withCellBlock:^(NSIndexPath *indexPath) {
         if (indexPath.row == 2) {
             [self switchVC];
         }else{

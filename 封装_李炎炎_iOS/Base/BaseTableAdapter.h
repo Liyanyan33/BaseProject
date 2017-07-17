@@ -12,7 +12,6 @@
 typedef void(^BaseTableCellSelectedBlock)(NSIndexPath *indexPath);            // 点击cell的回调
 typedef void(^BaseTableCellBtnBlock)(int row,int tag);        // 点击cell中按钮的回调
 
-
 @interface BaseTableAdapter : NSObject<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, copy) NSString *cellIdentifiers;                // cell样式选择
@@ -29,5 +28,7 @@ typedef void(^BaseTableCellBtnBlock)(int row,int tag);        // 点击cell中�
  *  @return Datasource
  */
 - (instancetype)initWithSourceData:(NSArray *)sourceData andCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock;
+
+- (instancetype)initWithCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock;
 
 @end

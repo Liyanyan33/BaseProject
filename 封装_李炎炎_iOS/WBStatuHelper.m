@@ -68,15 +68,16 @@
         // 等会需要拼接的子串
         NSAttributedString *substr = nil;
         if (part.isEmotion) { // [表情数据]
-            //创建此对象 能将图片 渲染在 文本控件上
+            //创建一个附件对象(textAttachment) 能将图片 渲染在 文本控件上
             NSTextAttachment *attch = [[NSTextAttachment alloc] init];
             // 根据表情文字 找到与之相对应的图片 (本地已经存储了表情文字与图片的一一对应的数据列表)
             NSString *name = [ZTEEmotionUtils emotionWithChs:part.text].png;
             if (name) { // 能找到对应的图片
                 attch.image = [UIImage imageNamed:name];
                 attch.bounds = CGRectMake(0, -3, font.lineHeight, font.lineHeight);
+                
                 substr = [NSAttributedString attributedStringWithAttachment:attch];
-            } else { // 表情图片不存在
+            } else { // 表情图片不存在 (1> 本地确实没有存储图片,不存在; 2> emoji表情(就是文字不是图片))
                 substr = [[NSAttributedString alloc] initWithString:part.text];
             }
         } else if (part.isSpecialText) { // 非表情的特殊文字

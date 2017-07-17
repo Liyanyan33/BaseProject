@@ -9,6 +9,7 @@
 #import "FCUAdapter.h"
 #import "FCUCell.h"
 #import "TestDataModel.h"
+
 @implementation FCUAdapter
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -21,6 +22,18 @@
     TestDataModel *model = self.sourceData[indexPath.row];
     return model.cellHeight;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    NSLog(@"%s",__func__);
+    return 180;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIImageView *headerImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 180)];
+    headerImageView.image = [UIImage imageNamed:@"1.jpg"];
+    return headerImageView;
+}
+
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
     

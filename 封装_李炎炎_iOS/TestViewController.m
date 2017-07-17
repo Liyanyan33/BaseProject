@@ -8,10 +8,14 @@
 
 #import "TestViewController.h"
 #import "ZTEEmojiKeyBoard.h"
+#import "ZTEEmojiTextView.h"
+#import "ZTEEmotionModel.h"
+#import "ZTESearchBar.h"
+#import "ZTEToolBar.h"
 
-@interface TestViewController ()<UITextViewDelegate>
-@property(nonatomic,strong)UITextView *textView;
-@property(nonatomic,strong)ZTEEmojiKeyBoard *emojiKeyBoard;
+@interface TestViewController ()<ZTEToolBarDelegate,UITextViewDelegate>
+@property(nonatomic,strong)ZTEToolBar *toolBar;
+@property(nonatomic,strong)ZTEEmojiTextView *emojiTextView;
 @end
 
 @implementation TestViewController
@@ -20,34 +24,80 @@
     [super viewDidLoad];
     self.title = @"测试";
     [self createUI];
-    
-    NSLog(@"内边距 = %@",NSStringFromUIEdgeInsets(self.textView.textContainerInset));
+}
+
+- (void)dealloc{
+    NSLog(@"%s",__func__);
 }
 
 - (void)createUI{
-//    [self.view addSubview:self.textView];
-    [self.view addSubview:self.emojiKeyBoard];
+    [self.view addSubview:self.emojiTextView];
+    [self.view addSubview:self.toolBar];
+    
+    NSLog(@"内容边距 = %@",NSStringFromUIEdgeInsets(_emojiTextView.textContainerInset));
 }
 
-#pragma mark 懒加载
-- (UITextView*)textView{
-    if (!_textView) {
-        _textView = [[UITextView alloc]initWithFrame:CGRectMake(10, 64+20, kScreenWidth - 10*2, 150)];
-        _textView.backgroundColor = [UIColor redColor];
-        _textView.text = @"大看的撒发的卡开发决定撒范德萨啦富家大室拉房间大理石";
-        _textView.textColor = [UIColor whiteColor];
-        _textView.font = [UIFont systemFontOfSize:19];
-        _textView.textContainerInset = UIEdgeInsetsMake(0, -5, 0, -5);
-        _textView.delegate = self;
-    }
-    return _textView;
+#pragma mark ZTEToolBarDelegate
+- (void)toolBar:(ZTEToolBar *)toolBar sendInputText:(NSString *)inputText{
+    NSLog(@"输入的内容 = %@",inputText);
 }
 
-- (ZTEEmojiKeyBoard*)emojiKeyBoard{
-    if (!_emojiKeyBoard) {
-        _emojiKeyBoard = [[ZTEEmojiKeyBoard alloc]initWithFrame:CGRectMake(0, 300, kScreenWidth, 216)];
+
+ #pragma mark UITextViewDelegate  每输入文字 都会调用此方法  UITextView默认存在内边距 计算文本size的时候要做考虑
+ - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+     NSLog(@"%s",__func__);
+//     NSString *completeStr = [NSString stringWithFormat:@"%@%@",textView.text,text];
+//     if ([text isEqualToString:@""]) { // 删除字符
+//     if (![textView.text isEqualToString:@""]) {
+//     completeStr = [completeStr substringToIndex:completeStr.length - 1];
+//     }
+//     }
+//     CGSize textSize = [completeStr sizeWithFont:textView.font withWidth:textView.width-5*2];
+//     NSLog(@"textSize = %@",NSStringFromCGSize(textSize));
+//     [UIView animateWithDuration:0.5f animations:^{
+//     textView.height = textSize.height + textView.textContainerInset.top*2;
+//     }];
+     return YES;
+ }
+
+- (void)textViewDidChange:(UITextView *)textView{
+    // 通过contentSize 实现textView内容的自适应
+    NSLog(@"contentSize = %@",NSStringFromCGSize(textView.contentSize));
+    [UIView animateWithDuration:0.25 animations:^{
+        _emojiTextView.height = textView.contentSize.height;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+ 
+
+#pragma mak 懒加载
+- (ZTEToolBar*)toolBar{
+    if (!_toolBar) {
+        _toolBar = [[ZTEToolBar alloc]initWithFrame:CGRectMake(0, kScreenHeight - 48 , kScreenWidth, 48) withTargetVC:self];
+        _toolBar.delegate = self;
     }
-    return _emojiKeyBoard;
+    return _toolBar;
+}
+
+#pragma mak 懒加载
+- (ZTEEmojiTextView*)emojiTextView{
+    if (!_emojiTextView) {
+        _emojiTextView = [[ZTEEmojiTextView alloc]initWithFrame:CGRectMake(10, 100, kScreenWidth - 20, 60)];
+        _emojiTextView.delegate = self;
+        _emojiTextView.placeHolder = @"说点什么呢...";
+        _emojiTextView.font = [UIFont systemFontOfSize:16];
+        _emojiTextView.layer.masksToBounds = YES;
+        _emojiTextView.layer.cornerRadius = 5.0;
+        _emojiTextView.layer.borderColor = [UIColor grayColor].CGColor;
+        _emojiTextView.layer.borderWidth = 2.0;
+    }
+    return _emojiTextView;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    NSLog(@"输入框 内容size = %@",NSStringFromCGSize(_emojiTextView.contentSize));
 }
 
 @end

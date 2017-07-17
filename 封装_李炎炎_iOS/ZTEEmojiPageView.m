@@ -7,7 +7,7 @@
 //  ZTEEmojiModuleView 模块view中滚动视图的 pageView (分页 滚动显示)
 
 #import "ZTEEmojiPageView.h"
-#import "ZTEEmojiButton.h"
+
 
 @interface ZTEEmojiPageView ()
 @property(nonatomic,strong)UIButton *deleteBtn;
@@ -40,7 +40,6 @@
         UIButton *btn = self.subviews[i + 1];
         btn.width = btnW;
         btn.height = btnH;
-        btn.backgroundColor = randomColor;
         btn.x = inset + (i%ZTEEmotionMaxCols) * btnW;
         btn.y = inset + (i/ZTEEmotionMaxCols) * btnH;
     }
@@ -51,12 +50,18 @@
     self.deleteBtn.x = w - inset - btnW;
 }
 
+/** 表情按钮 被点击 */
 - (void)btnClick:(ZTEEmojiButton*)sender{
-    
+    if (_emojiBtnClick) {
+        _emojiBtnClick(sender.emotjiModel);
+    }
 }
 
+/** 删除按钮 被点击 */
 - (void)deleteClick:(UIButton*)sender{
-    
+    if (_deleteBtnClick) {
+        _deleteBtnClick();
+    }
 }
 
 - (void)setEmojiArr:(NSArray *)emojiArr{

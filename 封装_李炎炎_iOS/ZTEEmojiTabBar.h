@@ -19,9 +19,14 @@ typedef NS_ENUM(NSUInteger,ZTEEmojiTabBarButtonType){
 
 @protocol ZTEEmojiTabBarDelegate <NSObject>
 @optional
-- (void)emotionTabBar:(ZTEEmojiTabBar *)tabBar didSelectButton:(ZTEEmojiTabBarButtonType)buttonType;
+- (void)emotionTabBar:(ZTEEmojiTabBar *)tabBar didSelectButton:(ZTEEmojiTabBarButtonType)buttonType;  // 表情按钮的点击
+- (void)emotionTabBar:(ZTEEmojiTabBar *)tabBar didSendButton:(UIButton*)sendButton;
+@required  
+- (NSArray*)emojiTabBarTitleArr;
 @end
 
 @interface ZTEEmojiTabBar : UIView
+@property(nonatomic,strong)NSArray *titleArr;  // 主题数组
 @property(nonatomic,weak)id<ZTEEmojiTabBarDelegate> delegate;
+- (void)reloadData;
 @end

@@ -20,6 +20,11 @@
     [super viewDidLoad];
     self.title = @"FCU方案";
     [self createDataSupport];
+    [self setHeaderRefresh:YES footerRefresh:NO];
+}
+
+- (UITableViewStyle)getTableViewStytle{
+    return UITableViewStyleGrouped;
 }
 
 #pragma mark 创建数据源  内部模拟了网络 异步请求
@@ -37,7 +42,7 @@
 }
 
 - (id)createAdapter{
-    FCUAdapter *fcuAdapter = [[FCUAdapter alloc]initWithSourceData:[self getData] andCellIdentifiers:@"fcu_cell" withCellBlock:^(NSIndexPath *indexPath) {
+    FCUAdapter *fcuAdapter = [[FCUAdapter alloc]initWithCellIdentifiers:@"fcu_cell" withCellBlock:^(NSIndexPath *indexPath) {
         
     }];
     return fcuAdapter;

@@ -7,15 +7,15 @@
 //
 
 #import "BaseTableController.h"
+#import "BaseTableAdapter.h"
 
 @interface BaseTableController ()
 {
     NSMutableArray *_array;
     int _loadType;   // 请求数据的方式  1 上拉刷新  2 下拉加载
 }
-@property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)UIImageView *noDataImageView;
-@property(nonatomic,strong)id adapter;
+@property(nonatomic,strong)BaseTableAdapter *adapter;
 @end
 
 @implementation BaseTableController
@@ -29,6 +29,11 @@
     // 默认情况下 上拉和下拉刷新都存在
     [self setHeaderRefresh:YES footerRefresh:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWork:) name:@"NetWorkingStatu" object:nil];
+}
+
+/** tableView 默认类型 */
+- (UITableViewStyle)getTableViewStytle{
+    return UITableViewStylePlain;
 }
 
 - (void)netWork:(NSNotification*)notification{
@@ -56,7 +61,6 @@
     if (type == 1) {
         
     }else{
-    
         [self showAlert:title];
     }
 }
@@ -171,6 +175,8 @@
         _tableView.dataSource = _adapter;
         _tableView.delegate = _adapter;
     }
+    // 需要将数据传递给adapter
+    _adapter.sourceData = _array;
     [_tableView reloadData];
 }
 
@@ -183,8 +189,12 @@
 #pragma mark 懒加载
 - (UITableView*)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64)];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) style:[self getTableViewStytle]];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.sectionHeaderHeight = 0.1f;
+        _adapter = [self createAdapter];   // 解决消除UITableViewGroupStytle 顶部默认间距 在此处就设置 tableView的代理对象 而不是 等拿到网络数据时才设置(如果那样会出现问题 顶部间距 无论怎么设置 都不能使之消除)
+        _tableView.delegate = _adapter;
+        _tableView.dataSource = _adapter;
     }
     return _tableView;
 }

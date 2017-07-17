@@ -34,7 +34,7 @@
     }
     
     // 遍历所有的图片控件，设置图片
-    for (int i = 0; i<self.subviews.count; i++) {
+    for (int i = 0; i < self.subviews.count; i++) {
         ZTEPhotoView *photoView = self.subviews[i];
         if (i < photosCount) { // 显示
             photoView.photo = photos[i];

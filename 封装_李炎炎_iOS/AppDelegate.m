@@ -30,7 +30,7 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
 
-    [FPSDisplayUtils shareFPSDisplay];
+//    [FPSDisplayUtils shareFPSDisplay];
     return YES;
 }
 

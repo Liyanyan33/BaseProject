@@ -13,6 +13,16 @@
 #define LYLog(format,...)
 #endif
 
+#ifdef DEBUG
+
+#define NNSLog(FORMAT, ...) fprintf(stderr,"%s\n",[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define NNSLog(...)
+
+#endif
+
 /** 日志输出宏   第一个参数: 类 第二个参数: 方法 */
 #define BASE_LOG(cls,sel)                           LYLog(@"%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel))
 #define BASE_ERROR_LOG(cls,sel,error)   LYLog(@"ERROR:%@-%@-%@",NSStringFromClass(cls),NSStringFromSelector(sel),error)

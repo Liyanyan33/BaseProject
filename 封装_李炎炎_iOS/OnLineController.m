@@ -18,8 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _dataArr = [[NSMutableArray alloc]init];
+    
     [self setHeaderRefresh:YES footerRefresh:NO];
     self.title = @"地址列表";
+}
+
+- (UITableViewStyle)getTableViewStytle{
+    return UITableViewStyleGrouped;
 }
 
 - (id)createAdapter{
@@ -38,10 +43,10 @@
         [LYToast showBottomWithText:@"没有网络，请检查网络设置" duration:2.0];
         return;
     }else{
-        NSString *urlStr = @"http://test2.mobile.care.ztehealth.com/health/MyService/qryCustomerArea";
-        NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-        params[@"authMark"] = @"deeevabgksugcqxu";
-        params[@"customerId"] = @"493058";
+        NSString *urlStr = @"http://care-pdclapp.ztehealth.com/health/MyService/qryCustomerArea";
+        NSMutableDictionary *params = [[NSMutableDictionary alloc]init]; 
+        params[@"authMark"] = @"kzhobcydmzloojla";
+        params[@"customerId"] = @"84717";
         [LYHud showAtView:self.navigationController.view title:@"正在加载数据" dimBackground:NO];
         [NetWorking POSTWithUrl:urlStr paramas:params resultClass:[OnLineResponModel class] success:^(id json) {
             [LYHud hideAtView:self.navigationController.view statu:Success];

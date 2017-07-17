@@ -72,10 +72,32 @@
             break;
         }
     }
+    __weak typeof(self) weakSelf = self;
     // 设置正在显示的listView
     self.showingMoudleView = [self.subviews lastObject];
+    self.showingMoudleView.emojiBtnClick = ^(ZTEEmotionModel *emojiModel){
+        // 通知代理
+        if ([weakSelf.delegate respondsToSelector:@selector(zteEmojiKeyBoard:emojiBtnClickModel:)]) {
+            [weakSelf.delegate zteEmojiKeyBoard:weakSelf emojiBtnClickModel:emojiModel];
+        }
+    };
+    self.showingMoudleView.deleteBtnClick = ^(){
+        if ([weakSelf.delegate respondsToSelector:@selector(deleteBtnClickZteEmojiKeyBoard:)]) {
+            [weakSelf.delegate deleteBtnClickZteEmojiKeyBoard:weakSelf];
+        }
+    };
     // 设置frame
     [self setNeedsLayout];
+}
+
+- (void)emotionTabBar:(ZTEEmojiTabBar *)tabBar didSendButton:(UIButton *)sendButton{
+    if ([self.delegate respondsToSelector:@selector(zteEmojiKeyBoard:sendBtnClick:)]) {
+        [self.delegate zteEmojiKeyBoard:self sendBtnClick:sendButton];
+    }
+}
+
+- (NSArray*)emojiTabBarTitleArr{
+    return @[@"默认",@"Emoji",@"浪小花"];
 }
 
 #pragma mark 懒加载
@@ -83,6 +105,7 @@
     if (!_bottom_tabBar) {
         _bottom_tabBar = [[ZTEEmojiTabBar alloc]init];
         _bottom_tabBar.delegate = self;
+        [_bottom_tabBar reloadData];
     }
     return _bottom_tabBar;
 }
