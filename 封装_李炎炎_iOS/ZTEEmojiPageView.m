@@ -7,10 +7,11 @@
 //  ZTEEmojiModuleView 模块view中滚动视图的 pageView (分页 滚动显示)
 
 #import "ZTEEmojiPageView.h"
-
+#import "ZTEEmojiPopView.h"
 
 @interface ZTEEmojiPageView ()
 @property(nonatomic,strong)UIButton *deleteBtn;
+@property(nonatomic,strong)ZTEEmojiPopView *popView;
 @end
 
 @implementation ZTEEmojiPageView
@@ -25,6 +26,9 @@
 
 - (void)createUI{
     [self addSubview:self.deleteBtn];
+    // 添加长按手势
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+    [self addGestureRecognizer:longPress];
 }
 
 - (void)layoutSubviews{
@@ -64,6 +68,47 @@
     }
 }
 
+/** 长按手势 回调 */
+- (void)longPress:(UILongPressGestureRecognizer*)sender{
+    // 获取长按的位置坐标
+    CGPoint location = [sender locationInView:sender.view];
+    // 根据长按位置坐标 获取被长按的表情按钮
+    ZTEEmojiButton *curEmotionBtn = [self emotionButtonWithLocaion:location];
+    // 手势状态的判断
+    switch (sender.state) {
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateEnded: // 手指已经不再触摸pageView
+            // 移除popView
+            [self.popView dismiss];
+            
+            // 如果手指还在表情按钮上
+            if (curEmotionBtn) {
+                // 发出通知
+//                [self selectEmotion:btn.emotion];
+            }
+            break;
+        case UIGestureRecognizerStateBegan: // 手势开始（刚检测到长按）
+        case UIGestureRecognizerStateChanged: { // 手势改变（手指的位置改变）
+            [self.popView showFrom:curEmotionBtn];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (ZTEEmojiButton*)emotionButtonWithLocaion:(CGPoint)location{
+    NSUInteger count = self.emojiArr.count;
+    for (int i = 0; i < count; i++) {
+        ZTEEmojiButton *btn = self.subviews[i + 1];
+        if (CGRectContainsPoint(btn.frame, location)) {
+            // 已经找到手指所在的表情按钮了，就没必要再往下遍历
+            return btn;
+        }
+    }
+    return nil;
+}
+
 - (void)setEmojiArr:(NSArray *)emojiArr{
     _emojiArr = emojiArr;
     NSUInteger count = emojiArr.count;
@@ -87,4 +132,11 @@
     return _deleteBtn;
 }
 
+#pragma mak 懒加载
+- (ZTEEmojiPopView*)popView{
+    if (!_popView) {
+        _popView = [ZTEEmojiPopView popView];
+    }
+    return _popView;
+}
 @end

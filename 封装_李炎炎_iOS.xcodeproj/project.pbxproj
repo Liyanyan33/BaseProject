@@ -69,6 +69,7 @@
 		682720BD1F1FB8BD0038966C /* ZTETextImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720BC1F1FB8BD0038966C /* ZTETextImageView.m */; };
 		682720DA1F21CE3B0038966C /* ZTEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720D71F21CE3B0038966C /* ZTEActionSheet.m */; };
 		682720DB1F21CE3B0038966C /* ZTEActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720D91F21CE3B0038966C /* ZTEActionCell.m */; };
+		682720EA1F23B0EF0038966C /* ZTEEmojiPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720E91F23B0EF0038966C /* ZTEEmojiPopView.m */; };
 		682A4EB61DDDBDC7000372B2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 682A4EB51DDDBDC7000372B2 /* MBProgressHUD.m */; };
 		682F23F61F09DD4600B29A44 /* PersonInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682F23F51F09DD4600B29A44 /* PersonInfoView.m */; };
 		682F23F91F09DE7500B29A44 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682F23F81F09DE7500B29A44 /* BaseView.m */; };
@@ -454,6 +455,8 @@
 		682720D71F21CE3B0038966C /* ZTEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEActionSheet.m; sourceTree = "<group>"; };
 		682720D81F21CE3B0038966C /* ZTEActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEActionCell.h; sourceTree = "<group>"; };
 		682720D91F21CE3B0038966C /* ZTEActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEActionCell.m; sourceTree = "<group>"; };
+		682720E81F23B0EF0038966C /* ZTEEmojiPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEEmojiPopView.h; sourceTree = "<group>"; };
+		682720E91F23B0EF0038966C /* ZTEEmojiPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEEmojiPopView.m; sourceTree = "<group>"; };
 		682A4EB41DDDBDC7000372B2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgerssHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		682A4EB51DDDBDC7000372B2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgerssHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		682F23F41F09DD4600B29A44 /* PersonInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoView.h; sourceTree = "<group>"; };
@@ -1486,6 +1489,8 @@
 				682F26E01F0CD74900B29A44 /* ZTEEmojiPageView.m */,
 				682F26E21F0DC72D00B29A44 /* ZTEEmojiButton.h */,
 				682F26E31F0DC72D00B29A44 /* ZTEEmojiButton.m */,
+				682720E81F23B0EF0038966C /* ZTEEmojiPopView.h */,
+				682720E91F23B0EF0038966C /* ZTEEmojiPopView.m */,
 			);
 			name = "ZTEEmojiKeyBoard(表情键盘面板)";
 			sourceTree = "<group>";
@@ -2553,6 +2558,7 @@
 				683038571DC9D4B5002BFD69 /* TZVideoPlayerController.m in Sources */,
 				681FF7951DB86A5500432D57 /* OnLineAdapter.m in Sources */,
 				681FF7681DB7520D00432D57 /* MJRefreshStateHeader.m in Sources */,
+				682720EA1F23B0EF0038966C /* ZTEEmojiPopView.m in Sources */,
 				68A5D1CF1D830F6B00209916 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				682F26B91F0B8F4100B29A44 /* ZTEEmotionModel.m in Sources */,
 				682F24231F09F2F600B29A44 /* UIButton+WebCache.m in Sources */,
