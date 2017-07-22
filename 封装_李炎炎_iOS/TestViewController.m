@@ -12,10 +12,14 @@
 #import "ZTEEmotionModel.h"
 #import "ZTESearchBar.h"
 #import "ZTEToolBar.h"
+#import "ZTEDropMenu.h"
+#import "ZTEActionSheet.h"
 
 @interface TestViewController ()<ZTEToolBarDelegate,UITextViewDelegate>
 @property(nonatomic,strong)ZTEToolBar *toolBar;
 @property(nonatomic,strong)ZTEEmojiTextView *emojiTextView;
+@property(nonatomic,strong)ZTEDropMenu *menu;;
+@property(nonatomic,strong)ZTEActionSheet *acSheet;
 @end
 
 @implementation TestViewController
@@ -33,8 +37,20 @@
 - (void)createUI{
     [self.view addSubview:self.emojiTextView];
     [self.view addSubview:self.toolBar];
+    [self.view addSubview:self.menu];
     
-    NSLog(@"内容边距 = %@",NSStringFromUIEdgeInsets(_emojiTextView.textContainerInset));
+//    NSArray * ar = @[@"微信",@"支付宝",@"银联",@"霸道",@"支付宝",@"银联",@"霸道"];
+//    ZTEActionSheet *lyac = [[ZTEActionSheet alloc]initWithButtonsArr:ar];
+//    lyac.cellClickBlock = ^(NSString *txt,NSInteger row){
+//        NSLog(@"点击文字 = %@",txt);
+//    };
+//    lyac.disAppearBlock = ^(){
+//        NSLog(@"actionSheet已经消失");
+//    };
+//    lyac.appearBlock = ^(){
+//        NSLog(@"actionSheet已经出现");
+//    };
+//    [lyac show];
 }
 
 #pragma mark ZTEToolBarDelegate
@@ -93,6 +109,15 @@
         _emojiTextView.layer.borderWidth = 2.0;
     }
     return _emojiTextView;
+}
+
+#pragma mak 懒加载
+- (ZTEDropMenu*)menu{
+    if (!_menu) {
+        _menu = [[ZTEDropMenu alloc]initWithFrame:CGRectMake(20, 200, 100, 30)];
+        [_menu setTitle:@[@"1",@"2",@"3",@"4"] rowHeight:44];
+    }
+    return _menu;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

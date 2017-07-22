@@ -40,7 +40,7 @@
 - (void)refreshData{
     [super refreshData];
     if (![ZteNetWorkUtils isNetworkExist]) {
-        [LYToast showBottomWithText:@"没有网络，请检查网络设置" duration:2.0];
+        [ZTEToast showBottomWithText:@"没有网络，请检查网络设置" duration:2.0];
         return;
     }else{
         NSString *urlStr = @"http://care-pdclapp.ztehealth.com/health/MyService/qryCustomerArea";
@@ -61,7 +61,7 @@
                 [_dataArr addObject:aViewModel];
             }
             [self onSuccessWithData:_dataArr];  // 数据请求成功之后 基类需要刷新UI
-            [LYToast showBottomWithText:@"网络数据加载成功" duration:4.0];
+            [ZTEToast showBottomWithText:@"网络数据加载成功" duration:4.0];
         } failure:^(id error) {
             [LYHud hideAtView:self.navigationController.view];
             [self onFalid];

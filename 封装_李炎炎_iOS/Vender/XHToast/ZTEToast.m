@@ -4,21 +4,21 @@
 //  Created by lyy on 15-6-15.
 //  Copyright (c) 2015年 qiantou. All rights reserved.
 
-#import "LYToast.h"
+#import "ZTEToast.h"
 
 //Toast默认停留时间
 #define ToastDispalyDuration 1.2f
 //Toast背景颜色
 #define ToastBackgroundColor [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.75]
 
-@interface LYToast ()
+@interface ZTEToast ()
 {
     UIButton *_contentView;
     CGFloat  _duration;
 }
 
 @end
-@implementation LYToast
+@implementation ZTEToast
 
 - (void)dealloc{
     
@@ -115,47 +115,47 @@
 
 #pragma mark-中间显示
 + (void)showCenterWithText:(NSString *)text{
-    [LYToast showCenterWithText:text duration:ToastDispalyDuration];
+    [ZTEToast showCenterWithText:text duration:ToastDispalyDuration];
 }
 
 + (void)showCenterWithText:(NSString *)text duration:(CGFloat)duration{
-    LYToast *toast = [[LYToast alloc] initWithText:text];
+    ZTEToast *toast = [[ZTEToast alloc] initWithText:text];
     [toast setDuration:duration];
     [toast show];
 }
 #pragma mark-上方显示
 + (void)showTopWithText:(NSString *)text{
     
-    [LYToast showTopWithText:text  topOffset:100.0f duration:ToastDispalyDuration];
+    [ZTEToast showTopWithText:text  topOffset:100.0f duration:ToastDispalyDuration];
 }
 + (void)showTopWithText:(NSString *)text duration:(CGFloat)duration
 {
-     [LYToast showTopWithText:text  topOffset:100.0f duration:duration];
+     [ZTEToast showTopWithText:text  topOffset:100.0f duration:duration];
 }
 + (void)showTopWithText:(NSString *)text topOffset:(CGFloat)topOffset{
-    [LYToast showTopWithText:text  topOffset:topOffset duration:ToastDispalyDuration];
+    [ZTEToast showTopWithText:text  topOffset:topOffset duration:ToastDispalyDuration];
 }
 
 + (void)showTopWithText:(NSString *)text topOffset:(CGFloat)topOffset duration:(CGFloat)duration{
-    LYToast *toast = [[LYToast alloc] initWithText:text];
+    ZTEToast *toast = [[ZTEToast alloc] initWithText:text];
     [toast setDuration:duration];
     [toast showFromTopOffset:topOffset];
 }
 #pragma mark-下方显示
 + (void)showBottomWithText:(NSString *)text{
     
-    [LYToast showBottomWithText:text  bottomOffset:100.0f duration:ToastDispalyDuration];
+    [ZTEToast showBottomWithText:text  bottomOffset:100.0f duration:ToastDispalyDuration];
 }
 + (void)showBottomWithText:(NSString *)text duration:(CGFloat)duration
 {
-      [LYToast showBottomWithText:text  bottomOffset:100.0f duration:duration];
+      [ZTEToast showBottomWithText:text  bottomOffset:100.0f duration:duration];
 }
 + (void)showBottomWithText:(NSString *)text bottomOffset:(CGFloat)bottomOffset{
-    [LYToast showBottomWithText:text  bottomOffset:bottomOffset duration:ToastDispalyDuration];
+    [ZTEToast showBottomWithText:text  bottomOffset:bottomOffset duration:ToastDispalyDuration];
 }
 
 + (void)showBottomWithText:(NSString *)text bottomOffset:(CGFloat)bottomOffset duration:(CGFloat)duration{
-    LYToast *toast = [[LYToast alloc] initWithText:text];
+    ZTEToast *toast = [[ZTEToast alloc] initWithText:text];
     [toast setDuration:duration];
     [toast showFromBottomOffset:bottomOffset];
 }

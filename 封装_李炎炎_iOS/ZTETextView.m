@@ -61,5 +61,4 @@
     /** 重新绘制 */
     [self setNeedsDisplay];
 }
-
 @end

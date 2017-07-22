@@ -16,6 +16,7 @@
 #import "AppDelegate+Extension.h"
 #import "NSString+Extension.h"
 #import "NSDate+Extension.h"
+#import "UIImage+Extension.h"
 
 #endif 
 

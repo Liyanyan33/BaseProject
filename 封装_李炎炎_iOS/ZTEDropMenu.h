@@ -8,26 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-@class UIDropdownMenu;
-@protocol UIDropdownMenuDelegate <NSObject>
+@class ZTEDropMenu;
+@protocol ZTEDropMenuDelegate <NSObject>
 @optional
 // 下拉菜单即将显示时调用
-- (void)dropdownMenuWillShow:(UIDropdownMenu*)dropdownMenu;
+- (void)dropdownMenuWillShow:(ZTEDropMenu*)dropdownMenu;
 // 下拉菜单已经显示时调用
-- (void)dropdownMenuDidShow:(UIDropdownMenu *)dropdownMenu;
+- (void)dropdownMenuDidShow:(ZTEDropMenu *)dropdownMenu;
 // 下拉菜单即将消失时调用
-- (void)dropdownMenuWillHide:(UIDropdownMenu *)dropdownMenu;
+- (void)dropdownMenuWillHide:(ZTEDropMenu *)dropdownMenu;
 // 下拉菜单已经消失时调用
-- (void)dropdownMenuDidHide:(UIDropdownMenu *)dropdownMenu;
+- (void)dropdownMenuDidHide:(ZTEDropMenu *)dropdownMenu;
 // 下拉菜单中选中某一行时调用
-- (void)dropdownMenu:(UIDropdownMenu*)dropdownMenu didSelectedRowAtIndex:(NSInteger)index;
+- (void)dropdownMenu:(ZTEDropMenu*)dropdownMenu didSelectedRowAtIndex:(NSInteger)index;
 @end
 
-@interface UIDropdownMenu : UIView
+@interface ZTEDropMenu : UIView
 
 @property(nonatomic,strong)UIButton *mainBtn;
 @property(nonatomic,copy)NSString *text;
-@property(nonatomic,assign)id<UIDropdownMenuDelegate> delegate;
+@property(nonatomic,weak)id<ZTEDropMenuDelegate> delegate;
 
 - (void)setTitle:(NSArray*)titleArray rowHeight:(CGFloat)rowHeight;
 

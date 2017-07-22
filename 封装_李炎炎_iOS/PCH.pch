@@ -17,7 +17,7 @@
 #import "NetWorking.h"
 #import "LYExtension.h"
 #import "MJRefresh.h"
-#import "LYToast.h"
+#import "ZTEToast.h"
 #import "ZteNetWorkUtils.h"
 #import <YYKit.h>
 #import <Masonry.h>

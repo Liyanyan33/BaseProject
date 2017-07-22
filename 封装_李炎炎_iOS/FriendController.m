@@ -35,7 +35,7 @@
 - (void)refreshData{
     [super refreshData];
     if (![ZteNetWorkUtils isNetworkExist]) {
-        [LYToast showBottomWithText:@"没有网络，请检查网络设置" duration:2.0];
+        [ZTEToast showBottomWithText:@"没有网络，请检查网络设置" duration:2.0];
         return;
     }else{
         // https://api.weibo.com/2/statuses/user_timeline.json  获取用户发布的所有微博
@@ -45,7 +45,7 @@
         
         [NetWorking GETWithUrl:urlStr paramas:params resultClass:[WBTimelineModel class] success:^(id json) {
             [LYHud hideAtView:self.navigationController.view statu:Success];
-            [LYToast showBottomWithText:@"网络数据加载成功" duration:4.0];
+            [ZTEToast showBottomWithText:@"网络数据加载成功" duration:4.0];
             WBTimelineModel *response = (WBTimelineModel*)json;
             // 模型转化 model --> viewModel
             _dataArr = [[NSMutableArray alloc]init];

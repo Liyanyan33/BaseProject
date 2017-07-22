@@ -6,11 +6,11 @@
 //  Copyright © 2016年 ZXJK. All rights reserved.
 //
 
-#import "UIDropdownMenu.h"
+#import "ZTEDropMenu.h"
 
 #define animateTime 0.25
 
-@interface UIDropdownMenu ()<UITableViewDataSource,UITableViewDelegate>
+@interface ZTEDropMenu ()<UITableViewDataSource,UITableViewDelegate>
 {
     UIImageView *_arrow;       //  箭头
     UIView *_backView;           // 下拉的背景view
@@ -20,10 +20,9 @@
 }
 @end
 
-@implementation UIDropdownMenu
+@implementation ZTEDropMenu
 
 - (instancetype)initWithFrame:(CGRect)frame{
-
     self = [super initWithFrame: frame];
     if (self) {
         [self createUIWithFrame:frame];
@@ -32,7 +31,6 @@
 }
 
 - (void)createUIWithFrame:(CGRect)frame{
-
     UIButton *mainBtn  = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
     [mainBtn setTitle:@"请选择" forState:(UIControlStateNormal)];
     [mainBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
@@ -75,10 +73,8 @@
 
 #pragma mark 监听事件
 - (void)clickMainBtn:(UIButton*)sender{
-
-    /** 将下拉的列表控件 添加到控件的父视图上面 (很重要)*/
+    /** 将下拉的列表控件 添加到控件的父视图上面 (很重要) 响应点击事件*/
     [self.superview addSubview:_backView];
-    
     if (sender.selected) {
         [self hideDropdownMenu];
     }else{
@@ -87,40 +83,31 @@
 }
 
 - (void)showDropdownMenu{
-
     [_backView.superview bringSubviewToFront:_backView];  //将backView移动到父控件的最上层
     // 下拉菜单即将出现
     if ([self.delegate respondsToSelector:@selector(dropdownMenuWillShow:)]) {
         [self.delegate dropdownMenuWillShow:self];
     }
-    
     // 下拉菜单 以动画的形式出现
     [UIView animateWithDuration:animateTime animations:^{
-        
         // 箭头方向翻转
         _arrow.transform = CGAffineTransformMakeRotation(M_PI);
         // 设置backView与tableView的frame
         _backView.frame = CGRectMake(_backView.x, _backView.y, self.frame.size.width, _titleArray.count*_rowHeight);
         _tableView.frame = CGRectMake(0, 0, _backView.width, _backView.height);
-        
     } completion:^(BOOL finished) {
-        
         if ([self.delegate respondsToSelector:@selector(dropdownMenuDidShow:)]) {
             [self.delegate dropdownMenuDidShow:self];
         }
     }];
-    
     _mainBtn.selected = YES;
 }
 
 - (void)hideDropdownMenu{
-
     if ([self.delegate respondsToSelector:@selector(dropdownMenuWillHide:)]) {
         [self.delegate dropdownMenuWillHide:self];
     }
-    
     [UIView animateWithDuration:animateTime animations:^{
-        
         _arrow.transform = CGAffineTransformIdentity;
         _backView.frame = CGRectMake(_backView.x, _backView.y, self.frame.size.width, 0);
         _tableView.frame = CGRectMake(0, 0, _backView.width, _backView.height);
@@ -133,23 +120,19 @@
 }
 
 - (NSString*)text{
-
     return [_mainBtn titleForState:(UIControlStateNormal)];
 }
 
 #pragma mark UITableViewDataSource  UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
     return _titleArray.count;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -161,7 +144,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     if ([self.delegate respondsToSelector:@selector(dropdownMenu:didSelectedRowAtIndex:)]) {
         [self.delegate dropdownMenu:self didSelectedRowAtIndex:indexPath.row];
     }
@@ -170,7 +152,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     return _rowHeight;
 }
 @end

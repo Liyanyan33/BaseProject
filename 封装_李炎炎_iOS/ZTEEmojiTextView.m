@@ -36,9 +36,10 @@
         [textAttStr addAttribute:NSFontAttributeName value:self.font range:NSMakeRange(0, textAttStr.length)];
         // 设置控件的文本
         self.attributedText = textAttStr;
-        //  移动光标位置 至最末尾
+        // 移动光标位置 至最末尾
         self.selectedRange = NSMakeRange(currentLoc+1, 0);
-        [self insertText:@""];
+        // 这一行代码 很重要 是现实 textView内容自适应的 关键代码
+//        [self insertText:@""];
     }
 }
 

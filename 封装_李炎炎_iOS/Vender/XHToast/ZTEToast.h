@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface LYToast : NSObject
+@interface ZTEToast : NSObject
 
 #pragma mark-中间显示
 /**

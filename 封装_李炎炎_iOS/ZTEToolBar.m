@@ -20,8 +20,9 @@
 @property(nonatomic,strong)ZTEEmojiTextView *textView;  // 输入框
 @property(nonatomic,strong)UIButton *emojiBtn;  // 表情按钮
 @property(nonatomic,strong)ZTEEmojiKeyBoard *emojiKeyBoard;  // 表情面板
-@property(nonatomic,weak)UIViewController *targetVC;  // toolBar 被添加到的 控件(父控件)
+@property(nonatomic,weak)UIViewController *targetVC;  // toolBar 被添加到的 控件(父控件)  解决循环引用使用weak(弱引用)
 @property(nonatomic,assign)BOOL isSwitchingKeyboard;  // 是否正在切换键盘
+@property (assign, nonatomic) CGFloat viewHeightOld;
 @end
 
 @implementation ZTEToolBar
@@ -31,6 +32,7 @@
     if (self) {
         self.backgroundColor = RGBColor(145, 173, 144);
         self.inputState = UITextViewInputStateSystem;  // 默认为系统键盘
+        _viewHeightOld = CGRectGetHeight(frame);
         [self createUI];
          [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardFrameChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     }
@@ -39,6 +41,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame withTargetVC:(UIViewController *)targetVC{
     _targetVC = targetVC;
+    _viewHeightOld = CGRectGetHeight(frame);
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = RGBColor(145, 173, 144);
@@ -51,20 +54,36 @@
 - (void)dealloc{
     NSLog(@"%s",__func__);
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
+    [self.textView removeObserver:self forKeyPath:@"contentSize"];
 }
 
 - (void)createUI{
     [self addSubview:self.textView];
     [self addSubview:self.emojiBtn];
+    
+    /** KVO 监听textView contentSize属性的变化 */
+    [self.textView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    CGFloat w = self.frame.size.width;
-    CGFloat h = self.frame.size.height;
-    self.textView.frame = CGRectMake(textViewMarginLeft, textViewMarginTop, w - textViewMarginLeft - emojiBtnMarginRight - emojiBtnW - emojiBtnMarginLeft, h - textViewMarginTop*2);
-    self.emojiBtn.frame = CGRectMake(CGRectGetMaxX(self.textView.frame)+emojiBtnMarginLeft, 0, emojiBtnW, emojiBtnW);
-    self.emojiBtn.centerY = h/2;
+// 通过监听 contentSize的变化 实现 textView 内容高度自适应
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    ZTETextView *zteTextView = object;
+    NSLog(@"textView的contentSzie 发生变化  -- %@",NSStringFromCGSize(zteTextView.contentSize));
+    CGSize textSize = zteTextView.contentSize;
+    if ( ABS( textSize.height - zteTextView.height) > 0.5) { // ABS 取绝对值  设置textView输入框的 高度
+        zteTextView.height =  textSize.height;
+    }
+    
+    CGFloat selfHeight = MAX(48, textSize.height + 2*textViewMarginTop);
+    
+    CGFloat diffHeight = selfHeight - _viewHeightOld;
+    if (ABS(diffHeight) > 0.5) {
+        CGRect selfFrame = self.frame;
+        selfFrame.size.height += diffHeight;
+        selfFrame.origin.y -= diffHeight;
+        [self setFrame:selfFrame];
+        _viewHeightOld = selfHeight;
+    }
 }
 
 #pragma mark 监听回调
@@ -133,17 +152,6 @@
     return YES;
 }
 
-- (void)textViewDidChange:(UITextView *)textView{
-    NSLog(@"%s",__func__);
-    NSLog(@"内容size = %@",NSStringFromCGSize(textView.contentSize));
-    [UIView animateWithDuration:0.25 animations:^{
-        _textView.height = textView.contentSize.height;
-        self.height = _textView.height + textViewMarginTop*2;
-    } completion:^(BOOL finished) {
-        
-    }];
-}
-
 #pragma mark ZTEEmojiKeyBoardDelegate
 - (void)zteEmojiKeyBoard:(ZTEEmojiKeyBoard *)zteEmojiKeyBoard emojiBtnClickModel:(ZTEEmotionModel *)model{
     [_textView insertEmotionModel:model];
@@ -163,7 +171,7 @@
 #pragma mak 懒加载
 - (ZTEEmojiTextView*)textView{
     if (!_textView) {
-        _textView = [[ZTEEmojiTextView alloc]init];
+        _textView = [[ZTEEmojiTextView alloc]initWithFrame:CGRectMake(textViewMarginLeft, textViewMarginTop, kScreenWidth - textViewMarginLeft - emojiBtnMarginRight - emojiBtnW - emojiBtnMarginLeft, 48 - textViewMarginTop*2)];
         _textView.layer.masksToBounds = YES;
         _textView.layer.cornerRadius = 5.0;
         _textView.placeHolder = @"说点什么....";
@@ -177,7 +185,8 @@
 #pragma mak 懒加载
 - (UIButton*)emojiBtn{
     if (!_emojiBtn) {
-        _emojiBtn = [[UIButton alloc]init];
+        _emojiBtn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_textView.frame)+emojiBtnMarginLeft, 0, emojiBtnW, emojiBtnW)];
+        _emojiBtn.centerY = 48/2;
         [_emojiBtn setImage:[UIImage imageNamed:@"keyboard_emotion@2x.png"] forState:(UIControlStateNormal)];
         [_emojiBtn addTarget:self action:@selector(emojiBtnClick:) forControlEvents:(UIControlEventTouchUpInside)];
     }

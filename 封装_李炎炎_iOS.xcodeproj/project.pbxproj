@@ -56,7 +56,6 @@
 		681FF7951DB86A5500432D57 /* OnLineAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF7941DB86A5500432D57 /* OnLineAdapter.m */; };
 		681FF79C1DB9B59700432D57 /* BaseTableAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF79B1DB9B59700432D57 /* BaseTableAdapter.m */; };
 		681FF79F1DBCADDA00432D57 /* TestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF79E1DBCADDA00432D57 /* TestController.m */; };
-		681FF7A21DBCB2FA00432D57 /* MYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF7A11DBCB2FA00432D57 /* MYView.m */; };
 		681FF7AB1DC0AD7A00432D57 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF7AA1DC0AD7A00432D57 /* BaseViewController.m */; };
 		681FF7AE1DC0AFD900432D57 /* messageSendFailed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FF7AD1DC0AFD900432D57 /* messageSendFailed@2x.png */; };
 		681FF7B21DC0C29800432D57 /* AppDelegate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF7B11DC0C29800432D57 /* AppDelegate+Extension.m */; };
@@ -66,6 +65,10 @@
 		682720921F1609EB0038966C /* ZTEToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720911F1609EB0038966C /* ZTEToolBar.m */; };
 		682720941F160B700038966C /* keyboard_emotion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 682720931F160B700038966C /* keyboard_emotion@2x.png */; };
 		682720971F1CA3740038966C /* ZTEAttachmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720961F1CA3740038966C /* ZTEAttachmentModel.m */; };
+		682720B91F1FB7C40038966C /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720B81F1FB7C40038966C /* UIImage+Extension.m */; };
+		682720BD1F1FB8BD0038966C /* ZTETextImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720BC1F1FB8BD0038966C /* ZTETextImageView.m */; };
+		682720DA1F21CE3B0038966C /* ZTEActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720D71F21CE3B0038966C /* ZTEActionSheet.m */; };
+		682720DB1F21CE3B0038966C /* ZTEActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720D91F21CE3B0038966C /* ZTEActionCell.m */; };
 		682A4EB61DDDBDC7000372B2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 682A4EB51DDDBDC7000372B2 /* MBProgressHUD.m */; };
 		682F23F61F09DD4600B29A44 /* PersonInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682F23F51F09DD4600B29A44 /* PersonInfoView.m */; };
 		682F23F91F09DE7500B29A44 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682F23F81F09DE7500B29A44 /* BaseView.m */; };
@@ -189,7 +192,7 @@
 		682F26DE1F0CD56C00B29A44 /* ZTEEmojiModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682F26DD1F0CD56C00B29A44 /* ZTEEmojiModuleView.m */; };
 		682F26E11F0CD74900B29A44 /* ZTEEmojiPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682F26E01F0CD74900B29A44 /* ZTEEmojiPageView.m */; };
 		682F26E41F0DC72D00B29A44 /* ZTEEmojiButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 682F26E31F0DC72D00B29A44 /* ZTEEmojiButton.m */; };
-		683038181DC34D2C002BFD69 /* LYToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 683038171DC34D2C002BFD69 /* LYToast.m */; };
+		683038181DC34D2C002BFD69 /* ZTEToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 683038171DC34D2C002BFD69 /* ZTEToast.m */; };
 		6830381B1DC8914A002BFD69 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6830381A1DC8914A002BFD69 /* NSString+Extension.m */; };
 		683038401DC9D4B5002BFD69 /* MMVideoPreviewPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6830381E1DC9D4B5002BFD69 /* MMVideoPreviewPlay@2x.png */; };
 		683038411DC9D4B5002BFD69 /* MMVideoPreviewPlayHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6830381F1DC9D4B5002BFD69 /* MMVideoPreviewPlayHL@2x.png */; };
@@ -265,7 +268,7 @@
 		686EBB351D925FB9009948F3 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 686EBB341D925FB9009948F3 /* UIViewController+Extension.m */; };
 		68722FAF1D9915C300C2E8FB /* 01 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = 68722FAE1D9915C300C2E8FB /* 01 (3).png */; };
 		68722FB21D9924D300C2E8FB /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68722FB11D9924D300C2E8FB /* UIFont+Extension.m */; };
-		68722FB51D9A07DF00C2E8FB /* UIDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 68722FB41D9A07DF00C2E8FB /* UIDropdownMenu.m */; };
+		68722FB51D9A07DF00C2E8FB /* ZTEDropMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 68722FB41D9A07DF00C2E8FB /* ZTEDropMenu.m */; };
 		68722FB71D9A119D00C2E8FB /* dropdownMenu_cornerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68722FB61D9A119D00C2E8FB /* dropdownMenu_cornerIcon.png */; };
 		689853E11EF3C2B6007B83BB /* OneLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 689853E01EF3C2B6007B83BB /* OneLabelCell.m */; };
 		689853E51EF3C443007B83BB /* CellHeightMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689853E41EF3C443007B83BB /* CellHeightMainController.m */; };
@@ -427,8 +430,6 @@
 		681FF79B1DB9B59700432D57 /* BaseTableAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableAdapter.m; sourceTree = "<group>"; };
 		681FF79D1DBCADDA00432D57 /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestController.h; sourceTree = "<group>"; };
 		681FF79E1DBCADDA00432D57 /* TestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestController.m; sourceTree = "<group>"; };
-		681FF7A01DBCB2FA00432D57 /* MYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYView.h; sourceTree = "<group>"; };
-		681FF7A11DBCB2FA00432D57 /* MYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYView.m; sourceTree = "<group>"; };
 		681FF7A91DC0AD7A00432D57 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		681FF7AA1DC0AD7A00432D57 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		681FF7AD1DC0AFD900432D57 /* messageSendFailed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageSendFailed@2x.png"; sourceTree = "<group>"; };
@@ -445,6 +446,14 @@
 		682720931F160B700038966C /* keyboard_emotion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_emotion@2x.png"; sourceTree = "<group>"; };
 		682720951F1CA3740038966C /* ZTEAttachmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEAttachmentModel.h; sourceTree = "<group>"; };
 		682720961F1CA3740038966C /* ZTEAttachmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEAttachmentModel.m; sourceTree = "<group>"; };
+		682720B71F1FB7C40038966C /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		682720B81F1FB7C40038966C /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		682720BB1F1FB8BD0038966C /* ZTETextImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTETextImageView.h; sourceTree = "<group>"; };
+		682720BC1F1FB8BD0038966C /* ZTETextImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTETextImageView.m; sourceTree = "<group>"; };
+		682720D61F21CE3B0038966C /* ZTEActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEActionSheet.h; sourceTree = "<group>"; };
+		682720D71F21CE3B0038966C /* ZTEActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEActionSheet.m; sourceTree = "<group>"; };
+		682720D81F21CE3B0038966C /* ZTEActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEActionCell.h; sourceTree = "<group>"; };
+		682720D91F21CE3B0038966C /* ZTEActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEActionCell.m; sourceTree = "<group>"; };
 		682A4EB41DDDBDC7000372B2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgerssHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		682A4EB51DDDBDC7000372B2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgerssHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		682F23F41F09DD4600B29A44 /* PersonInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonInfoView.h; sourceTree = "<group>"; };
@@ -609,8 +618,8 @@
 		682F26E01F0CD74900B29A44 /* ZTEEmojiPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEEmojiPageView.m; sourceTree = "<group>"; };
 		682F26E21F0DC72D00B29A44 /* ZTEEmojiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEEmojiButton.h; sourceTree = "<group>"; };
 		682F26E31F0DC72D00B29A44 /* ZTEEmojiButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEEmojiButton.m; sourceTree = "<group>"; };
-		683038161DC34D2C002BFD69 /* LYToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYToast.h; sourceTree = "<group>"; };
-		683038171DC34D2C002BFD69 /* LYToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYToast.m; sourceTree = "<group>"; };
+		683038161DC34D2C002BFD69 /* ZTEToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZTEToast.h; path = Vender/XHToast/ZTEToast.h; sourceTree = "<group>"; };
+		683038171DC34D2C002BFD69 /* ZTEToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZTEToast.m; path = Vender/XHToast/ZTEToast.m; sourceTree = "<group>"; };
 		683038191DC8914A002BFD69 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		6830381A1DC8914A002BFD69 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		6830381E1DC9D4B5002BFD69 /* MMVideoPreviewPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MMVideoPreviewPlay@2x.png"; sourceTree = "<group>"; };
@@ -729,8 +738,8 @@
 		68722FAE1D9915C300C2E8FB /* 01 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01 (3).png"; sourceTree = "<group>"; };
 		68722FB01D9924D300C2E8FB /* UIFont+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Extension.h"; sourceTree = "<group>"; };
 		68722FB11D9924D300C2E8FB /* UIFont+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Extension.m"; sourceTree = "<group>"; };
-		68722FB31D9A07DF00C2E8FB /* UIDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDropdownMenu.h; sourceTree = "<group>"; };
-		68722FB41D9A07DF00C2E8FB /* UIDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDropdownMenu.m; sourceTree = "<group>"; };
+		68722FB31D9A07DF00C2E8FB /* ZTEDropMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEDropMenu.h; sourceTree = "<group>"; };
+		68722FB41D9A07DF00C2E8FB /* ZTEDropMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEDropMenu.m; sourceTree = "<group>"; };
 		68722FB61D9A119D00C2E8FB /* dropdownMenu_cornerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdownMenu_cornerIcon.png; sourceTree = "<group>"; };
 		689853DF1EF3C2B6007B83BB /* OneLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneLabelCell.h; sourceTree = "<group>"; };
 		689853E01EF3C2B6007B83BB /* OneLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneLabelCell.m; sourceTree = "<group>"; };
@@ -1190,23 +1199,61 @@
 			name = "ZTEEmojiTextView(可输入表情TextView)";
 			sourceTree = "<group>";
 		};
-		682720881F0F869D0038966C /* ZTESearchBar */ = {
+		682720881F0F869D0038966C /* ZTESearchBar(搜索框) */ = {
 			isa = PBXGroup;
 			children = (
 				682720891F0F86B90038966C /* ZTESearchBar.h */,
 				6827208A1F0F86B90038966C /* ZTESearchBar.m */,
 			);
-			name = ZTESearchBar;
+			name = "ZTESearchBar(搜索框)";
 			sourceTree = "<group>";
 		};
-		6827208F1F1609C70038966C /* ZTEToolBar */ = {
+		6827208F1F1609C70038966C /* ZTEToolBar(聊天工具栏) */ = {
 			isa = PBXGroup;
 			children = (
 				682720901F1609EB0038966C /* ZTEToolBar.h */,
 				682720911F1609EB0038966C /* ZTEToolBar.m */,
 				682720931F160B700038966C /* keyboard_emotion@2x.png */,
 			);
-			name = ZTEToolBar;
+			name = "ZTEToolBar(聊天工具栏)";
+			sourceTree = "<group>";
+		};
+		682720981F1D13680038966C /* ZTEToast(类似于AndroidToast控件) */ = {
+			isa = PBXGroup;
+			children = (
+				683038161DC34D2C002BFD69 /* ZTEToast.h */,
+				683038171DC34D2C002BFD69 /* ZTEToast.m */,
+			);
+			name = "ZTEToast(类似于AndroidToast控件)";
+			sourceTree = "<group>";
+		};
+		682720BA1F1FB8550038966C /* ZTETextImageView(文字+图片) */ = {
+			isa = PBXGroup;
+			children = (
+				682720BB1F1FB8BD0038966C /* ZTETextImageView.h */,
+				682720BC1F1FB8BD0038966C /* ZTETextImageView.m */,
+			);
+			name = "ZTETextImageView(文字+图片)";
+			sourceTree = "<group>";
+		};
+		682720D11F2190480038966C /* ZTEDropMenu(点击弹出下拉框) */ = {
+			isa = PBXGroup;
+			children = (
+				68722FB31D9A07DF00C2E8FB /* ZTEDropMenu.h */,
+				68722FB41D9A07DF00C2E8FB /* ZTEDropMenu.m */,
+			);
+			name = "ZTEDropMenu(点击弹出下拉框)";
+			sourceTree = "<group>";
+		};
+		682720D51F21CE0A0038966C /* ZTEActionSheet(高仿微信的底部弹框) */ = {
+			isa = PBXGroup;
+			children = (
+				682720D61F21CE3B0038966C /* ZTEActionSheet.h */,
+				682720D71F21CE3B0038966C /* ZTEActionSheet.m */,
+				682720D81F21CE3B0038966C /* ZTEActionCell.h */,
+				682720D91F21CE3B0038966C /* ZTEActionCell.m */,
+			);
+			name = "ZTEActionSheet(高仿微信的底部弹框)";
 			sourceTree = "<group>";
 		};
 		682F23EF1F0632EE00B29A44 /* 富文本显示 */ = {
@@ -1424,7 +1471,7 @@
 			name = "用于测试";
 			sourceTree = "<group>";
 		};
-		682F26D21F0CC14800B29A44 /* ZTEEmojiKeyBoard(表情键盘) */ = {
+		682F26D21F0CC14800B29A44 /* ZTEEmojiKeyBoard(表情键盘面板) */ = {
 			isa = PBXGroup;
 			children = (
 				682F26D31F0CC24000B29A44 /* ZTEEmojiKeyBoard.h */,
@@ -1440,17 +1487,7 @@
 				682F26E21F0DC72D00B29A44 /* ZTEEmojiButton.h */,
 				682F26E31F0DC72D00B29A44 /* ZTEEmojiButton.m */,
 			);
-			name = "ZTEEmojiKeyBoard(表情键盘)";
-			sourceTree = "<group>";
-		};
-		683038151DC34D2C002BFD69 /* LYToast */ = {
-			isa = PBXGroup;
-			children = (
-				683038161DC34D2C002BFD69 /* LYToast.h */,
-				683038171DC34D2C002BFD69 /* LYToast.m */,
-			);
-			name = LYToast;
-			path = XHToast;
+			name = "ZTEEmojiKeyBoard(表情键盘面板)";
 			sourceTree = "<group>";
 		};
 		6830381C1DC9D4B5002BFD69 /* Album */ = {
@@ -1634,6 +1671,8 @@
 				6830381A1DC8914A002BFD69 /* NSString+Extension.m */,
 				682F24D21F0A2F0C00B29A44 /* NSDate+Extension.h */,
 				682F24D31F0A2F0C00B29A44 /* NSDate+Extension.m */,
+				682720B71F1FB7C40038966C /* UIImage+Extension.h */,
+				682720B81F1FB7C40038966C /* UIImage+Extension.m */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1650,20 +1689,20 @@
 		686EBB1E1D90BF91009948F3 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
-				6827208F1F1609C70038966C /* ZTEToolBar */,
-				682720881F0F869D0038966C /* ZTESearchBar */,
+				682720D51F21CE0A0038966C /* ZTEActionSheet(高仿微信的底部弹框) */,
+				682720D11F2190480038966C /* ZTEDropMenu(点击弹出下拉框) */,
+				682720BA1F1FB8550038966C /* ZTETextImageView(文字+图片) */,
+				682720981F1D13680038966C /* ZTEToast(类似于AndroidToast控件) */,
+				6827208F1F1609C70038966C /* ZTEToolBar(聊天工具栏) */,
+				682720881F0F869D0038966C /* ZTESearchBar(搜索框) */,
 				6827207E1F0F2B4F0038966C /* ZTEEmojiTextView(可输入表情TextView) */,
-				682F26D21F0CC14800B29A44 /* ZTEEmojiKeyBoard(表情键盘) */,
+				682F26D21F0CC14800B29A44 /* ZTEEmojiKeyBoard(表情键盘面板) */,
 				682F26C41F0BE76B00B29A44 /* ZTEJGGView(九宫格) */,
 				689C8CB71EEA321000AEF81F /* Common */,
 				686EBB1F1D90BFC7009948F3 /* LYButton.h */,
 				686EBB201D90BFC7009948F3 /* LYButton.m */,
 				686EBB261D90E166009948F3 /* UITextImageView.h */,
 				686EBB271D90E166009948F3 /* UITextImageView.m */,
-				68722FB31D9A07DF00C2E8FB /* UIDropdownMenu.h */,
-				68722FB41D9A07DF00C2E8FB /* UIDropdownMenu.m */,
-				681FF7A01DBCB2FA00432D57 /* MYView.h */,
-				681FF7A11DBCB2FA00432D57 /* MYView.m */,
 			);
 			name = Widgets;
 			sourceTree = "<group>";
@@ -2072,7 +2111,6 @@
 				683038911DCB2D87002BFD69 /* Audio */,
 				6830389A1DCB2D87002BFD69 /* HSDownloadManager */,
 				6830381C1DC9D4B5002BFD69 /* Album */,
-				683038151DC34D2C002BFD69 /* LYToast */,
 				681FF72A1DB7520D00432D57 /* MJRefresh */,
 				68A5D1881D830F6B00209916 /* AFNetworking */,
 				68A5D1AF1D830F6B00209916 /* MJExtension */,
@@ -2473,7 +2511,7 @@
 				686EBB0C1D8FE643009948F3 /* BaseNavController.m in Sources */,
 				681FF76A1DB7520D00432D57 /* MJRefreshConst.m in Sources */,
 				68A5D1D31D830F6B00209916 /* UIProgressView+AFNetworking.m in Sources */,
-				683038181DC34D2C002BFD69 /* LYToast.m in Sources */,
+				683038181DC34D2C002BFD69 /* ZTEToast.m in Sources */,
 				683038A51DCB2D87002BFD69 /* AFSoundRecord.m in Sources */,
 				68063A621EFB974E009C41A8 /* AccountDB.m in Sources */,
 				68063AA11EFBBE49009C41A8 /* FriendAdapter.m in Sources */,
@@ -2508,7 +2546,6 @@
 				68A5D1C91D830F6B00209916 /* AFURLResponseSerialization.m in Sources */,
 				68A5D1DE1D830F6B00209916 /* NSObject+MJProperty.m in Sources */,
 				681FF78A1DB851CB00432D57 /* OnLineResponModel.m in Sources */,
-				681FF7A21DBCB2FA00432D57 /* MYView.m in Sources */,
 				689853ED1EF3CA86007B83BB /* AAUController.m in Sources */,
 				682F24DB1F0A812900B29A44 /* OrginalStatuView.m in Sources */,
 				68A5D1DF1D830F6B00209916 /* NSString+MJExtension.m in Sources */,
@@ -2529,6 +2566,7 @@
 				681FF75F1DB7520D00432D57 /* MJRefreshHeader.m in Sources */,
 				689855321EF5801B007B83BB /* FCUAdapter.m in Sources */,
 				682F26DE1F0CD56C00B29A44 /* ZTEEmojiModuleView.m in Sources */,
+				682720BD1F1FB8BD0038966C /* ZTETextImageView.m in Sources */,
 				681FF76C1DB7520D00432D57 /* UIScrollView+MJRefresh.m in Sources */,
 				683038581DC9D4B5002BFD69 /* UIView+Layout.m in Sources */,
 				6830392B1DD1A0F7002BFD69 /* ZteNetWorkUtils.m in Sources */,
@@ -2557,6 +2595,7 @@
 				68A5D1DC1D830F6B00209916 /* NSObject+MJCoding.m in Sources */,
 				682F26CA1F0C84C900B29A44 /* StatuTextView.m in Sources */,
 				683038A21DCB2D87002BFD69 /* AFSoundItem.m in Sources */,
+				682720B91F1FB7C40038966C /* UIImage+Extension.m in Sources */,
 				683038781DCB27F0002BFD69 /* VoiceAdapter.m in Sources */,
 				681FF7B21DC0C29800432D57 /* AppDelegate+Extension.m in Sources */,
 				682F24D41F0A2F0C00B29A44 /* NSDate+Extension.m in Sources */,
@@ -2597,7 +2636,7 @@
 				681FF7AB1DC0AD7A00432D57 /* BaseViewController.m in Sources */,
 				681FF7621DB7520D00432D57 /* MJRefreshAutoStateFooter.m in Sources */,
 				68A5D1D81D830F6B00209916 /* MJProperty.m in Sources */,
-				68722FB51D9A07DF00C2E8FB /* UIDropdownMenu.m in Sources */,
+				68722FB51D9A07DF00C2E8FB /* ZTEDropMenu.m in Sources */,
 				682F23FC1F09E86700B29A44 /* WBStatuViewModel.m in Sources */,
 				681FF7661DB7520D00432D57 /* MJRefreshGifHeader.m in Sources */,
 				68A5D1D61D830F6B00209916 /* MJExtensionConst.m in Sources */,
@@ -2617,6 +2656,7 @@
 				68063AB91EFCA4D4009C41A8 /* WBVisibleModel.m in Sources */,
 				6898553B1EF58DF3007B83BB /* FCYController.m in Sources */,
 				683038AD1DCB2D87002BFD69 /* NSString+Hash.m in Sources */,
+				682720DA1F21CE3B0038966C /* ZTEActionSheet.m in Sources */,
 				682F26D81F0CC56100B29A44 /* ZTEEmojiTabBar.m in Sources */,
 				683039321DD1A16C002BFD69 /* Reachability.m in Sources */,
 				689853F61EF3CBAB007B83BB /* AAUAdapter.m in Sources */,
@@ -2625,6 +2665,7 @@
 				689853E51EF3C443007B83BB /* CellHeightMainController.m in Sources */,
 				68A5D1C71D830F6B00209916 /* AFSecurityPolicy.m in Sources */,
 				68063A5E1EFB95F4009C41A8 /* AccoutModel.m in Sources */,
+				682720DB1F21CE3B0038966C /* ZTEActionCell.m in Sources */,
 				681FF7721DB754D600432D57 /* OnLineController.m in Sources */,
 				683038501DC9D4B5002BFD69 /* TZAssetCell.m in Sources */,
 				68A5D1D21D830F6B00209916 /* UIImageView+AFNetworking.m in Sources */,
