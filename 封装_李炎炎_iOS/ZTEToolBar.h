@@ -24,4 +24,7 @@ typedef NS_ENUM(NSUInteger,UITextViewInputState){
 @property(nonatomic,weak)id<ZTEToolBarDelegate> delegate;
 - (instancetype)initWithFrame:(CGRect)frame withTargetVC:(UIViewController*)targetVC;
 
+/** 退出输入编辑状态 */
+- (void)hideToBottom;
+
 @end

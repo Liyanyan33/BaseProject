@@ -14,12 +14,14 @@
 #import "ZTEToolBar.h"
 #import "ZTEDropMenu.h"
 #import "ZTEActionSheet.h"
+#import "ZTEPickView.h"
 
 @interface TestViewController ()<ZTEToolBarDelegate,UITextViewDelegate>
 @property(nonatomic,strong)ZTEToolBar *toolBar;
 @property(nonatomic,strong)ZTEEmojiTextView *emojiTextView;
 @property(nonatomic,strong)ZTEDropMenu *menu;;
 @property(nonatomic,strong)ZTEActionSheet *acSheet;
+@property(nonatomic,strong)ZTEPickView *pickView;
 @end
 
 @implementation TestViewController
@@ -51,6 +53,11 @@
 //        NSLog(@"actionSheet已经出现");
 //    };
 //    [lyac show];
+}
+
+- (void)navBarRightClick{
+    _pickView = [ZTEPickView pickView];
+    [_pickView show];
 }
 
 #pragma mark ZTEToolBarDelegate
@@ -123,6 +130,6 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
     NSLog(@"输入框 内容size = %@",NSStringFromCGSize(_emojiTextView.contentSize));
+    [self.toolBar hideToBottom];
 }
-
 @end

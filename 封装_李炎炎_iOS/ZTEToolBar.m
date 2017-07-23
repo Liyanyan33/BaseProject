@@ -104,6 +104,15 @@
     }
 }
 
+- (void)hideToBottom{
+    [UIView animateWithDuration:0.25f animations:^{
+        self.y = kScreenHeight - self.height;
+        self.emojiKeyBoard.y = kScreenHeight;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
 - (void)emojiBtnClick:(UIButton*)sender{
     CGFloat emojiKeyboardY = kScreenHeight;
     if (self.inputState == UITextViewInputStateEmoji) {

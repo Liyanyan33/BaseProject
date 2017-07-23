@@ -4,7 +4,7 @@
 //
 //  Created by lyy on 17/7/19.
 //  Copyright © 2017年 ZXJK. All rights reserved.
-//
+//  文字+图片 组合
 
 #import "ZTETextImageView.h"
 
