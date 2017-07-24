@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WBSpecailModel.h"
 
 @interface StatuTextView : UITextView
 

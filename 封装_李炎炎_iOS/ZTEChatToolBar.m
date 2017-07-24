@@ -6,9 +6,10 @@
 //  Copyright © 2017年 ZXJK. All rights reserved.
 //  聊天工具栏 主要包括 内容输入框 表情按钮  表情键盘面板 
 
-#import "ZTEToolBar.h"
+#import "ZTEChatToolBar.h"
 #import "ZTEEmojiTextView.h"
 #import "ZTEEmojiKeyBoard.h"
+#import "ZTEToast.h"
 
 #define textViewMarginLeft 6
 #define textViewMarginTop 6
@@ -16,7 +17,7 @@
 #define emojiBtnMarginRight 6
 #define emojiBtnMarginLeft 6
 
-@interface ZTEToolBar ()<UITextViewDelegate,ZTEEmojiKeyBoardDelegate>
+@interface ZTEChatToolBar ()<UITextViewDelegate,ZTEEmojiKeyBoardDelegate>
 @property(nonatomic,strong)ZTEEmojiTextView *textView;  // 输入框
 @property(nonatomic,strong)UIButton *emojiBtn;  // 表情按钮
 @property(nonatomic,strong)ZTEEmojiKeyBoard *emojiKeyBoard;  // 表情面板
@@ -25,7 +26,7 @@
 @property (assign, nonatomic) CGFloat viewHeightOld;
 @end
 
-@implementation ZTEToolBar
+@implementation ZTEChatToolBar
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -152,6 +153,10 @@
 // 但是 UITextView的代理UITextViewDelegate 里面并没有这样的回调 可以通过判断输入的字是否是回车，即按下return
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     if ([text isEqualToString:@"\n"]){ //判断输入的字是否是回车，即按下return
+        if ([_textView.fullText isEmpty]) {
+            [ZTEToast showBottomWithText:@"请输入内容" duration:3.0f];
+            return NO;
+        }
         //在这里做你响应return键的代码
         if ([self.delegate respondsToSelector:@selector(toolBar:sendInputText:)]) {
             [self.delegate toolBar:self sendInputText:_textView.fullText];
@@ -172,6 +177,10 @@
 
 - (void)zteEmojiKeyBoard:(ZTEEmojiKeyBoard *)zteEmojiKeyBoard sendBtnClick:(UIButton *)sendButton{
     NSLog(@"%s",__func__);
+    if ([_textView.fullText isEmpty]) {
+        [ZTEToast showBottomWithText:@"请输入内容" duration:3.0f];
+        return;
+    }
     if ([self.delegate respondsToSelector:@selector(toolBar:sendInputText:)]) {
         [self.delegate toolBar:self sendInputText:_textView.fullText];
     }

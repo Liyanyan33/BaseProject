@@ -10,13 +10,16 @@
 
 @interface NSString (Extension)
 
+/** 字符串 判空 */
+- (BOOL)isEmpty;
+
 /** 根据身份证号码获取出生日期 */
 + (NSString *)birthdayStrFromIdentityCard:(NSString *)iDnumberStr;
 
 /** 根据身份证号码获取年龄 */
 + (NSString *)getIdentityCardAge:(NSString *)numberStr;
 
-/** 根据文字 计算区域大小 */
+/** 根据文字 计算区域大小  大多用于单行文字显示 */
 + (CGSize)getBoundSizeWithText:(NSString*)text font:(UIFont*)font;
 
 /**

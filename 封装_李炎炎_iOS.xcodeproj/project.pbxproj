@@ -62,7 +62,7 @@
 		682720811F0F2C070038966C /* ZTETextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720801F0F2C060038966C /* ZTETextView.m */; };
 		682720841F0F36320038966C /* ZTEEmojiTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720831F0F36320038966C /* ZTEEmojiTextView.m */; };
 		6827208B1F0F86B90038966C /* ZTESearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6827208A1F0F86B90038966C /* ZTESearchBar.m */; };
-		682720921F1609EB0038966C /* ZTEToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720911F1609EB0038966C /* ZTEToolBar.m */; };
+		682720921F1609EB0038966C /* ZTEChatToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720911F1609EB0038966C /* ZTEChatToolBar.m */; };
 		682720941F160B700038966C /* keyboard_emotion@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 682720931F160B700038966C /* keyboard_emotion@2x.png */; };
 		682720971F1CA3740038966C /* ZTEAttachmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720961F1CA3740038966C /* ZTEAttachmentModel.m */; };
 		682720B91F1FB7C40038966C /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 682720B81F1FB7C40038966C /* UIImage+Extension.m */; };
@@ -443,8 +443,8 @@
 		682720831F0F36320038966C /* ZTEEmojiTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEEmojiTextView.m; sourceTree = "<group>"; };
 		682720891F0F86B90038966C /* ZTESearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTESearchBar.h; sourceTree = "<group>"; };
 		6827208A1F0F86B90038966C /* ZTESearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTESearchBar.m; sourceTree = "<group>"; };
-		682720901F1609EB0038966C /* ZTEToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEToolBar.h; sourceTree = "<group>"; };
-		682720911F1609EB0038966C /* ZTEToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEToolBar.m; sourceTree = "<group>"; };
+		682720901F1609EB0038966C /* ZTEChatToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEChatToolBar.h; sourceTree = "<group>"; };
+		682720911F1609EB0038966C /* ZTEChatToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEChatToolBar.m; sourceTree = "<group>"; };
 		682720931F160B700038966C /* keyboard_emotion@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_emotion@2x.png"; sourceTree = "<group>"; };
 		682720951F1CA3740038966C /* ZTEAttachmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEAttachmentModel.h; sourceTree = "<group>"; };
 		682720961F1CA3740038966C /* ZTEAttachmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEAttachmentModel.m; sourceTree = "<group>"; };
@@ -1214,14 +1214,14 @@
 			name = "ZTESearchBar(搜索框)";
 			sourceTree = "<group>";
 		};
-		6827208F1F1609C70038966C /* ZTEToolBar(聊天工具栏) */ = {
+		6827208F1F1609C70038966C /* ZTEChatToolBar(聊天工具栏) */ = {
 			isa = PBXGroup;
 			children = (
-				682720901F1609EB0038966C /* ZTEToolBar.h */,
-				682720911F1609EB0038966C /* ZTEToolBar.m */,
+				682720901F1609EB0038966C /* ZTEChatToolBar.h */,
+				682720911F1609EB0038966C /* ZTEChatToolBar.m */,
 				682720931F160B700038966C /* keyboard_emotion@2x.png */,
 			);
-			name = "ZTEToolBar(聊天工具栏)";
+			name = "ZTEChatToolBar(聊天工具栏)";
 			sourceTree = "<group>";
 		};
 		682720981F1D13680038966C /* ZTEToast(类似于AndroidToast控件) */ = {
@@ -1711,7 +1711,7 @@
 				682720D11F2190480038966C /* ZTEDropMenu(点击弹出下拉框) */,
 				682720BA1F1FB8550038966C /* ZTETextImageView(文字+图片) */,
 				682720981F1D13680038966C /* ZTEToast(类似于AndroidToast控件) */,
-				6827208F1F1609C70038966C /* ZTEToolBar(聊天工具栏) */,
+				6827208F1F1609C70038966C /* ZTEChatToolBar(聊天工具栏) */,
 				682720881F0F869D0038966C /* ZTESearchBar(搜索框) */,
 				6827207E1F0F2B4F0038966C /* ZTEEmojiTextView(可输入表情TextView) */,
 				682F26D21F0CC14800B29A44 /* ZTEEmojiKeyBoard(表情键盘面板) */,
@@ -2541,7 +2541,7 @@
 				6830385F1DC9D5B9002BFD69 /* LYActionSheetUtils.m in Sources */,
 				68A5D1CE1D830F6B00209916 /* AFImageDownloader.m in Sources */,
 				682720811F0F2C070038966C /* ZTETextView.m in Sources */,
-				682720921F1609EB0038966C /* ZTEToolBar.m in Sources */,
+				682720921F1609EB0038966C /* ZTEChatToolBar.m in Sources */,
 				682F26DB1F0CC79300B29A44 /* ZTEEmojiTabBarButton.m in Sources */,
 				683038A81DCB2D87002BFD69 /* LCAudioPlay.m in Sources */,
 				68A5D1CA1D830F6B00209916 /* AFURLSessionManager.m in Sources */,

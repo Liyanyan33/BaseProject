@@ -12,6 +12,29 @@
 
 @implementation NSString (Extension)
 
+- (BOOL)isEmpty{
+    
+    if (self  == nil ) {
+        return YES;
+    }
+    
+    if (self == NULL) {
+        return YES;
+    }
+    
+    if ([self isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([self isEqual:[NSNull null]]) {
+        return YES;
+    }
+    
+    if ([[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length]==0) {
+        return YES;
+    }
+    return NO;
+}
+
 + (NSString*)birthdayStrFromIdentityCard:(NSString *)iDNumberStr{
     NSMutableString *result = [NSMutableString stringWithCapacity:0];
     NSString *year = nil;

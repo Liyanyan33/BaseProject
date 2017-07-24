@@ -8,23 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZTEToolBar;
+@class ZTEChatToolBar;
 /** 输入框的键盘状态 */
 typedef NS_ENUM(NSUInteger,UITextViewInputState){
     UITextViewInputStateSystem,  // 系统键盘
     UITextViewInputStateEmoji,     // 表情键盘
 };
 
-@protocol ZTEToolBarDelegate <NSObject>
-- (void)toolBar:(ZTEToolBar*)toolBar sendInputText:(NSString*)inputText;
+@protocol ZTEChatToolBarDelegate <NSObject>
+- (void)toolBar:(ZTEChatToolBar*)toolBar sendInputText:(NSString*)inputText;
 @end
 
-@interface ZTEToolBar : UIView
+@interface ZTEChatToolBar : UIView
 @property(nonatomic,assign)UITextViewInputState inputState;
-@property(nonatomic,weak)id<ZTEToolBarDelegate> delegate;
+@property(nonatomic,weak)id<ZTEChatToolBarDelegate> delegate;
 - (instancetype)initWithFrame:(CGRect)frame withTargetVC:(UIViewController*)targetVC;
 
 /** 退出输入编辑状态 */
 - (void)hideToBottom;
-
 @end

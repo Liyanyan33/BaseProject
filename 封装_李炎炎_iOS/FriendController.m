@@ -22,7 +22,6 @@
     [super viewDidLoad];
     self.title = @"朋友圈";
     [self deletVCInNavStackWithVCName:@"NewFeatureController"];
-    
 }
 
 - (id)createAdapter{

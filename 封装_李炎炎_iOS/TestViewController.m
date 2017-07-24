@@ -11,13 +11,13 @@
 #import "ZTEEmojiTextView.h"
 #import "ZTEEmotionModel.h"
 #import "ZTESearchBar.h"
-#import "ZTEToolBar.h"
+#import "ZTEChatToolBar.h"
 #import "ZTEDropMenu.h"
 #import "ZTEActionSheet.h"
 #import "ZTEPickView.h"
 
-@interface TestViewController ()<ZTEToolBarDelegate,UITextViewDelegate>
-@property(nonatomic,strong)ZTEToolBar *toolBar;
+@interface TestViewController ()<ZTEChatToolBarDelegate,UITextViewDelegate>
+@property(nonatomic,strong)ZTEChatToolBar *toolBar;
 @property(nonatomic,strong)ZTEEmojiTextView *emojiTextView;
 @property(nonatomic,strong)ZTEDropMenu *menu;;
 @property(nonatomic,strong)ZTEActionSheet *acSheet;
@@ -40,19 +40,6 @@
     [self.view addSubview:self.emojiTextView];
     [self.view addSubview:self.toolBar];
     [self.view addSubview:self.menu];
-    
-//    NSArray * ar = @[@"微信",@"支付宝",@"银联",@"霸道",@"支付宝",@"银联",@"霸道"];
-//    ZTEActionSheet *lyac = [[ZTEActionSheet alloc]initWithButtonsArr:ar];
-//    lyac.cellClickBlock = ^(NSString *txt,NSInteger row){
-//        NSLog(@"点击文字 = %@",txt);
-//    };
-//    lyac.disAppearBlock = ^(){
-//        NSLog(@"actionSheet已经消失");
-//    };
-//    lyac.appearBlock = ^(){
-//        NSLog(@"actionSheet已经出现");
-//    };
-//    [lyac show];
 }
 
 - (void)navBarRightClick{
@@ -61,8 +48,9 @@
 }
 
 #pragma mark ZTEToolBarDelegate
-- (void)toolBar:(ZTEToolBar *)toolBar sendInputText:(NSString *)inputText{
+- (void)toolBar:(ZTEChatToolBar *)toolBar sendInputText:(NSString *)inputText{
     NSLog(@"输入的内容 = %@",inputText);
+    
 }
 
 
@@ -95,9 +83,9 @@
  
 
 #pragma mak 懒加载
-- (ZTEToolBar*)toolBar{
+- (ZTEChatToolBar*)toolBar{
     if (!_toolBar) {
-        _toolBar = [[ZTEToolBar alloc]initWithFrame:CGRectMake(0, kScreenHeight - 48 , kScreenWidth, 48) withTargetVC:self];
+        _toolBar = [[ZTEChatToolBar alloc]initWithFrame:CGRectMake(0, kScreenHeight - 48 , kScreenWidth, 48) withTargetVC:self];
         _toolBar.delegate = self;
     }
     return _toolBar;
