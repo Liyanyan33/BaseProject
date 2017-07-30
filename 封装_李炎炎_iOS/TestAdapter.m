@@ -35,6 +35,4 @@
     headerImageView.image = [UIImage imageNamed:@"1.jpg"];
     return headerImageView;
 }
-
-
 @end

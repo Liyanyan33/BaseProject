@@ -60,6 +60,8 @@
     [_dataArr addObject:@"测试富文本显示"];
     [_dataArr addObject:@"html——cell 显示"];
     [_dataArr addObject:@"用于测试的控制器"];
+    [_dataArr addObject:@"测试控制器_02"];
+    [_dataArr addObject:@"coreGraphics框架学习"];
     [self onSuccessWithData:_dataArr];
     
     _vcNameArr = [[NSMutableArray alloc]init];
@@ -69,6 +71,8 @@
     [_vcNameArr addObject:@"MyViewController"];
     [_vcNameArr addObject:@"HtmlController"];
     [_vcNameArr addObject:@"TestViewController"];
+    [_vcNameArr addObject:@"Test_TwoController"];
+    [_vcNameArr addObject:@"CoreGraphicController"];
 }
 
 - (void)switchVC{

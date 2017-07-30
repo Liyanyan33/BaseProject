@@ -19,7 +19,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /** 监听网络变化 */
 //    [self detectionNetWorking];

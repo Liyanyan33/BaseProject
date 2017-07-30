@@ -22,4 +22,7 @@
 
 #pragma mark 视图层次相关 获取view所在的视图控制器
 - (UIViewController *)parentController;
+
+#pragma mark 设置圆角边框
+- (void)setCornerRadius:(CGFloat)radius borderW:(CGFloat)borderW borderCorlor:(UIColor*)corlor;
 @end

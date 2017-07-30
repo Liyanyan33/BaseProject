@@ -35,9 +35,7 @@
     [mainBtn setTitle:@"请选择" forState:(UIControlStateNormal)];
     [mainBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
     [mainBtn addTarget:self action:@selector(clickMainBtn:) forControlEvents:(UIControlEventTouchUpInside)];
-    mainBtn.layer.borderColor = [UIColor redColor].CGColor;
-    mainBtn.layer.borderWidth = 1.0;
-    mainBtn.layer.cornerRadius = 5.0;
+    [mainBtn setCornerRadius:5.0f borderW:1.0f borderCorlor:[UIColor redColor]];
     mainBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft; // 调整整体内容的位置(文字图片)
     mainBtn.titleEdgeInsets    = UIEdgeInsetsMake(0, 15, 0, 0);  //调整文字的位置
     mainBtn.selected = NO;   //设置按钮处于非选中状态

@@ -25,6 +25,7 @@
 		68063AC81EFED88E009C41A8 /* HtmlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68063AC71EFED88E009C41A8 /* HtmlController.m */; };
 		68063ACB1EFED8AD009C41A8 /* HtmlAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68063ACA1EFED8AD009C41A8 /* HtmlAdapter.m */; };
 		68063ACE1EFED926009C41A8 /* HtmlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68063ACD1EFED926009C41A8 /* HtmlCell.m */; };
+		681CC76F1F272F2300E79B1B /* Test_TwoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681CC76E1F272F2300E79B1B /* Test_TwoController.m */; };
 		681FF7281DB74BAC00432D57 /* BaseTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF7271DB74BAC00432D57 /* BaseTableController.m */; };
 		681FF75A1DB7520D00432D57 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 681FF72B1DB7520D00432D57 /* LICENSE */; };
 		681FF75B1DB7520D00432D57 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FF72F1DB7520D00432D57 /* MJRefreshAutoFooter.m */; };
@@ -332,6 +333,19 @@
 		68A5D1DE1D830F6B00209916 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5D1C21D830F6B00209916 /* NSObject+MJProperty.m */; };
 		68A5D1DF1D830F6B00209916 /* NSString+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5D1C41D830F6B00209916 /* NSString+MJExtension.m */; };
 		68A5D1ED1D83115800209916 /* LYHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A5D1EC1D83115800209916 /* LYHud.m */; };
+		68E6831F1F2C5A990081BBE3 /* CoreGraphicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6831E1F2C5A990081BBE3 /* CoreGraphicController.m */; };
+		68E683221F2C5B380081BBE3 /* CoreGraphicAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683211F2C5B380081BBE3 /* CoreGraphicAdapter.m */; };
+		68E683251F2C5E3B0081BBE3 /* BaseTextController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683241F2C5E3B0081BBE3 /* BaseTextController.m */; };
+		68E683281F2C5FB50081BBE3 /* CoreGraphicIntroduceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683271F2C5FB50081BBE3 /* CoreGraphicIntroduceController.m */; };
+		68E683301F2C68390081BBE3 /* MainDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6832F1F2C68390081BBE3 /* MainDrawController.m */; };
+		68E683331F2C685B0081BBE3 /* MainDrawAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683321F2C685B0081BBE3 /* MainDrawAdapter.m */; };
+		68E683361F2C6A090081BBE3 /* FirstDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683351F2C6A090081BBE3 /* FirstDrawController.m */; };
+		68E683391F2C6ADF0081BBE3 /* FDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683381F2C6ADF0081BBE3 /* FDrawView.m */; };
+		68E6833D1F2CACA90081BBE3 /* SDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6833C1F2CACA90081BBE3 /* SDrawController.m */; };
+		68E683401F2CACBD0081BBE3 /* SDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6833F1F2CACBD0081BBE3 /* SDrawView.m */; };
+		68E683441F2CB05C0081BBE3 /* TDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683431F2CB05C0081BBE3 /* TDrawView.m */; };
+		68E683471F2CB0740081BBE3 /* TDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683461F2CB0740081BBE3 /* TDrawController.m */; };
+		68E6834A1F2CF31F0081BBE3 /* LayerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683491F2CF31F0081BBE3 /* LayerDelegate.m */; };
 		B558334E7CC5BB36430060C4 /* libPods-封装_李炎炎_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE95840E57003888F64226D /* libPods-封装_李炎炎_iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -373,6 +387,8 @@
 		68063ACA1EFED8AD009C41A8 /* HtmlAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlAdapter.m; sourceTree = "<group>"; };
 		68063ACC1EFED926009C41A8 /* HtmlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlCell.h; sourceTree = "<group>"; };
 		68063ACD1EFED926009C41A8 /* HtmlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlCell.m; sourceTree = "<group>"; };
+		681CC76D1F272F2300E79B1B /* Test_TwoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_TwoController.h; sourceTree = "<group>"; };
+		681CC76E1F272F2300E79B1B /* Test_TwoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test_TwoController.m; sourceTree = "<group>"; };
 		681FF7261DB74BAC00432D57 /* BaseTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableController.h; sourceTree = "<group>"; };
 		681FF7271DB74BAC00432D57 /* BaseTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableController.m; sourceTree = "<group>"; };
 		681FF72B1DB7520D00432D57 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -865,6 +881,32 @@
 		68A5D1C41D830F6B00209916 /* NSString+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MJExtension.m"; sourceTree = "<group>"; };
 		68A5D1EB1D83115800209916 /* LYHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHud.h; sourceTree = "<group>"; };
 		68A5D1EC1D83115800209916 /* LYHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHud.m; sourceTree = "<group>"; };
+		68E6831D1F2C5A990081BBE3 /* CoreGraphicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicController.h; sourceTree = "<group>"; };
+		68E6831E1F2C5A990081BBE3 /* CoreGraphicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicController.m; sourceTree = "<group>"; };
+		68E683201F2C5B380081BBE3 /* CoreGraphicAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicAdapter.h; sourceTree = "<group>"; };
+		68E683211F2C5B380081BBE3 /* CoreGraphicAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicAdapter.m; sourceTree = "<group>"; };
+		68E683231F2C5E3B0081BBE3 /* BaseTextController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextController.h; sourceTree = "<group>"; };
+		68E683241F2C5E3B0081BBE3 /* BaseTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextController.m; sourceTree = "<group>"; };
+		68E683261F2C5FB50081BBE3 /* CoreGraphicIntroduceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicIntroduceController.h; sourceTree = "<group>"; };
+		68E683271F2C5FB50081BBE3 /* CoreGraphicIntroduceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicIntroduceController.m; sourceTree = "<group>"; };
+		68E6832E1F2C68390081BBE3 /* MainDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDrawController.h; sourceTree = "<group>"; };
+		68E6832F1F2C68390081BBE3 /* MainDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDrawController.m; sourceTree = "<group>"; };
+		68E683311F2C685B0081BBE3 /* MainDrawAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDrawAdapter.h; sourceTree = "<group>"; };
+		68E683321F2C685B0081BBE3 /* MainDrawAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDrawAdapter.m; sourceTree = "<group>"; };
+		68E683341F2C6A090081BBE3 /* FirstDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDrawController.h; sourceTree = "<group>"; };
+		68E683351F2C6A090081BBE3 /* FirstDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDrawController.m; sourceTree = "<group>"; };
+		68E683371F2C6ADF0081BBE3 /* FDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDrawView.h; sourceTree = "<group>"; };
+		68E683381F2C6ADF0081BBE3 /* FDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDrawView.m; sourceTree = "<group>"; };
+		68E6833B1F2CACA90081BBE3 /* SDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDrawController.h; sourceTree = "<group>"; };
+		68E6833C1F2CACA90081BBE3 /* SDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDrawController.m; sourceTree = "<group>"; };
+		68E6833E1F2CACBD0081BBE3 /* SDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDrawView.h; sourceTree = "<group>"; };
+		68E6833F1F2CACBD0081BBE3 /* SDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDrawView.m; sourceTree = "<group>"; };
+		68E683421F2CB05C0081BBE3 /* TDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDrawView.h; sourceTree = "<group>"; };
+		68E683431F2CB05C0081BBE3 /* TDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDrawView.m; sourceTree = "<group>"; };
+		68E683451F2CB0740081BBE3 /* TDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDrawController.h; sourceTree = "<group>"; };
+		68E683461F2CB0740081BBE3 /* TDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDrawController.m; sourceTree = "<group>"; };
+		68E683481F2CF31F0081BBE3 /* LayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerDelegate.h; sourceTree = "<group>"; };
+		68E683491F2CF31F0081BBE3 /* LayerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerDelegate.m; sourceTree = "<group>"; };
 		73484E1887BD9066BF0DBEC7 /* Pods-封装_李炎炎_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装_李炎炎_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-封装_李炎炎_iOS/Pods-封装_李炎炎_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DBE95840E57003888F64226D /* libPods-封装_李炎炎_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-封装_李炎炎_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1482,6 +1524,8 @@
 			children = (
 				682F26CC1F0C862B00B29A44 /* TestViewController.h */,
 				682F26CD1F0C862B00B29A44 /* TestViewController.m */,
+				681CC76D1F272F2300E79B1B /* Test_TwoController.h */,
+				681CC76E1F272F2300E79B1B /* Test_TwoController.m */,
 			);
 			name = "用于测试";
 			sourceTree = "<group>";
@@ -2103,6 +2147,7 @@
 				682F26CB1F0C85FA00B29A44 /* 用于测试 */,
 				689C8CC31EEE344F00AEF81F /* ImageController */,
 				683038721DCB1313002BFD69 /* Voice(声音播放) */,
+				68E6831C1F2C59900081BBE3 /* CoreGraphics */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -2239,8 +2284,97 @@
 				681FF7761DB7614F00432D57 /* BaseCell.m */,
 				682F23F71F09DE7500B29A44 /* BaseView.h */,
 				682F23F81F09DE7500B29A44 /* BaseView.m */,
+				68E683231F2C5E3B0081BBE3 /* BaseTextController.h */,
+				68E683241F2C5E3B0081BBE3 /* BaseTextController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		68E6831C1F2C59900081BBE3 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				68E683291F2C66260081BBE3 /* 一级菜单 */,
+				68E6832A1F2C66990081BBE3 /* 绘图框架介绍 */,
+			);
+			name = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		68E683291F2C66260081BBE3 /* 一级菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				68E6831D1F2C5A990081BBE3 /* CoreGraphicController.h */,
+				68E6831E1F2C5A990081BBE3 /* CoreGraphicController.m */,
+				68E683201F2C5B380081BBE3 /* CoreGraphicAdapter.h */,
+				68E683211F2C5B380081BBE3 /* CoreGraphicAdapter.m */,
+			);
+			name = "一级菜单";
+			sourceTree = "<group>";
+		};
+		68E6832A1F2C66990081BBE3 /* 绘图框架介绍 */ = {
+			isa = PBXGroup;
+			children = (
+				68E683261F2C5FB50081BBE3 /* CoreGraphicIntroduceController.h */,
+				68E683271F2C5FB50081BBE3 /* CoreGraphicIntroduceController.m */,
+				68E6832B1F2C67A00081BBE3 /* 6种不同的绘制方案 */,
+			);
+			name = "绘图框架介绍";
+			sourceTree = "<group>";
+		};
+		68E6832B1F2C67A00081BBE3 /* 6种不同的绘制方案 */ = {
+			isa = PBXGroup;
+			children = (
+				68E6832C1F2C67D60081BBE3 /* Main绘制方案 */,
+				68E6832D1F2C67DE0081BBE3 /* UIView DrawRect */,
+				68E6833A1F2CAC670081BBE3 /* UIView DrawRect CoreGraphic */,
+				68E683411F2CB0340081BBE3 /* UIView DrawRect Context */,
+			);
+			name = "6种不同的绘制方案";
+			sourceTree = "<group>";
+		};
+		68E6832C1F2C67D60081BBE3 /* Main绘制方案 */ = {
+			isa = PBXGroup;
+			children = (
+				68E6832E1F2C68390081BBE3 /* MainDrawController.h */,
+				68E6832F1F2C68390081BBE3 /* MainDrawController.m */,
+				68E683311F2C685B0081BBE3 /* MainDrawAdapter.h */,
+				68E683321F2C685B0081BBE3 /* MainDrawAdapter.m */,
+			);
+			name = "Main绘制方案";
+			sourceTree = "<group>";
+		};
+		68E6832D1F2C67DE0081BBE3 /* UIView DrawRect */ = {
+			isa = PBXGroup;
+			children = (
+				68E683341F2C6A090081BBE3 /* FirstDrawController.h */,
+				68E683351F2C6A090081BBE3 /* FirstDrawController.m */,
+				68E683371F2C6ADF0081BBE3 /* FDrawView.h */,
+				68E683381F2C6ADF0081BBE3 /* FDrawView.m */,
+			);
+			name = "UIView DrawRect";
+			sourceTree = "<group>";
+		};
+		68E6833A1F2CAC670081BBE3 /* UIView DrawRect CoreGraphic */ = {
+			isa = PBXGroup;
+			children = (
+				68E6833B1F2CACA90081BBE3 /* SDrawController.h */,
+				68E6833C1F2CACA90081BBE3 /* SDrawController.m */,
+				68E6833E1F2CACBD0081BBE3 /* SDrawView.h */,
+				68E6833F1F2CACBD0081BBE3 /* SDrawView.m */,
+			);
+			name = "UIView DrawRect CoreGraphic";
+			sourceTree = "<group>";
+		};
+		68E683411F2CB0340081BBE3 /* UIView DrawRect Context */ = {
+			isa = PBXGroup;
+			children = (
+				68E683451F2CB0740081BBE3 /* TDrawController.h */,
+				68E683461F2CB0740081BBE3 /* TDrawController.m */,
+				68E683421F2CB05C0081BBE3 /* TDrawView.h */,
+				68E683431F2CB05C0081BBE3 /* TDrawView.m */,
+				68E683481F2CF31F0081BBE3 /* LayerDelegate.h */,
+				68E683491F2CF31F0081BBE3 /* LayerDelegate.m */,
+			);
+			name = "UIView DrawRect Context";
 			sourceTree = "<group>";
 		};
 		9AC1C3214E99D9AA97420DCD /* Pods */ = {
@@ -2516,6 +2650,7 @@
 				682F24D81F0A78EA00B29A44 /* WBPhotoModel.m in Sources */,
 				6898552F1EF57FE6007B83BB /* FCUController.m in Sources */,
 				68063A591EFB7EEE009C41A8 /* AuthController.m in Sources */,
+				68E683221F2C5B380081BBE3 /* CoreGraphicAdapter.m in Sources */,
 				68A5D1D41D830F6B00209916 /* UIRefreshControl+AFNetworking.m in Sources */,
 				689C8CC71EEE354100AEF81F /* ImageController.m in Sources */,
 				681FF75C1DB7520D00432D57 /* MJRefreshBackFooter.m in Sources */,
@@ -2530,8 +2665,10 @@
 				681FF76A1DB7520D00432D57 /* MJRefreshConst.m in Sources */,
 				68A5D1D31D830F6B00209916 /* UIProgressView+AFNetworking.m in Sources */,
 				683038181DC34D2C002BFD69 /* ZTEToast.m in Sources */,
+				68E683471F2CB0740081BBE3 /* TDrawController.m in Sources */,
 				683038A51DCB2D87002BFD69 /* AFSoundRecord.m in Sources */,
 				68063A621EFB974E009C41A8 /* AccountDB.m in Sources */,
+				68E6834A1F2CF31F0081BBE3 /* LayerDelegate.m in Sources */,
 				68063AA11EFBBE49009C41A8 /* FriendAdapter.m in Sources */,
 				68063A651EFBA147009C41A8 /* FriendController.m in Sources */,
 				682F241C1F09F2F600B29A44 /* SDImageCache.m in Sources */,
@@ -2542,6 +2679,7 @@
 				68A5D1CE1D830F6B00209916 /* AFImageDownloader.m in Sources */,
 				682720811F0F2C070038966C /* ZTETextView.m in Sources */,
 				682720921F1609EB0038966C /* ZTEChatToolBar.m in Sources */,
+				681CC76F1F272F2300E79B1B /* Test_TwoController.m in Sources */,
 				682F26DB1F0CC79300B29A44 /* ZTEEmojiTabBarButton.m in Sources */,
 				683038A81DCB2D87002BFD69 /* LCAudioPlay.m in Sources */,
 				68A5D1CA1D830F6B00209916 /* AFURLSessionManager.m in Sources */,
@@ -2551,6 +2689,7 @@
 				681FF76E1DB7520D00432D57 /* README.md in Sources */,
 				689855261EF53FF5007B83BB /* ACUController.m in Sources */,
 				682F24271F09F2F600B29A44 /* UIImageView+WebCache.m in Sources */,
+				68E683251F2C5E3B0081BBE3 /* BaseTextController.m in Sources */,
 				682F26C71F0BE7A000B29A44 /* ZTEPhotoView.m in Sources */,
 				68A5D1D71D830F6B00209916 /* MJFoundation.m in Sources */,
 				682F24201F09F2F600B29A44 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -2570,8 +2709,10 @@
 				68A5D1DF1D830F6B00209916 /* NSString+MJExtension.m in Sources */,
 				68A5D1D01D830F6B00209916 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				683038571DC9D4B5002BFD69 /* TZVideoPlayerController.m in Sources */,
+				68E683391F2C6ADF0081BBE3 /* FDrawView.m in Sources */,
 				681FF7951DB86A5500432D57 /* OnLineAdapter.m in Sources */,
 				681FF7681DB7520D00432D57 /* MJRefreshStateHeader.m in Sources */,
+				68E683401F2CACBD0081BBE3 /* SDrawView.m in Sources */,
 				682720EA1F23B0EF0038966C /* ZTEEmojiPopView.m in Sources */,
 				68A5D1CF1D830F6B00209916 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				682F26B91F0B8F4100B29A44 /* ZTEEmotionModel.m in Sources */,
@@ -2596,6 +2737,7 @@
 				682F241B1F09F2F600B29A44 /* NSData+ImageContentType.m in Sources */,
 				689855111EF3DEF7007B83BB /* AAUCell.m in Sources */,
 				68A5D1D91D830F6B00209916 /* MJPropertyKey.m in Sources */,
+				68E6831F1F2C5A990081BBE3 /* CoreGraphicController.m in Sources */,
 				68063AB01EFBD073009C41A8 /* WBAdvertityModel.m in Sources */,
 				682F26B41F0B8E5300B29A44 /* ZTEEmotionUtils.m in Sources */,
 				68A5D1DA1D830F6B00209916 /* MJPropertyType.m in Sources */,
@@ -2608,10 +2750,13 @@
 				682F24221F09F2F600B29A44 /* SDWebImagePrefetcher.m in Sources */,
 				683038AB1DCB2D87002BFD69 /* HSDownloadManager.m in Sources */,
 				682F26D51F0CC24000B29A44 /* ZTEEmojiKeyBoard.m in Sources */,
+				68E683441F2CB05C0081BBE3 /* TDrawView.m in Sources */,
 				683038A71DCB2D87002BFD69 /* LCAudioManager.m in Sources */,
 				681FF76D1DB7520D00432D57 /* UIView+MJExtension.m in Sources */,
 				68063A691EFBA866009C41A8 /* NewFeatureController.m in Sources */,
 				683038A91DCB2D87002BFD69 /* LCAudioRecord.m in Sources */,
+				68E683361F2C6A090081BBE3 /* FirstDrawController.m in Sources */,
+				68E683281F2C5FB50081BBE3 /* CoreGraphicIntroduceController.m in Sources */,
 				68A5D1DC1D830F6B00209916 /* NSObject+MJCoding.m in Sources */,
 				682F26CA1F0C84C900B29A44 /* StatuTextView.m in Sources */,
 				683038A21DCB2D87002BFD69 /* AFSoundItem.m in Sources */,
@@ -2627,6 +2772,7 @@
 				683038541DC9D4B5002BFD69 /* TZPhotoPickerController.m in Sources */,
 				683038521DC9D4B5002BFD69 /* TZImageManager.m in Sources */,
 				6898550D1EF3DA03007B83BB /* DataSupport.m in Sources */,
+				68E683301F2C68390081BBE3 /* MainDrawController.m in Sources */,
 				682F24EC1F0B786B00B29A44 /* WBStatuHelper.m in Sources */,
 				682F26CE1F0C862B00B29A44 /* TestViewController.m in Sources */,
 				683038841DCB2D53002BFD69 /* CustomProgress.m in Sources */,
@@ -2641,11 +2787,13 @@
 				682F24261F09F2F600B29A44 /* UIImageView+HighlightedWebCache.m in Sources */,
 				68722FB21D9924D300C2E8FB /* UIFont+Extension.m in Sources */,
 				682F24251F09F2F600B29A44 /* UIImage+MultiFormat.m in Sources */,
+				68E683331F2C685B0081BBE3 /* MainDrawAdapter.m in Sources */,
 				681FF7671DB7520D00432D57 /* MJRefreshNormalHeader.m in Sources */,
 				682F23F91F09DE7500B29A44 /* BaseView.m in Sources */,
 				689C8CBD1EEC61D700AEF81F /* AdressViewModel.m in Sources */,
 				682A4EB61DDDBDC7000372B2 /* MBProgressHUD.m in Sources */,
 				683038AC1DCB2D87002BFD69 /* HSSessionModel.m in Sources */,
+				68E6833D1F2CACA90081BBE3 /* SDrawController.m in Sources */,
 				68A5D1D51D830F6B00209916 /* UIWebView+AFNetworking.m in Sources */,
 				681FF7281DB74BAC00432D57 /* BaseTableController.m in Sources */,
 				682F24281F09F2F600B29A44 /* UIView+WebCacheOperation.m in Sources */,

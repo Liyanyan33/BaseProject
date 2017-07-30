@@ -1,0 +1,46 @@
+//
+//  CoreGraphicIntroduceController.m
+//  封装_李炎炎_iOS
+//
+//  Created by lyy on 17/7/29.
+//  Copyright © 2017年 ZXJK. All rights reserved.
+//
+
+#import "CoreGraphicIntroduceController.h"
+#import "MainDrawController.h"
+
+@interface CoreGraphicIntroduceController ()
+@property(nonatomic,strong)UIButton *bottomBtn;
+@end
+
+@implementation CoreGraphicIntroduceController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.title = @"两大绘图框架介绍";
+    self.textView.height -= 40;
+    self.text = @"UIKit像UIImage、NSString（绘制文本）、UIBezierPath（绘制形状）、UIColor都知道如何绘制自己。这些类提供了功能有限但使用方便的方法来让我们完成绘图任务。一般情况下，UIKit就是我们所需要的。使用UiKit，你只能在当前上下文中绘图，所以如果你当前处于UIGraphicsBeginImageContextWithOptions函数或drawRect：方法中，你就可以直接使用UIKit提供的方法进行绘图。如果你持有一个context：参数，那么使用UIKit提供的方法之前，必须将该上下文参数转化为当前上下文。幸运的是，调用UIGraphicsPushContext 函数可以方便的将context：参数转化为当前上下文，记住最后别忘了调用UIGraphicsPopContext函数恢复上下文环境。\n\nCore Graphics 这是一个绘图专用的API族，它经常被称为QuartZ或QuartZ 2D。Core Graphics是iOS上所有绘图功能的基石，包括UIKit。使用Core Graphics之前需要指定一个用于绘图的图形上下文（CGContextRef），这个图形上下文会在每个绘图函数中都会被用到。如果你持有一个图形上下文context：参数，那么你等同于有了一个图形上下文，这个上下文也许就是你需要用来绘图的那个。如果你当前处于UIGraphicsBeginImageContextWithOptions函数或drawRect：方法中，并没有引用一个上下文。为了使用Core Graphics，你可以调用UIGraphicsGetCurrentContext函数获得当前的图形上下文。　\n\n至此，我们有了两大绘图框架的支持以及三种获得图形上下文的方法（drawRect:、drawRect: inContext:、UIGraphicsBeginImageContextWithOptions）。那么我们就有6种绘图的形式。如果你有些困惑了，不用怕，我接下来将说明这6种情况。无需担心还没有具体的绘图命令，你只需关注上下文如何被创建以及我们是在使用UIKit还是Core Graphics。";
+}
+
+- (void)createUI{
+    [self.view addSubview:self.bottomBtn];
+}
+
+- (void)click:(UIButton*)sender{
+    [self.navigationController pushViewController:[[MainDrawController alloc]init] animated:YES];
+}
+
+#pragma mak 懒加载
+- (UIButton*)bottomBtn{
+    if (!_bottomBtn) {
+        _bottomBtn = [[UIButton alloc]initWithFrame:CGRectMake(20, kScreenHeight - 35, kScreenWidth - 40, 30)];
+        [_bottomBtn setTitle:@"展示6种不同的绘图形式" forState:(UIControlStateNormal)];
+        [_bottomBtn setTitleColor:[UIColor greenColor] forState:(UIControlStateNormal)];
+        [_bottomBtn setCornerRadius:5.0 borderW:1.0 borderCorlor:[UIColor redColor]];
+        [_bottomBtn addTarget:self action:@selector(click:) forControlEvents:(UIControlEventTouchUpInside)];
+        [_bottomBtn setBackgroundImage:[UIImage imageWithCustomerColor:[UIColor blackColor]] forState:(UIControlStateNormal)];
+    }
+    return _bottomBtn;
+}
+
+@end

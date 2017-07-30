@@ -74,7 +74,6 @@
     if ( ABS( textSize.height - zteTextView.height) > 0.5) { // ABS 取绝对值  设置textView输入框的 高度
         zteTextView.height =  textSize.height;
     }
-    
     CGFloat selfHeight = MAX(48, textSize.height + 2*textViewMarginTop);
     
     CGFloat diffHeight = selfHeight - _viewHeightOld;

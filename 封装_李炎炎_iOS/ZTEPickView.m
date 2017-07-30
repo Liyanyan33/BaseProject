@@ -110,7 +110,6 @@
     }
     pickerLabel.text                = [self pickerView:pickerView titleForRow:row forComponent:component];
     
-    
     //设置分割线的颜色
     for(UIView *singleLine in pickerView.subviews){
         if (singleLine.frame.size.height < 1){
@@ -124,8 +123,6 @@
 //- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component{
 //    return 44;
 //}
-
-
 
 #pragma mark 懒加载
 /**背景View */

@@ -21,7 +21,7 @@
     [self setHeaderRefresh:NO footerRefresh:NO];
     self.title = @"AAU方案";
     [self createDataSupport];
-    [self getTableView].estimatedRowHeight = 200;
+    self.tableView.estimatedRowHeight = 200;
 }
 
 #pragma mark 创建数据源  内部模拟了网络 异步请求

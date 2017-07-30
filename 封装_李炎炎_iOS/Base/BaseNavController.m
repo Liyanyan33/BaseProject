@@ -16,16 +16,13 @@
 @implementation BaseNavController
 
 +(void)initialize{
-    
     // 设置整个项目所有item的主题样式
     UIBarButtonItem *item = [UIBarButtonItem appearance];
-    
     // 普通状态
     NSMutableDictionary *textAttrsNormal = [NSMutableDictionary dictionary];
     textAttrsNormal[NSForegroundColorAttributeName] = [UIColor orangeColor];
     textAttrsNormal[NSFontAttributeName] = [UIFont systemFontOfSize:14];
     [item setTitleTextAttributes:textAttrsNormal forState:UIControlStateNormal];
-    
     // 不可用状态
     NSMutableDictionary *textAttrsDisabled = [NSMutableDictionary dictionary];
     textAttrsDisabled[NSFontAttributeName] = [UIFont systemFontOfSize:14];
@@ -35,7 +32,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
 #pragma mark 添加滑动手势 返回上一级控制器功能 实现全屏侧滑
     id target = self.interactivePopGestureRecognizer.delegate;
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:target action:@selector(handleNavigationTransition:)];
@@ -77,13 +73,10 @@
 
 /** 返回上一级视图控制器 */
 - (void)back:(UIButton*)sender{
-    
     BaseViewController *bvc = (BaseViewController*)[self.viewControllers lastObject];
-    
     for (UIViewController *vc in self.viewControllers) {
         NSLog(@"vc = %@",vc);
     }
-    
     [bvc navBarLeftClick];
     [self popViewControllerAnimated:YES];
 }
@@ -93,5 +86,4 @@
     BaseViewController *bvc = (BaseViewController*)[self.viewControllers lastObject];
     [bvc navBarRightClick];
 }
-
 @end
