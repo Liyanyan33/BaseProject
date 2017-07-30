@@ -1,5 +1,5 @@
 //
-//  FDrawView.h
+//  FourDrawView.h
 //  封装_李炎炎_iOS
 //
 //  Created by lyy on 17/7/30.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FDrawView : UIView
+@interface FourDrawView : UIView
 
 @end

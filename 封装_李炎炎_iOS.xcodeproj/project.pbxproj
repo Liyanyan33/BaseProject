@@ -340,12 +340,16 @@
 		68E683301F2C68390081BBE3 /* MainDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6832F1F2C68390081BBE3 /* MainDrawController.m */; };
 		68E683331F2C685B0081BBE3 /* MainDrawAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683321F2C685B0081BBE3 /* MainDrawAdapter.m */; };
 		68E683361F2C6A090081BBE3 /* FirstDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683351F2C6A090081BBE3 /* FirstDrawController.m */; };
-		68E683391F2C6ADF0081BBE3 /* FDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683381F2C6ADF0081BBE3 /* FDrawView.m */; };
 		68E6833D1F2CACA90081BBE3 /* SDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6833C1F2CACA90081BBE3 /* SDrawController.m */; };
 		68E683401F2CACBD0081BBE3 /* SDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6833F1F2CACBD0081BBE3 /* SDrawView.m */; };
 		68E683441F2CB05C0081BBE3 /* TDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683431F2CB05C0081BBE3 /* TDrawView.m */; };
 		68E683471F2CB0740081BBE3 /* TDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683461F2CB0740081BBE3 /* TDrawController.m */; };
 		68E6834A1F2CF31F0081BBE3 /* LayerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683491F2CF31F0081BBE3 /* LayerDelegate.m */; };
+		68E6834E1F2DAD580081BBE3 /* FDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6834D1F2DAD580081BBE3 /* FDrawController.m */; };
+		68E683541F2DAF9E0081BBE3 /* FDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683531F2DAF9E0081BBE3 /* FDrawView.m */; };
+		68E683571F2DB0190081BBE3 /* FourDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E683561F2DB0190081BBE3 /* FourDrawView.m */; };
+		68E6835C1F2DB2E20081BBE3 /* FiveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6835B1F2DB2E20081BBE3 /* FiveController.m */; };
+		68E6835F1F2DB7410081BBE3 /* SixController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E6835E1F2DB7410081BBE3 /* SixController.m */; };
 		B558334E7CC5BB36430060C4 /* libPods-封装_李炎炎_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE95840E57003888F64226D /* libPods-封装_李炎炎_iOS.a */; };
 /* End PBXBuildFile section */
 
@@ -895,8 +899,6 @@
 		68E683321F2C685B0081BBE3 /* MainDrawAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDrawAdapter.m; sourceTree = "<group>"; };
 		68E683341F2C6A090081BBE3 /* FirstDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstDrawController.h; sourceTree = "<group>"; };
 		68E683351F2C6A090081BBE3 /* FirstDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstDrawController.m; sourceTree = "<group>"; };
-		68E683371F2C6ADF0081BBE3 /* FDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDrawView.h; sourceTree = "<group>"; };
-		68E683381F2C6ADF0081BBE3 /* FDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDrawView.m; sourceTree = "<group>"; };
 		68E6833B1F2CACA90081BBE3 /* SDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDrawController.h; sourceTree = "<group>"; };
 		68E6833C1F2CACA90081BBE3 /* SDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDrawController.m; sourceTree = "<group>"; };
 		68E6833E1F2CACBD0081BBE3 /* SDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDrawView.h; sourceTree = "<group>"; };
@@ -907,6 +909,16 @@
 		68E683461F2CB0740081BBE3 /* TDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDrawController.m; sourceTree = "<group>"; };
 		68E683481F2CF31F0081BBE3 /* LayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerDelegate.h; sourceTree = "<group>"; };
 		68E683491F2CF31F0081BBE3 /* LayerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerDelegate.m; sourceTree = "<group>"; };
+		68E6834C1F2DAD580081BBE3 /* FDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDrawController.h; sourceTree = "<group>"; };
+		68E6834D1F2DAD580081BBE3 /* FDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDrawController.m; sourceTree = "<group>"; };
+		68E683521F2DAF9E0081BBE3 /* FDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDrawView.h; sourceTree = "<group>"; };
+		68E683531F2DAF9E0081BBE3 /* FDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDrawView.m; sourceTree = "<group>"; };
+		68E683551F2DB0190081BBE3 /* FourDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourDrawView.h; sourceTree = "<group>"; };
+		68E683561F2DB0190081BBE3 /* FourDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourDrawView.m; sourceTree = "<group>"; };
+		68E6835A1F2DB2E20081BBE3 /* FiveController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveController.h; sourceTree = "<group>"; };
+		68E6835B1F2DB2E20081BBE3 /* FiveController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveController.m; sourceTree = "<group>"; };
+		68E6835D1F2DB7410081BBE3 /* SixController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SixController.h; sourceTree = "<group>"; };
+		68E6835E1F2DB7410081BBE3 /* SixController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SixController.m; sourceTree = "<group>"; };
 		73484E1887BD9066BF0DBEC7 /* Pods-封装_李炎炎_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装_李炎炎_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-封装_李炎炎_iOS/Pods-封装_李炎炎_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DBE95840E57003888F64226D /* libPods-封装_李炎炎_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-封装_李炎炎_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -2324,9 +2336,12 @@
 			isa = PBXGroup;
 			children = (
 				68E6832C1F2C67D60081BBE3 /* Main绘制方案 */,
-				68E6832D1F2C67DE0081BBE3 /* UIView DrawRect */,
+				68E6832D1F2C67DE0081BBE3 /* UIView DrawRect UIKit */,
 				68E6833A1F2CAC670081BBE3 /* UIView DrawRect CoreGraphic */,
-				68E683411F2CB0340081BBE3 /* UIView DrawRect Context */,
+				68E683411F2CB0340081BBE3 /* UIView DrawRect Context UIKit */,
+				68E6834B1F2DACD90081BBE3 /* UIView Draw Context CoreGraphic */,
+				68E683581F2DB2830081BBE3 /* 直接使用UIKit实现 */,
+				68E683591F2DB2AB0081BBE3 /* 直接使用CoreGraphics实现 */,
 			);
 			name = "6种不同的绘制方案";
 			sourceTree = "<group>";
@@ -2342,15 +2357,15 @@
 			name = "Main绘制方案";
 			sourceTree = "<group>";
 		};
-		68E6832D1F2C67DE0081BBE3 /* UIView DrawRect */ = {
+		68E6832D1F2C67DE0081BBE3 /* UIView DrawRect UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				68E683341F2C6A090081BBE3 /* FirstDrawController.h */,
 				68E683351F2C6A090081BBE3 /* FirstDrawController.m */,
-				68E683371F2C6ADF0081BBE3 /* FDrawView.h */,
-				68E683381F2C6ADF0081BBE3 /* FDrawView.m */,
+				68E683521F2DAF9E0081BBE3 /* FDrawView.h */,
+				68E683531F2DAF9E0081BBE3 /* FDrawView.m */,
 			);
-			name = "UIView DrawRect";
+			name = "UIView DrawRect UIKit";
 			sourceTree = "<group>";
 		};
 		68E6833A1F2CAC670081BBE3 /* UIView DrawRect CoreGraphic */ = {
@@ -2364,7 +2379,7 @@
 			name = "UIView DrawRect CoreGraphic";
 			sourceTree = "<group>";
 		};
-		68E683411F2CB0340081BBE3 /* UIView DrawRect Context */ = {
+		68E683411F2CB0340081BBE3 /* UIView DrawRect Context UIKit */ = {
 			isa = PBXGroup;
 			children = (
 				68E683451F2CB0740081BBE3 /* TDrawController.h */,
@@ -2374,7 +2389,36 @@
 				68E683481F2CF31F0081BBE3 /* LayerDelegate.h */,
 				68E683491F2CF31F0081BBE3 /* LayerDelegate.m */,
 			);
-			name = "UIView DrawRect Context";
+			name = "UIView DrawRect Context UIKit";
+			sourceTree = "<group>";
+		};
+		68E6834B1F2DACD90081BBE3 /* UIView Draw Context CoreGraphic */ = {
+			isa = PBXGroup;
+			children = (
+				68E6834C1F2DAD580081BBE3 /* FDrawController.h */,
+				68E6834D1F2DAD580081BBE3 /* FDrawController.m */,
+				68E683551F2DB0190081BBE3 /* FourDrawView.h */,
+				68E683561F2DB0190081BBE3 /* FourDrawView.m */,
+			);
+			name = "UIView Draw Context CoreGraphic";
+			sourceTree = "<group>";
+		};
+		68E683581F2DB2830081BBE3 /* 直接使用UIKit实现 */ = {
+			isa = PBXGroup;
+			children = (
+				68E6835A1F2DB2E20081BBE3 /* FiveController.h */,
+				68E6835B1F2DB2E20081BBE3 /* FiveController.m */,
+			);
+			name = "直接使用UIKit实现";
+			sourceTree = "<group>";
+		};
+		68E683591F2DB2AB0081BBE3 /* 直接使用CoreGraphics实现 */ = {
+			isa = PBXGroup;
+			children = (
+				68E6835D1F2DB7410081BBE3 /* SixController.h */,
+				68E6835E1F2DB7410081BBE3 /* SixController.m */,
+			);
+			name = "直接使用CoreGraphics实现";
 			sourceTree = "<group>";
 		};
 		9AC1C3214E99D9AA97420DCD /* Pods */ = {
@@ -2642,12 +2686,14 @@
 				68A5D1ED1D83115800209916 /* LYHud.m in Sources */,
 				68063AAD1EFBCE72009C41A8 /* WBAdModel.m in Sources */,
 				682F241E1F09F2F600B29A44 /* SDWebImageDecoder.m in Sources */,
+				68E6834E1F2DAD580081BBE3 /* FDrawController.m in Sources */,
 				681FF79C1DB9B59700432D57 /* BaseTableAdapter.m in Sources */,
 				686EBB211D90BFC7009948F3 /* LYButton.m in Sources */,
 				686EBB1D1D8FEFCB009948F3 /* LYNavController.m in Sources */,
 				683038811DCB2B18002BFD69 /* SoundModel.m in Sources */,
 				682F241D1F09F2F600B29A44 /* SDWebImageCompat.m in Sources */,
 				682F24D81F0A78EA00B29A44 /* WBPhotoModel.m in Sources */,
+				68E6835C1F2DB2E20081BBE3 /* FiveController.m in Sources */,
 				6898552F1EF57FE6007B83BB /* FCUController.m in Sources */,
 				68063A591EFB7EEE009C41A8 /* AuthController.m in Sources */,
 				68E683221F2C5B380081BBE3 /* CoreGraphicAdapter.m in Sources */,
@@ -2666,6 +2712,7 @@
 				68A5D1D31D830F6B00209916 /* UIProgressView+AFNetworking.m in Sources */,
 				683038181DC34D2C002BFD69 /* ZTEToast.m in Sources */,
 				68E683471F2CB0740081BBE3 /* TDrawController.m in Sources */,
+				68E6835F1F2DB7410081BBE3 /* SixController.m in Sources */,
 				683038A51DCB2D87002BFD69 /* AFSoundRecord.m in Sources */,
 				68063A621EFB974E009C41A8 /* AccountDB.m in Sources */,
 				68E6834A1F2CF31F0081BBE3 /* LayerDelegate.m in Sources */,
@@ -2709,11 +2756,11 @@
 				68A5D1DF1D830F6B00209916 /* NSString+MJExtension.m in Sources */,
 				68A5D1D01D830F6B00209916 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				683038571DC9D4B5002BFD69 /* TZVideoPlayerController.m in Sources */,
-				68E683391F2C6ADF0081BBE3 /* FDrawView.m in Sources */,
 				681FF7951DB86A5500432D57 /* OnLineAdapter.m in Sources */,
 				681FF7681DB7520D00432D57 /* MJRefreshStateHeader.m in Sources */,
 				68E683401F2CACBD0081BBE3 /* SDrawView.m in Sources */,
 				682720EA1F23B0EF0038966C /* ZTEEmojiPopView.m in Sources */,
+				68E683571F2DB0190081BBE3 /* FourDrawView.m in Sources */,
 				68A5D1CF1D830F6B00209916 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				682F26B91F0B8F4100B29A44 /* ZTEEmotionModel.m in Sources */,
 				682F24231F09F2F600B29A44 /* UIButton+WebCache.m in Sources */,
@@ -2803,6 +2850,7 @@
 				6898553E1EF58E09007B83BB /* FCYCell.m in Sources */,
 				681FF7AB1DC0AD7A00432D57 /* BaseViewController.m in Sources */,
 				681FF7621DB7520D00432D57 /* MJRefreshAutoStateFooter.m in Sources */,
+				68E683541F2DAF9E0081BBE3 /* FDrawView.m in Sources */,
 				68A5D1D81D830F6B00209916 /* MJProperty.m in Sources */,
 				68722FB51D9A07DF00C2E8FB /* ZTEDropMenu.m in Sources */,
 				682F23FC1F09E86700B29A44 /* WBStatuViewModel.m in Sources */,
