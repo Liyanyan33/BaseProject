@@ -21,12 +21,7 @@
     return [OneLabelCell calCellHeightWithModel:self.sourceData[indexPath.row]];
 }
 
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return 10;
-//}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    NSLog(@"%s",__func__);
     return 180;
 }
 

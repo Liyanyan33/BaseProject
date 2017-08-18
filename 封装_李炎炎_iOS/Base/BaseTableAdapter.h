@@ -31,4 +31,6 @@ typedef void(^BaseTableCellBtnBlock)(int row,int tag);        // 点击cell中�
 
 - (instancetype)initWithCellIdentifiers:(NSString *)identifiers withCellBlock:(BaseTableCellSelectedBlock)cellBlock;
 
+- (instancetype)initWithCellBlock:(BaseTableCellSelectedBlock)cellBlock;
+
 @end

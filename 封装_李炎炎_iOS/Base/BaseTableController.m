@@ -190,7 +190,7 @@
 - (UITableView*)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64) style:[self getTableViewStytle]];
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.sectionHeaderHeight = 0.1f;
         _adapter = [self createAdapter];   // 解决消除UITableViewGroupStytle 顶部默认间距 在此处就设置 tableView的代理对象 而不是 等拿到网络数据时才设置(如果那样会出现问题 顶部间距 无论怎么设置 都不能使之消除)
         _tableView.delegate = _adapter;

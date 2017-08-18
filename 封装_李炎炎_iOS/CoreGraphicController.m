@@ -39,10 +39,12 @@
 - (void)initData{
     _dataArr = [[NSMutableArray alloc]init];
     [_dataArr addObject:@"两大绘图框架（UIKit与CoreGraphic）以及三种获得图形上下文的方法,组合成6种不同的绘图方式"];
+    [_dataArr addObject:@"绘制文本"];
     [self onSuccessWithData:_dataArr];
     
     _vcNameArr = [[NSMutableArray alloc]init];
     [_vcNameArr addObject:@"CoreGraphicIntroduceController"];
+    [_vcNameArr addObject:@"DrawTextController"];
 }
 
 @end

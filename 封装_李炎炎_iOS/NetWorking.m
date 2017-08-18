@@ -35,6 +35,7 @@
     NSLog(@" url = %@",url);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 10.0f;
+    
     [manager GET:url parameters:paramas progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

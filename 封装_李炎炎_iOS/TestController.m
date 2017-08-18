@@ -62,6 +62,7 @@
     [_dataArr addObject:@"用于测试的控制器"];
     [_dataArr addObject:@"测试控制器_02"];
     [_dataArr addObject:@"coreGraphics框架学习"];
+    [_dataArr addObject:@"高仿QQ好友列表--可折叠列表实现"];
     [self onSuccessWithData:_dataArr];
     
     _vcNameArr = [[NSMutableArray alloc]init];
@@ -73,6 +74,7 @@
     [_vcNameArr addObject:@"TestViewController"];
     [_vcNameArr addObject:@"Test_TwoController"];
     [_vcNameArr addObject:@"CoreGraphicController"];
+    [_vcNameArr addObject:@"QQFoldController"];
 }
 
 - (void)switchVC{

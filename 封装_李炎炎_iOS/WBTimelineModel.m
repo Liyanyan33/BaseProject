@@ -9,7 +9,7 @@
 #import "WBTimelineModel.h"
 
 @implementation WBTimelineModel
-
+/** 确定 数组中的 模型映射 关系 */
 + (NSDictionary *)mj_objectClassInArray{
     return @{@"ad" : @"WBAdModel",@"advertises":@"WBAdvertityModel",@"statuses":@"WBStatuModel"};
 }

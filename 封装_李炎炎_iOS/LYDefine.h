@@ -52,6 +52,11 @@
 #define RGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
 #define RGBA(r, g, b,alp) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:alp]
 #define randomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:(256)/255.0 alpha:1.0]
+// RGB颜色(16进制)
+#define RGB_HEX(rgbValue) \
+[UIColor colorWithRed:((CGFloat)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
+green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0 \
+blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 
 /** 屏幕尺寸宏 */
 #define mainScreenBounds        [UIScreen mainScreen].bounds                            //主屏幕
@@ -59,6 +64,9 @@
 #define kScreenHeight                mainScreenBounds.size.height                           //屏幕高度
 #define kScreenMaxLength        (MAX(kScreenWidth,kScreenHeight))                 //获取屏幕的最大尺寸
 #define kScreenMinLength         (MIN(kScreenWidth,kScreenHeight))                  //获取屏幕的最小尺寸
+
+// 等比例适配系数
+#define kScaleFit (kScreenWidth / 375.0f)
 
 /** 设备类型判断宏 */
 #define isiPad_ZTE         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)

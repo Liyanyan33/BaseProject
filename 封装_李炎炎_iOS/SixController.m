@@ -18,6 +18,7 @@
     [super viewDidLoad];
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(100, 100), NO, 0);
 
+    // 获取当前的上下文
     CGContextRef con = UIGraphicsGetCurrentContext();
     CGContextAddEllipseInRect(con, CGRectMake(0,0,100,100));
     CGContextSetFillColorWithColor(con, [UIColor redColor].CGColor);
@@ -25,7 +26,6 @@
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     
     UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(20, 100, 200, 200)];
     imageView.image = image;

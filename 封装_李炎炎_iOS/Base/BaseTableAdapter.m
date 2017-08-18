@@ -29,6 +29,14 @@
     return self;
 }
 
+- (instancetype)initWithCellBlock:(BaseTableCellSelectedBlock)cellBock{
+    self = [super init];
+    if (self) {
+        self.cellSelectedBlock = cellBock;
+    }
+    return self;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.sourceData.count;
 }
