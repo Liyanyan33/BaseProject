@@ -13,7 +13,6 @@
 @implementation QQFoldAdapter
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    NSLog(@"分组数量 = %lu",(unsigned long)self.sourceData.count);
     return self.sourceData.count;
 }
 
@@ -29,11 +28,9 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     QQContactCell *cell = [QQContactCell cellWithTableView:tableView];
     cell.selectionStyle = UITableViewCellSelectionStyleNone; //cell点击不变色
-    
     QQGroupModel *groupModel = self.sourceData[indexPath.section];
     QQContactModel *contactModel = groupModel.contacts[indexPath.row];
     [cell configCellWithModel:contactModel indexPath:indexPath];
-    
     return cell;
 }
 

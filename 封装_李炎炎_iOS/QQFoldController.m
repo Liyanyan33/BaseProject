@@ -44,9 +44,15 @@
             // 解析返回的结果：JSON转数据模型
             NSMutableArray *groupModelArr = [QQGroupModel mj_objectArrayWithKeyValuesArray:jsonObj[@"groups"]];
             self.groupModelArr = groupModelArr;
+            int index = 0;
             for (QQGroupModel *groupModel in self.groupModelArr) {
-                // 初始化 默认为折叠状态
-                groupModel.isFold = YES;
+                if (index == 0) {
+                    groupModel.isFold = NO;
+                }else{
+                    // 初始化 默认为折叠状态
+                    groupModel.isFold = YES;
+                }
+                index++;
             }
             // 回到主线程刷新表格
             dispatch_async(dispatch_get_main_queue(), ^{

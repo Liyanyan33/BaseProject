@@ -33,7 +33,7 @@
 }
 
 - (id)createAdapter{
-    TestAdapter *oAdapter = [[TestAdapter alloc]initWithCellIdentifiers:@"test_cell" withCellBlock:^(NSIndexPath *indexPath) {
+    TestAdapter *oAdapter = [[TestAdapter alloc]initWithCellBlock:^(NSIndexPath *indexPath) {
         if (indexPath.row == 2) {
             [self switchVC];
         }else{
@@ -63,6 +63,7 @@
     [_dataArr addObject:@"测试控制器_02"];
     [_dataArr addObject:@"coreGraphics框架学习"];
     [_dataArr addObject:@"高仿QQ好友列表--可折叠列表实现"];
+    [_dataArr addObject:@"高仿今日头条--频道的选择与删除(可拖拽)"];
     [self onSuccessWithData:_dataArr];
     
     _vcNameArr = [[NSMutableArray alloc]init];
@@ -75,6 +76,7 @@
     [_vcNameArr addObject:@"Test_TwoController"];
     [_vcNameArr addObject:@"CoreGraphicController"];
     [_vcNameArr addObject:@"QQFoldController"];
+    [_vcNameArr addObject:@"TodayHeadLineController"];
 }
 
 - (void)switchVC{

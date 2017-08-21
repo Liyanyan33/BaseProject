@@ -12,7 +12,7 @@
 @implementation TestAdapter
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    OneLabelCell *cell = [OneLabelCell cellWithTableView:tableView withReuseIdentify:self.cellIdentifiers];
+    OneLabelCell *cell = [OneLabelCell cellWithTableView:tableView];
     [cell configCellWithModel:self.sourceData[indexPath.row] indexPath:indexPath];
     return cell;
 }
