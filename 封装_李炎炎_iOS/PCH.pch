@@ -13,6 +13,7 @@
 #import "LYHud.h"
 #import "LYDefine.h"
 #import "RegularExDefine.h"
+#import "ZTEScreenFitDefine.h"
 #import "URLDefine.h"
 #import "NetWorking.h"
 #import "LYExtension.h"

@@ -58,33 +58,9 @@
 green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0 \
 blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 
-/** 屏幕尺寸宏 */
-#define mainScreenBounds        [UIScreen mainScreen].bounds                            //主屏幕
-#define kScreenWidth                 mainScreenBounds.size.width                             //屏幕宽度
-#define kScreenHeight                mainScreenBounds.size.height                           //屏幕高度
-#define kScreenMaxLength        (MAX(kScreenWidth,kScreenHeight))                 //获取屏幕的最大尺寸
-#define kScreenMinLength         (MIN(kScreenWidth,kScreenHeight))                  //获取屏幕的最小尺寸
 
 // 等比例适配系数
 #define kScaleFit (kScreenWidth / 375.0f)
-
-/** 设备类型判断宏 */
-#define isiPad_ZTE         (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define isiPhone    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define isRetain     ([[UIScreen mainScreen] scale] >= 2.0)
-
-/** 设备型号判断宏 
- iPhone4,         //320*480
- iPhone5,5s     //320*568
- iPhone6,         //375*667
- iPhone6Plus,  //414*736
- iPad                //768*1024
- */
-#define isiPhone4   (isiPhone && kScreenMaxLength  <  568.0)
-#define isiPhone5   (isiPhone && kScreenMaxLength == 568.0)
-#define isiPhone6   (isiPhone && kScreenMaxLength  == 667.0)
-#define isiPhone6P (isiPhone && kScreenMaxLength  == 736.0)
-#define isiPad          (isiPad_ZTE && kScreenMaxLength  == 1024.0)
 
 /** 判断设备系统宏 */
 #define is_iOS8   [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0

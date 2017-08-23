@@ -52,13 +52,13 @@
 
 - (void)setData{
 
-    if (isiPhone5) {
+    if (IS_IPHONE5) {
         _imageWidth = i5ImageWidth;
-    }else if (isiPhone6){
+    }else if (IS_IPHONE6){
         _imageWidth = i6ImageWidth;
-    }else if (isiPhone6P){
+    }else if (IS_IPHONE6_PLUS){
         _imageWidth = i6PImageWidth;
-    }else if (isiPad){
+    }else if (IS_PAD){
         _imageWidth = iPadWidth;
     }
 }

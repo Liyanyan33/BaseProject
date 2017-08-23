@@ -18,6 +18,5 @@
 /** url链接规则 */
 #define urlRegularEx          @"\\b(([\\w-]+://?|www[.])[^\\s()<>]+(?:\\([\\w\\d]+\\)|([^[:punct:]\\s]|/)))"
 
-
 #endif /* RegularExDefine_h */
 

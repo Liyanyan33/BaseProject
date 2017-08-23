@@ -13,7 +13,6 @@
 #import "NewFeatureController.h"
 #import "AccountDB.h"
 
-
 @interface TestController ()
 @property(nonatomic,strong)NSMutableArray *dataArr;
 @property(nonatomic,strong)NSMutableArray *vcNameArr;
@@ -26,6 +25,21 @@
     self.title = @"主页--功能列表";
     [self setHeaderRefresh:NO footerRefresh:NO];
     [self initData];
+    
+    CGFloat fontSizeScale_var = 0;
+    if (IS_IPHONE5) {
+        fontSizeScale_var = 0.9;
+    }else if (IS_IPHONE6){
+        fontSizeScale_var = 1;
+    }else if (IS_IPHONE6_PLUS){
+        fontSizeScale_var = 1.5;
+    }else if (IS_PAD){
+        fontSizeScale_var = 2;
+    }
+    
+    
+    NSLog(@"%f--%f",kScreenWidth,kScreenHeight);
+    NSLog(@"fontSizeScale_var = %f",fontSizeScale_var);
 }
 
 - (UITableViewStyle)getTableViewStytle{

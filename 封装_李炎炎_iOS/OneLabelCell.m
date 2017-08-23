@@ -37,7 +37,7 @@
     NSString *txtStr = (NSString*)modelData;
     CGFloat cellHeight = 0;
     cellHeight+=labelMarginTop;
-    CGSize txtSize = [txtStr sizeWithFont:[UIFont systemFontOfSize:18] withWidth:kScreenWidth - labelMarginLeft*2];
+    CGSize txtSize = [txtStr sizeWithFont:kFont(17) withWidth:kScreenWidth - labelMarginLeft*2];
     cellHeight+=txtSize.height;
     cellHeight+=labelMarginBottom;
     cellHeight+=lineH;
@@ -48,7 +48,7 @@
 - (UILabel*)txtLabel{
     if (!_txtLabel) {
         _txtLabel = [[UILabel alloc]init];
-        _txtLabel.font = [UIFont systemFontOfSize:18];
+        _txtLabel.font = kFont(17);
         _txtLabel.numberOfLines = 0;
         _txtLabel.textColor = [UIColor redColor];
     }
@@ -62,5 +62,4 @@
     }
     return _line;
 }
-
 @end

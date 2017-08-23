@@ -26,7 +26,7 @@
 }
 - (id)createAdapter{
     QQFoldAdapter *adpter = [[QQFoldAdapter alloc]initWithCellBlock:^(NSIndexPath *indexPath) {
-        
+        NSLog(@"%ld--%ld",indexPath.section,indexPath.row);
     }];
     return adpter;
 }
@@ -38,7 +38,6 @@
         NSString *filePath = [[NSBundle mainBundle]pathForResource:@"contacts" ofType:@"json"];
         NSData *data = [NSData dataWithContentsOfFile:filePath];
         NSDictionary *jsonObj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"数据内容：%@", jsonObj);
         NSString *retCode = jsonObj[@"ret_code"];
         if ([retCode isEqualToString:@"0"]) {
             // 解析返回的结果：JSON转数据模型
