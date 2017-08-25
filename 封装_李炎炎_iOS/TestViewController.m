@@ -31,8 +31,17 @@
     [super viewDidLoad];
     self.title = @"测试";
     [self createUI];
+//    [self createYYKitControl];
     
-    [self createYYKitControl];
+    
+    NSLog(@"X轴比例 = %f -- Y轴比例 = %f",ZTEScaleX,ZTEScaleY);
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(20, 300, kScreenWidth - 20*2, ScreenFitH(30))];
+    label.text = @"决定高手";
+    label.font = ScreenFitFont(17);
+    label.backgroundColor = [UIColor redColor];
+    [self.view addSubview:label];
+    
+    NSLog(@"height = %f",ScreenFitH(30));
 }
 
 - (void)dealloc{

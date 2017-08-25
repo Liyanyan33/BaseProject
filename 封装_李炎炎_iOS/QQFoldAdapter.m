@@ -40,7 +40,7 @@
 
 /** 返回分区头视图的高度 */
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50 * kScaleFit;
+    return ScreenFitH(50);
 }
 
 /** 返回分区尾视图的高度 */
@@ -55,7 +55,7 @@
 /** 返回头视图 */
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     QQGroupModel *groupModel = self.sourceData[section];
-    QQFoldSectionHeaderView *headerView = [[QQFoldSectionHeaderView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 50*kScaleFit)];
+    QQFoldSectionHeaderView *headerView = [[QQFoldSectionHeaderView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, ScreenFitH(50))];
     [headerView configHeaderView:groupModel indexPath:nil];
     headerView.tapBlock = ^(){
         groupModel.isFold = !groupModel.isFold;

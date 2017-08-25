@@ -974,6 +974,7 @@
 		68E683661F2F3B490081BBE3 /* DrawTextController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawTextController.m; sourceTree = "<group>"; };
 		68E683681F2F3DC00081BBE3 /* DrawTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawTextView.h; sourceTree = "<group>"; };
 		68E683691F2F3DC00081BBE3 /* DrawTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawTextView.m; sourceTree = "<group>"; };
+		68E691BD1F4DBCE100D115D6 /* ZTEScreenFitDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTEScreenFitDefine.h; sourceTree = "<group>"; };
 		73484E1887BD9066BF0DBEC7 /* Pods-封装_李炎炎_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-封装_李炎炎_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-封装_李炎炎_iOS/Pods-封装_李炎炎_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		DBE95840E57003888F64226D /* libPods-封装_李炎炎_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-封装_李炎炎_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1363,9 +1364,9 @@
 		681FF7961DB8F25900432D57 /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
+				689C8CBE1EED722000AEF81F /* Controller */,
 				689853D81EF3B44C007B83BB /* View */,
 				689C8CBF1EED722E00AEF81F /* Adapter */,
-				689C8CBE1EED722000AEF81F /* Controller */,
 			);
 			name = "主页";
 			sourceTree = "<group>";
@@ -2295,6 +2296,7 @@
 				68A5D14E1D82921800209916 /* LYDefine.h */,
 				68A5D1581D8296AD00209916 /* URLDefine.h */,
 				682F24DF1F0B46AD00B29A44 /* RegularExDefine.h */,
+				68E691BD1F4DBCE100D115D6 /* ZTEScreenFitDefine.h */,
 			);
 			name = Define;
 			sourceTree = "<group>";

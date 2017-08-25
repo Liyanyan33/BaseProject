@@ -52,8 +52,20 @@ fontSizeScale_var = 2;\
 (fontSizeScale_var);\
 })\
 
-#define kFont(value)    [UIFont systemFontOfSize:value * fontSizeScale]
+#define ScreenFitFont(value)    [UIFont systemFontOfSize:value * fontSizeScale]
 
+/** 以iPhone6的宽高为基准  */
+#define IPHONE6W 375
+#define IPHONE6H  667
+
+#define ZTEScaleX (kScreenWidth / IPHONE6W)
+#define ZTEScaleY (kScreenHeight / IPHONE6H)
+
+#define ScreenFitX(x)  (x * ZTEScaleX)
+#define ScreenFitY(y)  (y * ZTEScaleY)
+#define ScreenFitW(w) (w * ZTEScaleX)
+#define ScreenFitH(h)  (h * ZTEScaleY)
+#define LineFont(value)  [UIFont systemFontOfSize:value * ZTEScaleX]
 
 #define GetURLWith(tag) \
 ({\
