@@ -11,4 +11,6 @@
 @interface UIImage (Extension)
 /** 通过颜色创建 一张图片*/
 + (UIImage *)imageWithCustomerColor:(UIColor *)color;
+
++(UIImage *)ax_imageRectangleWithSize:(CGSize )aSzize color:(UIColor *)aColor;
 @end

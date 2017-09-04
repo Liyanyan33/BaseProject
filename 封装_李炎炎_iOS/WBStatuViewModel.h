@@ -29,6 +29,9 @@
 @property(nonatomic,assign)CGRect orginalJGGFrame;
 @property(nonatomic,assign)CGFloat orginalViewHeight;
 
+#pragma mark 底部工具栏(转发,评论,点赞)
+@property(nonatomic,assign)CGRect bottomToolBarFrame;
+
 #pragma mark cell高度
 @property(nonatomic,assign)CGFloat cellHeight;
 

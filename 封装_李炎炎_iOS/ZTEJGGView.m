@@ -36,6 +36,9 @@
     // 遍历所有的图片控件，设置图片
     for (int i = 0; i < self.subviews.count; i++) {
         ZTEPhotoView *photoView = self.subviews[i];
+        photoView.tag = i;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClick:)];
+        [photoView addGestureRecognizer:tap];
         if (i < photosCount) { // 显示
             photoView.photo = photos[i];
             photoView.hidden = NO;
@@ -73,5 +76,13 @@
     CGFloat photosH = rows * HWStatusPhotoWH + (rows - 1) * HWStatusPhotoMargin;
     
     return CGSizeMake(photosW, photosH);
+}
+
+#pragma mark 监听事件
+- (void)tapClick:(UITapGestureRecognizer*)sender{
+    NSInteger imageViewIndex = sender.view.tag;
+    if (self.clickImageBlock) {
+        self.clickImageBlock(imageViewIndex);
+    }
 }
 @end

@@ -58,7 +58,6 @@
 green:((CGFloat)((rgbValue & 0xFF00) >> 8)) / 255.0 \
 blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 
-
 // 等比例适配系数
 #define kScaleFit (kScreenWidth / 375.0f)
 
@@ -68,10 +67,29 @@ blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 #define loadTitle  @"正在加载中......"
 #define busyTitle @"网络繁忙请稍后...."
 
-/** 新浪微博的key,密钥,回调地址 */
-#define XLAppKey       @"677145421"
-#define XLAppSecret   @"704facabd462129f68afaca2a3d04f72"
-#define XLRedirectUR @"http://baidu.com"
+#define  AXLocalizedString(key) NSLocalizedString(key,nil)
+
+#define  AXLogFunc AXLog(@"%s",__func__);
+
+#define axLong_dealloc AXLog(@"dealloc %@",self.class)
+
+// 弱引用 宏定义
+#ifndef weakify
+#if DEBUG
+#if __has_feature(objc_arc)
+#define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+#endif
+#else
+#if __has_feature(objc_arc)
+#define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+#else
+#define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+#endif
+#endif
+#endif
+
 
 
 

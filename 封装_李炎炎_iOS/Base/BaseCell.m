@@ -22,7 +22,7 @@
 + (instancetype)cellWithTableView:(UITableView*)tableView withReuseIdentify:(NSString*)reuseIdentify{
     BaseCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentify];
     if (cell == nil) {
-        cell = [[[self class] alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:NSStringFromClass([self class])];
+        cell = [[[self class] alloc]initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:reuseIdentify];
     }
     return cell;
 }

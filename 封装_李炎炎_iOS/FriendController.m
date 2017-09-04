@@ -12,7 +12,7 @@
 #import "WBTimelineModel.h"
 #import "WBStatuViewModel.h"
 
-@interface FriendController ()
+@interface FriendController ()<FriendAdapterBottomToolBarDelegate>
 @property(nonatomic,strong)NSMutableArray *dataArr;
 @end
 
@@ -25,9 +25,10 @@
 }
 
 - (id)createAdapter{
-    FriendAdapter *fAdapter = [[FriendAdapter alloc]initWithCellIdentifiers:@"friend_cell" withCellBlock:^(NSIndexPath *indexPath) {
+    FriendAdapter *fAdapter = [[FriendAdapter alloc]initWithCellBlock:^(NSIndexPath *indexPath) {
         
     }];
+    fAdapter.bottomToolBarClickDelegate = self;
     return fAdapter;
 }
 
@@ -62,5 +63,10 @@
 
 - (void)loadMoreData{
     
+}
+
+#pragma mark FriendAdapterBottomToolBarDelegate
+- (void)bottomToolBarClickTag:(NSInteger)btnTag friendAdapter:(FriendAdapter *)friendAdapter indexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%s--%ld -- %ld",__func__,(long)btnTag,(long)indexPath.row);
 }
 @end

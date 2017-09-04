@@ -9,7 +9,7 @@
 #import "BaseTableController.h"
 #import "BaseTableAdapter.h"
 
-@interface BaseTableController ()
+@interface BaseTableController ()<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 {
     NSMutableArray *_array;
     int _loadType;   // 请求数据的方式  1 上拉刷新  2 下拉加载
@@ -25,10 +25,20 @@
     _array = [[NSMutableArray alloc]init];
     _loadType = 1;
     [self.view addSubview:self.tableView];
+//    [self setNoDataView];
     [self.tableView addSubview:self.noDataImageView];
     // 默认情况下 上拉和下拉刷新都存在
     [self setHeaderRefresh:YES footerRefresh:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(netWork:) name:@"NetWorkingStatu" object:nil];
+}
+
+- (void)setNoDataView{
+    self.tableView.emptyDataSetSource = self;
+    self.tableView.emptyDataSetDelegate = self;
+}
+
+- (NSAttributedString*)titleForEmptyDataSet:(UIScrollView *)scrollView{
+    return [[NSAttributedString alloc]initWithString:@"你满B"];
 }
 
 /** tableView 默认类型 */

@@ -22,6 +22,8 @@
 
 #define sourceLabelMarginTop 4
 
+#define bottomToolBarH 35
+
 @interface WBStatuModel ()
 
 @end
@@ -64,12 +66,15 @@
     // 九宫格图片
     NSArray *pic_urls = _statuModel.pic_urls;
     CGSize jggSize = [ZTEJGGView sizeWithCount:pic_urls.count];
-    _orginalJGGFrame = CGRectMake(0, CGRectGetMaxY(_orginalTxtFrame), kScreenWidth, jggSize.height);
+    _orginalJGGFrame = CGRectMake(0, CGRectGetMaxY(_orginalTxtFrame)+2, kScreenWidth, jggSize.height);
     
-    _orginalViewHeight = attStrSize.height + 2*2 + jggSize.height;
+    _orginalViewHeight = attStrSize.height + 2*2 + jggSize.height + 2;
     _orginalViewFrame = CGRectMake(0, personInfoViewH, kScreenWidth-10*2, _orginalViewHeight);
     
+    // 底部工具栏
+    _bottomToolBarFrame = CGRectMake(0, CGRectGetMaxY(_orginalViewFrame), kScreenWidth, bottomToolBarH);
+    
     // 整个cell的高度
-    _cellHeight = _personInfoViewHeight + _orginalViewHeight;
+    _cellHeight = _personInfoViewHeight + _orginalViewHeight + _bottomToolBarFrame.size.height;
 }
 @end

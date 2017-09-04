@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^JGGVIewClickImageVIewBlock)(NSInteger clickIndex);
+
 @interface ZTEJGGView : UIView
 
 /** 图片数组 根据图片数组的个数 创建内部控件的个数 */
@@ -15,4 +17,8 @@
 
 /** 根据图片个数计算九宫格的尺寸 */
 + (CGSize)sizeWithCount:(NSUInteger)count;
+
+/** 点击指定imageView的block回调*/
+@property(nonatomic,copy)JGGVIewClickImageVIewBlock clickImageBlock;
+
 @end

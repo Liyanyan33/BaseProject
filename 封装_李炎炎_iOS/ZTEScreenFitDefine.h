@@ -22,11 +22,17 @@
 #define isRetain               ([[UIScreen mainScreen] scale] >= 2.0)
 
 /** 设备型号判断
- iPhone4,         //320*480
- iPhone5,5s     //320*568
- iPhone6,         //375*667
- iPhone6Plus,  //414*736
- iPad                //768*1024
+  设备                     逻辑分辨率   屏幕模式                           屏幕物理尺寸
+ iPhone4,                //320*480        @x                                   3.5英寸
+ iPhone5,5s            //320*568        @2x                                 4英寸
+ iPhone6,6s,7         //375*667        @2x                                 4.7英寸
+ iPhone6+,6s+,7+   //414*736        @3x                                 5.5英寸
+ iPad ,2                   //768*1024      @x                                   9.7英寸
+ iPad mini,2,3,4      //768*1024      @x(第一代)  @2x(其他)   7.9英寸
+ iPad Air,2               //768*1024      @2x                                 9.7英寸
+ iPad Pro 9.7          //768*1024      @2x                                  9.7英寸
+ iPad Pro 10.5        //834 x 1112    @2x                                  10.5英寸
+ iPad Pro 12.9        //1024*1336    @2x                                  12.9英寸
  */
 #define IS_IPHONE4   (isiPhone && kScreenMaxLength  <  568.0)
 #define IS_IPHONE5   (isiPhone && kScreenMaxLength == 568.0)
@@ -54,29 +60,34 @@ fontSizeScale_var = 2;\
 
 #define ScreenFitFont(value)    [UIFont systemFontOfSize:value * fontSizeScale]
 
-/** 以iPhone6的宽高为基准  */
+/** 
+ * CGRect 适配 以iPhone6的宽高为基准
+ */
 #define IPHONE6W 375
 #define IPHONE6H  667
 
+/** 宽高的比例系数 */
 #define ZTEScaleX (kScreenWidth / IPHONE6W)
 #define ZTEScaleY (kScreenHeight / IPHONE6H)
 
+/** 
+ * 经过适配(乘以比例系数)之后的 x y w h
+ * iPhone5     X轴比例 = 0.853333 -- Y轴比例 = 0.851574
+ * iPhone6     X轴比例 = 1.000000 -- Y轴比例 = 1.000000
+ * iPhone6P   X轴比例 = 1.104000 -- Y轴比例 = 1.103448
+ */
 #define ScreenFitX(x)  (x * ZTEScaleX)
 #define ScreenFitY(y)  (y * ZTEScaleY)
 #define ScreenFitW(w) (w * ZTEScaleX)
 #define ScreenFitH(h)  (h * ZTEScaleY)
 #define LineFont(value)  [UIFont systemFontOfSize:value * ZTEScaleX]
 
-#define GetURLWith(tag) \
-({\
-NSString *url=@"";\
-if (tag==1)\
-url=@"http://www.xxx.com:";\
-else if (tag==2)\
-url=@"http://www.xxx-test.com:";\
-else if(tag==3)\
-url=@"http://www.xxx-test2.com:";\
-(url);\
-})\
+/** 
+ 为了解决（小宽度） 乘以 scale比例系数基本没效果     --需要 发大比例系数
+ 或者（大宽度） 乘以 scale比例系数 又过分了的问题， -- 需要 缩小比例系数 (发大与缩小主要是由设置的参量的数值大小决定的)
+ 又定义了这样一个宏，给scale再乘一个（自己制定的系数）
+ 主要针对是 大屏的UI显示问题  scale * scale 双比例
+ */
+#define ScaleScreenFitX(x,scale)  (ZTEScaleX > 1 ? (x * ZTEScaleX) : (x * ZTEScaleX * scale))
 
 #endif /* ZTEScreenFitDefine_h */

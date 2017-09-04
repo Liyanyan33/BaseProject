@@ -118,10 +118,10 @@
     return nil;
 }
 
-- (void)setCornerRadius:(CGFloat)radius borderW:(CGFloat)borderW borderCorlor:(UIColor *)corlor{
+- (void)setCornerRadius:(CGFloat)radius borderW:(CGFloat)borderW borderCorlor:(UIColor *)color{
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = radius;
     self.layer.borderWidth = borderW;
-    self.layer.borderColor = corlor.CGColor;
+    self.layer.borderColor = color.CGColor;
 }
 @end

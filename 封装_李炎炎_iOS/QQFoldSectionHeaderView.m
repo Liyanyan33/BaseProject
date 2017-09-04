@@ -94,9 +94,7 @@
 #pragma mak 懒加载
 - (UILabel*)groupLabel{
     if (!_groupLabel) {
-        _groupLabel = [[UILabel alloc]init];
-        _groupLabel.textColor = [UIColor colorWithRed:0.21 green:0.21 blue:0.21 alpha:1.0];
-        _groupLabel.font = [UIFont systemFontOfSize:16];
+        _groupLabel = [ZTEUIKit labelWithText:@"" font:ScreenFitFont(16) textColor:[UIColor colorWithRed:0.21 green:0.21 blue:0.21 alpha:1.0]];
     }
     return _groupLabel;
 }

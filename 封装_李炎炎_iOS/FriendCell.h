@@ -7,7 +7,10 @@
 //
 
 #import "BaseCell.h"
+#import "WBBottomToolBar.h"
+
+typedef void(^FriendCellInBottomToolBarClick)(NSInteger tag);
 
 @interface FriendCell : BaseCell
-
+@property(nonatomic,copy)FriendCellInBottomToolBarClick friendCellInBottomToolBarClick;
 @end

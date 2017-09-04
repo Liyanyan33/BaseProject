@@ -47,10 +47,7 @@
 #pragma mark 懒加载
 - (UILabel*)txtLabel{
     if (!_txtLabel) {
-        _txtLabel = [[UILabel alloc]init];
-        _txtLabel.font = ScreenFitFont(17);
-        _txtLabel.numberOfLines = 0;
-        _txtLabel.textColor = [UIColor redColor];
+        _txtLabel = [ZTEUIKit labelWithText:@"尼玛B" font:ScreenFitFont(17) textColor:[UIColor redColor]];
     }
     return _txtLabel;
 }

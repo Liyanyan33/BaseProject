@@ -21,6 +21,8 @@
         self.contentMode = UIViewContentModeScaleAspectFill;
         // 超出边框的内容都剪掉
         self.clipsToBounds = YES;
+        // 开启事件交互
+        self.userInteractionEnabled = YES;
     }
     return self;
 }

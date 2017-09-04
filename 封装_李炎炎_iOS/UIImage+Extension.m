@@ -27,4 +27,22 @@
     
     return image;
 }
+
+/**
+* 矩形颜色图片
+*/
++(UIImage *)ax_imageRectangleWithSize:(CGSize )aSzize color:(UIColor *)aColor{
+    
+    UIGraphicsBeginImageContextWithOptions(aSzize, NO,0);
+    
+    UIBezierPath *path=[UIBezierPath bezierPathWithRect:CGRectMake(0, 0, aSzize.width, aSzize.height)];
+    
+    [[UIColor whiteColor] setStroke];
+    [aColor setFill];
+    [path stroke];
+    [path fill];
+    UIImage *tempImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return tempImg;
+}
 @end

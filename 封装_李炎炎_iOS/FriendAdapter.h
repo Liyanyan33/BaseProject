@@ -7,7 +7,14 @@
 //
 
 #import "BaseTableAdapter.h"
+@class FriendAdapter;
+@protocol FriendAdapterBottomToolBarDelegate <NSObject>
+@optional
+- (void)bottomToolBarClickTag:(NSInteger)btnTag friendAdapter:(FriendAdapter*)friendAdapter indexPath:(NSIndexPath*)indexPath;
+
+@end
 
 @interface FriendAdapter : BaseTableAdapter
+@property(nonatomic,weak)id<FriendAdapterBottomToolBarDelegate> bottomToolBarClickDelegate;
 
 @end

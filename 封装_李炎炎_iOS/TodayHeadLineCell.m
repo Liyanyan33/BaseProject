@@ -33,11 +33,8 @@
 
 - (UILabel*)txtLabel{
     if (!_txtLabel) {
-        _txtLabel = [[UILabel alloc]init];
-        _txtLabel.textColor = [UIColor blackColor];
-        _txtLabel.textAlignment = NSTextAlignmentCenter;
+        _txtLabel = [ZTEUIKit labelWithText:@"" font:ScreenFitFont(17) textColor:[UIColor blackColor] textAlignment:NSTextAlignmentCenter];
     }
     return _txtLabel;
 }
-
 @end

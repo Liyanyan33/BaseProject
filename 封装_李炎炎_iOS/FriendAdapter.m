@@ -13,7 +13,12 @@
 @implementation FriendAdapter
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    FriendCell *cell = [FriendCell cellWithTableView:tableView withReuseIdentify:self.cellIdentifiers];
+    FriendCell *cell = [FriendCell cellWithTableView:tableView];
+    cell.friendCellInBottomToolBarClick = ^(NSInteger tag){
+        if ([self.bottomToolBarClickDelegate respondsToSelector:@selector(bottomToolBarClickTag:friendAdapter:indexPath:)]) {
+            [self.bottomToolBarClickDelegate bottomToolBarClickTag:tag friendAdapter:self indexPath:indexPath];
+        }
+    };
     [cell configCellWithViewModel:self.sourceData[indexPath.row] indexPath:indexPath];
     return cell;
 }

@@ -10,6 +10,7 @@
 #import "WBStatuViewModel.h"
 #import "StatuTextView.h"
 #import "ZTEJGGView.h"
+#import "ZTEPhotoBrowser.h"
 
 @interface OrginalStatuView ()
 @property(nonatomic,strong)StatuTextView *textView;
@@ -22,15 +23,11 @@
 
 - (void)createUI{
     [self addSubview:self.textView];
-//    [self addSubview:self.txtLabel];
     [self addSubview:self.jggView];
 }
 
 - (void)configWithViewModel:(id)viewModel{
     _sViewModel = (WBStatuViewModel*)viewModel;
-    
-//    _txtLabel.attributedText = _sViewModel.statuModel.orginalAttrStr;
-//    _txtLabel.frame = _sViewModel.orginalTxtFrame;
     
     _textView.attributedText = _sViewModel.statuModel.orginalAttrStr;
     _textView.frame = _sViewModel.orginalTxtFrame;
@@ -39,7 +36,15 @@
     _jggView.frame = _sViewModel.orginalJGGFrame;
 }
 
-#pragma mark 懒加载
+#pragma mark private method
+- (NSArray*)generateImageUrlStrArr{
+    NSMutableArray *imageUrlArr = [[NSMutableArray alloc]init];
+    for (ZTEPhotoModel *model in _sViewModel.statuModel.pic_urls) {
+        [imageUrlArr addObject:model.thumbnail_pic];
+    }
+    return imageUrlArr;
+}
+
 #pragma mak 懒加载
 - (StatuTextView*)textView{
     if (!_textView) {
@@ -57,8 +62,14 @@
 }
 
 - (ZTEJGGView*)jggView{
+     __weak __typeof(self)weakSelf = self;
     if (!_jggView) {
         _jggView = [[ZTEJGGView alloc]init];
+        _jggView.clickImageBlock = ^(NSInteger clickImageIndex){
+            ZTEPhotoBrowser *photoBrowser = [[ZTEPhotoBrowser alloc]init];
+            [photoBrowser showPhotoBrowserWithImageUrls:[weakSelf generateImageUrlStrArr] clickImageIndex:clickImageIndex];
+            
+        };
     }
     return _jggView;
 }

@@ -56,9 +56,7 @@
 
 - (UILabel*)nameLabel{
     if (!_nameLabel) {
-        _nameLabel = [[UILabel alloc]init];
-        _nameLabel.font = [UIFont systemFontOfSize:16];
-        _nameLabel.textColor = [UIColor orangeColor];
+        _nameLabel = [ZTEUIKit labelWithText:@"" font:ScreenFitFont(16) textColor:[UIColor orangeColor]];
     }
     return _nameLabel;
 }
@@ -72,9 +70,7 @@
 
 - (UILabel*)sourceLabel{
     if (!_sourceLabel) {
-        _sourceLabel = [[UILabel alloc]init];
-        _sourceLabel.font = [UIFont systemFontOfSize:12];
-        _sourceLabel.textColor = [UIColor grayColor];
+        _sourceLabel = [ZTEUIKit labelWithText:@"" font:ScreenFitFont(12) textColor:[UIColor grayColor]];
         _sourceLabel.adjustsFontSizeToFitWidth = YES;  // 解决宽度不够问题
     }
     return _sourceLabel;
