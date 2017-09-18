@@ -37,6 +37,9 @@
 /** 正常状态 文字 */
 + (UIButton*)buttonWtihNormalText:(NSString *)normalText;
 
+/** 正常状态下 图片 */
++ (UIButton*)buttonWithnormalImage:(NSString*)normalImage;
+
 /** 正常状态 文字 + 字体 */
 + (UIButton*)buttonWtihNormalText:(NSString *)normalText font:(UIFont *)font;
 

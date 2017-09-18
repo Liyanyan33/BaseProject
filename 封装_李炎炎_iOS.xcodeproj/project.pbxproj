@@ -284,9 +284,22 @@
 		683039331DD1A16C002BFD69 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 683039301DD1A16C002BFD69 /* README.md */; };
 		68310F021F57D7E400D1CEDF /* ZTEPhotoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F011F57D7E400D1CEDF /* ZTEPhotoContentView.m */; };
 		68310F051F57DA0800D1CEDF /* ZTEPhotoAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F041F57DA0800D1CEDF /* ZTEPhotoAccessoryView.m */; };
-		68310F071F57DC9900D1CEDF /* picture_download_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68310F061F57DC9900D1CEDF /* picture_download_icon@2x.png */; };
 		68310F0A1F57E63100D1CEDF /* ZTEBrowserPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F091F57E63100D1CEDF /* ZTEBrowserPhotoModel.m */; };
 		68310F0D1F5813E400D1CEDF /* ZTEPhotoBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F0C1F5813E400D1CEDF /* ZTEPhotoBrowserCell.m */; };
+		68310F0F1F5D9C7600D1CEDF /* ZTEPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68310F0E1F5D9C7600D1CEDF /* ZTEPhotoBrowser.bundle */; };
+		68310F121F5E52E000D1CEDF /* ZTEImagePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68310F111F5E52E000D1CEDF /* ZTEImagePicker.bundle */; };
+		68310F151F5E85BA00D1CEDF /* ZTEImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F141F5E85BA00D1CEDF /* ZTEImagePickerController.m */; };
+		68310F181F5E864300D1CEDF /* ZTEAlbumTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F171F5E864300D1CEDF /* ZTEAlbumTypeController.m */; };
+		68310F1B1F5E86A600D1CEDF /* ZTEImageCollecionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F1A1F5E86A600D1CEDF /* ZTEImageCollecionController.m */; };
+		68310F1E1F5EAEFF00D1CEDF /* ZTEImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F1D1F5EAEFF00D1CEDF /* ZTEImageManager.m */; };
+		68310F211F5EB0F000D1CEDF /* ZTEAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F201F5EB0F000D1CEDF /* ZTEAlbumModel.m */; };
+		68310F241F5EE61400D1CEDF /* ZTEAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F231F5EE61400D1CEDF /* ZTEAlbumManager.m */; };
+		68310F2A1F5FE32A00D1CEDF /* ZTEAlbumTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F291F5FE32A00D1CEDF /* ZTEAlbumTypeCell.m */; };
+		68310F2D1F62288600D1CEDF /* ZTEImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F2C1F62288600D1CEDF /* ZTEImageCollectionCell.m */; };
+		68310F301F6229DE00D1CEDF /* ZTEImageCollectinBottomVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F2F1F6229DE00D1CEDF /* ZTEImageCollectinBottomVIew.m */; };
+		68310F331F62878200D1CEDF /* ZTEImagePreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F321F62878200D1CEDF /* ZTEImagePreViewController.m */; };
+		68310F361F6530CC00D1CEDF /* ZTEAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F351F6530CC00D1CEDF /* ZTEAssetModel.m */; };
+		68310F391F6905C300D1CEDF /* NSBundle+ZTEImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 68310F381F6905C300D1CEDF /* NSBundle+ZTEImagePicker.m */; };
 		6849FF861F5013C500995227 /* ZTEUIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849FF851F5013C500995227 /* ZTEUIKit.m */; };
 		686EBB0C1D8FE643009948F3 /* BaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686EBB0B1D8FE643009948F3 /* BaseNavController.m */; };
 		686EBB121D8FECC5009948F3 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 686EBB111D8FECC5009948F3 /* UIBarButtonItem+Extension.m */; };
@@ -300,6 +313,9 @@
 		68722FB21D9924D300C2E8FB /* UIFont+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68722FB11D9924D300C2E8FB /* UIFont+Extension.m */; };
 		68722FB51D9A07DF00C2E8FB /* ZTEDropMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 68722FB41D9A07DF00C2E8FB /* ZTEDropMenu.m */; };
 		68722FB71D9A119D00C2E8FB /* dropdownMenu_cornerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 68722FB61D9A119D00C2E8FB /* dropdownMenu_cornerIcon.png */; };
+		6889D58A1F6E9D2B0096356A /* ZTEImagePreViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889D5891F6E9D2B0096356A /* ZTEImagePreViewCell.m */; };
+		6889D58D1F6EA2450096356A /* ZTEPreViewNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889D58C1F6EA2450096356A /* ZTEPreViewNavBar.m */; };
+		6889D5901F6EA2540096356A /* ZTEPreViewBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889D58F1F6EA2540096356A /* ZTEPreViewBottomBar.m */; };
 		688DB29D1F545BF8007A6B7D /* UIScrollView+AXEmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 688DB29C1F545BF8007A6B7D /* UIScrollView+AXEmptyDataSet.m */; };
 		688DB2A01F545CA0007A6B7D /* ax_emptyData.png in Resources */ = {isa = PBXBuildFile; fileRef = 688DB29E1F545CA0007A6B7D /* ax_emptyData.png */; };
 		688DB2A11F545CA0007A6B7D /* ax_emptyData@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 688DB29F1F545CA0007A6B7D /* ax_emptyData@2x.png */; };
@@ -816,11 +832,36 @@
 		68310F011F57D7E400D1CEDF /* ZTEPhotoContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEPhotoContentView.m; sourceTree = "<group>"; };
 		68310F031F57DA0800D1CEDF /* ZTEPhotoAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEPhotoAccessoryView.h; sourceTree = "<group>"; };
 		68310F041F57DA0800D1CEDF /* ZTEPhotoAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEPhotoAccessoryView.m; sourceTree = "<group>"; };
-		68310F061F57DC9900D1CEDF /* picture_download_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture_download_icon@2x.png"; sourceTree = "<group>"; };
 		68310F081F57E63100D1CEDF /* ZTEBrowserPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEBrowserPhotoModel.h; sourceTree = "<group>"; };
 		68310F091F57E63100D1CEDF /* ZTEBrowserPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEBrowserPhotoModel.m; sourceTree = "<group>"; };
 		68310F0B1F5813E400D1CEDF /* ZTEPhotoBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEPhotoBrowserCell.h; sourceTree = "<group>"; };
 		68310F0C1F5813E400D1CEDF /* ZTEPhotoBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEPhotoBrowserCell.m; sourceTree = "<group>"; };
+		68310F0E1F5D9C7600D1CEDF /* ZTEPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZTEPhotoBrowser.bundle; sourceTree = "<group>"; };
+		68310F111F5E52E000D1CEDF /* ZTEImagePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZTEImagePicker.bundle; sourceTree = "<group>"; };
+		68310F131F5E85BA00D1CEDF /* ZTEImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEImagePickerController.h; sourceTree = "<group>"; };
+		68310F141F5E85BA00D1CEDF /* ZTEImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEImagePickerController.m; sourceTree = "<group>"; };
+		68310F161F5E864300D1CEDF /* ZTEAlbumTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEAlbumTypeController.h; sourceTree = "<group>"; };
+		68310F171F5E864300D1CEDF /* ZTEAlbumTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEAlbumTypeController.m; sourceTree = "<group>"; };
+		68310F191F5E86A600D1CEDF /* ZTEImageCollecionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEImageCollecionController.h; sourceTree = "<group>"; };
+		68310F1A1F5E86A600D1CEDF /* ZTEImageCollecionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEImageCollecionController.m; sourceTree = "<group>"; };
+		68310F1C1F5EAEFF00D1CEDF /* ZTEImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEImageManager.h; sourceTree = "<group>"; };
+		68310F1D1F5EAEFF00D1CEDF /* ZTEImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEImageManager.m; sourceTree = "<group>"; };
+		68310F1F1F5EB0F000D1CEDF /* ZTEAlbumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEAlbumModel.h; sourceTree = "<group>"; };
+		68310F201F5EB0F000D1CEDF /* ZTEAlbumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEAlbumModel.m; sourceTree = "<group>"; };
+		68310F221F5EE61400D1CEDF /* ZTEAlbumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEAlbumManager.h; sourceTree = "<group>"; };
+		68310F231F5EE61400D1CEDF /* ZTEAlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEAlbumManager.m; sourceTree = "<group>"; };
+		68310F281F5FE32A00D1CEDF /* ZTEAlbumTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEAlbumTypeCell.h; sourceTree = "<group>"; };
+		68310F291F5FE32A00D1CEDF /* ZTEAlbumTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEAlbumTypeCell.m; sourceTree = "<group>"; };
+		68310F2B1F62288600D1CEDF /* ZTEImageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEImageCollectionCell.h; sourceTree = "<group>"; };
+		68310F2C1F62288600D1CEDF /* ZTEImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEImageCollectionCell.m; sourceTree = "<group>"; };
+		68310F2E1F6229DE00D1CEDF /* ZTEImageCollectinBottomVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEImageCollectinBottomVIew.h; sourceTree = "<group>"; };
+		68310F2F1F6229DE00D1CEDF /* ZTEImageCollectinBottomVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEImageCollectinBottomVIew.m; sourceTree = "<group>"; };
+		68310F311F62878200D1CEDF /* ZTEImagePreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEImagePreViewController.h; sourceTree = "<group>"; };
+		68310F321F62878200D1CEDF /* ZTEImagePreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEImagePreViewController.m; sourceTree = "<group>"; };
+		68310F341F6530CC00D1CEDF /* ZTEAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEAssetModel.h; sourceTree = "<group>"; };
+		68310F351F6530CC00D1CEDF /* ZTEAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEAssetModel.m; sourceTree = "<group>"; };
+		68310F371F6905C300D1CEDF /* NSBundle+ZTEImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+ZTEImagePicker.h"; sourceTree = "<group>"; };
+		68310F381F6905C300D1CEDF /* NSBundle+ZTEImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+ZTEImagePicker.m"; sourceTree = "<group>"; };
 		6849FF841F5013C500995227 /* ZTEUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEUIKit.h; sourceTree = "<group>"; };
 		6849FF851F5013C500995227 /* ZTEUIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEUIKit.m; sourceTree = "<group>"; };
 		6849FF871F506D6500995227 /* ZTEThirdSDKKeyDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTEThirdSDKKeyDefine.h; sourceTree = "<group>"; };
@@ -846,6 +887,12 @@
 		68722FB31D9A07DF00C2E8FB /* ZTEDropMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEDropMenu.h; sourceTree = "<group>"; };
 		68722FB41D9A07DF00C2E8FB /* ZTEDropMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEDropMenu.m; sourceTree = "<group>"; };
 		68722FB61D9A119D00C2E8FB /* dropdownMenu_cornerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdownMenu_cornerIcon.png; sourceTree = "<group>"; };
+		6889D5881F6E9D2B0096356A /* ZTEImagePreViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZTEImagePreViewCell.h; path = Assets.xcassets/ZTEImagePreViewCell.h; sourceTree = "<group>"; };
+		6889D5891F6E9D2B0096356A /* ZTEImagePreViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZTEImagePreViewCell.m; path = Assets.xcassets/ZTEImagePreViewCell.m; sourceTree = "<group>"; };
+		6889D58B1F6EA2450096356A /* ZTEPreViewNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEPreViewNavBar.h; sourceTree = "<group>"; };
+		6889D58C1F6EA2450096356A /* ZTEPreViewNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEPreViewNavBar.m; sourceTree = "<group>"; };
+		6889D58E1F6EA2540096356A /* ZTEPreViewBottomBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTEPreViewBottomBar.h; sourceTree = "<group>"; };
+		6889D58F1F6EA2540096356A /* ZTEPreViewBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTEPreViewBottomBar.m; sourceTree = "<group>"; };
 		688DB29B1F545BF8007A6B7D /* UIScrollView+AXEmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AXEmptyDataSet.h"; sourceTree = "<group>"; };
 		688DB29C1F545BF8007A6B7D /* UIScrollView+AXEmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AXEmptyDataSet.m"; sourceTree = "<group>"; };
 		688DB29E1F545CA0007A6B7D /* ax_emptyData.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ax_emptyData.png; sourceTree = "<group>"; };
@@ -1446,7 +1493,7 @@
 				68310F041F57DA0800D1CEDF /* ZTEPhotoAccessoryView.m */,
 				68310F081F57E63100D1CEDF /* ZTEBrowserPhotoModel.h */,
 				68310F091F57E63100D1CEDF /* ZTEBrowserPhotoModel.m */,
-				68310F061F57DC9900D1CEDF /* picture_download_icon@2x.png */,
+				68310F0E1F5D9C7600D1CEDF /* ZTEPhotoBrowser.bundle */,
 			);
 			name = "ZTEPhotoBrowser(图片浏览器)";
 			sourceTree = "<group>";
@@ -1929,6 +1976,44 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		68310F101F5E528F00D1CEDF /* ZTEImagePicker(图片选择器) */ = {
+			isa = PBXGroup;
+			children = (
+				68310F131F5E85BA00D1CEDF /* ZTEImagePickerController.h */,
+				68310F141F5E85BA00D1CEDF /* ZTEImagePickerController.m */,
+				68310F161F5E864300D1CEDF /* ZTEAlbumTypeController.h */,
+				68310F171F5E864300D1CEDF /* ZTEAlbumTypeController.m */,
+				68310F281F5FE32A00D1CEDF /* ZTEAlbumTypeCell.h */,
+				68310F291F5FE32A00D1CEDF /* ZTEAlbumTypeCell.m */,
+				68310F1F1F5EB0F000D1CEDF /* ZTEAlbumModel.h */,
+				68310F201F5EB0F000D1CEDF /* ZTEAlbumModel.m */,
+				68310F341F6530CC00D1CEDF /* ZTEAssetModel.h */,
+				68310F351F6530CC00D1CEDF /* ZTEAssetModel.m */,
+				68310F191F5E86A600D1CEDF /* ZTEImageCollecionController.h */,
+				68310F1A1F5E86A600D1CEDF /* ZTEImageCollecionController.m */,
+				68310F2E1F6229DE00D1CEDF /* ZTEImageCollectinBottomVIew.h */,
+				68310F2F1F6229DE00D1CEDF /* ZTEImageCollectinBottomVIew.m */,
+				68310F2B1F62288600D1CEDF /* ZTEImageCollectionCell.h */,
+				68310F2C1F62288600D1CEDF /* ZTEImageCollectionCell.m */,
+				68310F311F62878200D1CEDF /* ZTEImagePreViewController.h */,
+				68310F321F62878200D1CEDF /* ZTEImagePreViewController.m */,
+				6889D58B1F6EA2450096356A /* ZTEPreViewNavBar.h */,
+				6889D58C1F6EA2450096356A /* ZTEPreViewNavBar.m */,
+				6889D58E1F6EA2540096356A /* ZTEPreViewBottomBar.h */,
+				6889D58F1F6EA2540096356A /* ZTEPreViewBottomBar.m */,
+				6889D5881F6E9D2B0096356A /* ZTEImagePreViewCell.h */,
+				6889D5891F6E9D2B0096356A /* ZTEImagePreViewCell.m */,
+				68310F1C1F5EAEFF00D1CEDF /* ZTEImageManager.h */,
+				68310F1D1F5EAEFF00D1CEDF /* ZTEImageManager.m */,
+				68310F221F5EE61400D1CEDF /* ZTEAlbumManager.h */,
+				68310F231F5EE61400D1CEDF /* ZTEAlbumManager.m */,
+				68310F371F6905C300D1CEDF /* NSBundle+ZTEImagePicker.h */,
+				68310F381F6905C300D1CEDF /* NSBundle+ZTEImagePicker.m */,
+				68310F111F5E52E000D1CEDF /* ZTEImagePicker.bundle */,
+			);
+			name = "ZTEImagePicker(图片选择器)";
+			sourceTree = "<group>";
+		};
 		6849FF831F50130F00995227 /* ZTEUIKIt(常见系统控件工厂构造方法) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1986,6 +2071,7 @@
 				682F26C41F0BE76B00B29A44 /* ZTEJGGView(九宫格) */,
 				6849FF831F50130F00995227 /* ZTEUIKIt(常见系统控件工厂构造方法) */,
 				6820E5FB1F56BBE900147EE7 /* ZTEPhotoBrowser(图片浏览器) */,
+				68310F101F5E528F00D1CEDF /* ZTEImagePicker(图片选择器) */,
 				689C8CB71EEA321000AEF81F /* Common */,
 				686EBB1F1D90BFC7009948F3 /* LYButton.h */,
 				686EBB201D90BFC7009948F3 /* LYButton.m */,
@@ -2861,6 +2947,7 @@
 				682F247F1F0A270800B29A44 /* common_icon_membership_level2@2x.png in Resources */,
 				6820E5F51F568C8D00147EE7 /* timeline_icon_comment@2x.png in Resources */,
 				682F24A91F0A270800B29A44 /* compose_toolbar_picture_highlighted@3x.png in Resources */,
+				68310F121F5E52E000D1CEDF /* ZTEImagePicker.bundle in Resources */,
 				682F24881F0A270800B29A44 /* common_icon_membership@2x.png in Resources */,
 				683039311DD1A16C002BFD69 /* LICENCE.txt in Resources */,
 				681FF7AE1DC0AFD900432D57 /* messageSendFailed@2x.png in Resources */,
@@ -2888,7 +2975,6 @@
 				682F24A31F0A270800B29A44 /* compose_mentionbutton_background_highlighted@3x.png in Resources */,
 				683038421DC9D4B5002BFD69 /* navi_back@2x.png in Resources */,
 				682F248C1F0A270800B29A44 /* compose_emoticonbutton_background@2x.png in Resources */,
-				68310F071F57DC9900D1CEDF /* picture_download_icon@2x.png in Resources */,
 				683039041DD0755E002BFD69 /* error-black.png in Resources */,
 				682F24CC1F0A273100B29A44 /* message_voice_receiver_playing_1@2x.png in Resources */,
 				682F247E1F0A270800B29A44 /* common_icon_membership_level1@3x.png in Resources */,
@@ -2911,6 +2997,7 @@
 				68722FB71D9A119D00C2E8FB /* dropdownMenu_cornerIcon.png in Resources */,
 				682F24C51F0A273100B29A44 /* message_add_background@3x.png in Resources */,
 				683038B41DCB30D7002BFD69 /* message_voice_receiver_playing_1@2x.png in Resources */,
+				68310F0F1F5D9C7600D1CEDF /* ZTEPhotoBrowser.bundle in Resources */,
 				682F24A81F0A270800B29A44 /* compose_toolbar_picture_highlighted@2x.png in Resources */,
 				682F24381F0A26E100B29A44 /* avatar_grassroot@2x.png in Resources */,
 				682F24391F0A26E100B29A44 /* avatar_grassroot@3x.png in Resources */,
@@ -2992,6 +3079,7 @@
 			files = (
 				68063AB31EFBD0A4009C41A8 /* WBStatuModel.m in Sources */,
 				682F24211F09F2F600B29A44 /* SDWebImageManager.m in Sources */,
+				68310F301F6229DE00D1CEDF /* ZTEImageCollectinBottomVIew.m in Sources */,
 				682F24E31F0B673100B29A44 /* RegexKitLite.m in Sources */,
 				68A5D1ED1D83115800209916 /* LYHud.m in Sources */,
 				68063AAD1EFBCE72009C41A8 /* WBAdModel.m in Sources */,
@@ -3011,12 +3099,15 @@
 				68A5D1D41D830F6B00209916 /* UIRefreshControl+AFNetworking.m in Sources */,
 				689C8CC71EEE354100AEF81F /* ImageController.m in Sources */,
 				681FF75C1DB7520D00432D57 /* MJRefreshBackFooter.m in Sources */,
+				68310F391F6905C300D1CEDF /* NSBundle+ZTEImagePicker.m in Sources */,
+				68310F181F5E864300D1CEDF /* ZTEAlbumTypeController.m in Sources */,
 				689853E91EF3C4AE007B83BB /* CellHeightMainAdapter.m in Sources */,
 				681FF79F1DBCADDA00432D57 /* TestController.m in Sources */,
 				683038511DC9D4B5002BFD69 /* TZAssetModel.m in Sources */,
 				68A5D1DB1D830F6B00209916 /* NSObject+MJClass.m in Sources */,
 				6898550C1EF3DA03007B83BB /* TestDataModel.m in Sources */,
 				683038A61DCB2D87002BFD69 /* NSTimer+AFSoundManager.m in Sources */,
+				6889D5901F6EA2540096356A /* ZTEPreViewBottomBar.m in Sources */,
 				683039331DD1A16C002BFD69 /* README.md in Sources */,
 				686EBB0C1D8FE643009948F3 /* BaseNavController.m in Sources */,
 				681FF76A1DB7520D00432D57 /* MJRefreshConst.m in Sources */,
@@ -3026,11 +3117,13 @@
 				68E6835F1F2DB7410081BBE3 /* SixController.m in Sources */,
 				683038A51DCB2D87002BFD69 /* AFSoundRecord.m in Sources */,
 				68063A621EFB974E009C41A8 /* AccountDB.m in Sources */,
+				6889D58A1F6E9D2B0096356A /* ZTEImagePreViewCell.m in Sources */,
 				68E6834A1F2CF31F0081BBE3 /* LayerDelegate.m in Sources */,
 				68063AA11EFBBE49009C41A8 /* FriendAdapter.m in Sources */,
 				68063A651EFBA147009C41A8 /* FriendController.m in Sources */,
 				682F241C1F09F2F600B29A44 /* SDImageCache.m in Sources */,
 				682F26C31F0BE4AE00B29A44 /* ZTEJGGView.m in Sources */,
+				68310F2A1F5FE32A00D1CEDF /* ZTEAlbumTypeCell.m in Sources */,
 				681FF7651DB7520D00432D57 /* MJRefreshBackStateFooter.m in Sources */,
 				68A5D1C61D830F6B00209916 /* AFNetworkReachabilityManager.m in Sources */,
 				6830385F1DC9D5B9002BFD69 /* LYActionSheetUtils.m in Sources */,
@@ -3065,6 +3158,7 @@
 				68A5D1DE1D830F6B00209916 /* NSObject+MJProperty.m in Sources */,
 				682720EE1F2453150038966C /* ZTEPickView.m in Sources */,
 				681FF78A1DB851CB00432D57 /* OnLineResponModel.m in Sources */,
+				68310F211F5EB0F000D1CEDF /* ZTEAlbumModel.m in Sources */,
 				6818F2181F46E50900C92955 /* QQGroupModel.m in Sources */,
 				689853ED1EF3CA86007B83BB /* AAUController.m in Sources */,
 				682F24DB1F0A812900B29A44 /* OrginalStatuView.m in Sources */,
@@ -3101,6 +3195,7 @@
 				683038581DC9D4B5002BFD69 /* UIView+Layout.m in Sources */,
 				6830392B1DD1A0F7002BFD69 /* ZteNetWorkUtils.m in Sources */,
 				682F23F61F09DD4600B29A44 /* PersonInfoView.m in Sources */,
+				68310F361F6530CC00D1CEDF /* ZTEAssetModel.m in Sources */,
 				68063AB61EFBD4BA009C41A8 /* WBUserModel.m in Sources */,
 				681FF7641DB7520D00432D57 /* MJRefreshBackNormalFooter.m in Sources */,
 				682F241B1F09F2F600B29A44 /* NSData+ImageContentType.m in Sources */,
@@ -3120,6 +3215,7 @@
 				681FF77A1DB761A200432D57 /* OnLineCell.m in Sources */,
 				68A5D0FA1D828B2B00209916 /* main.m in Sources */,
 				682F24221F09F2F600B29A44 /* SDWebImagePrefetcher.m in Sources */,
+				68310F2D1F62288600D1CEDF /* ZTEImageCollectionCell.m in Sources */,
 				683038AB1DCB2D87002BFD69 /* HSDownloadManager.m in Sources */,
 				682F26D51F0CC24000B29A44 /* ZTEEmojiKeyBoard.m in Sources */,
 				68E683441F2CB05C0081BBE3 /* TDrawView.m in Sources */,
@@ -3131,6 +3227,7 @@
 				68E683281F2C5FB50081BBE3 /* CoreGraphicIntroduceController.m in Sources */,
 				68A5D1DC1D830F6B00209916 /* NSObject+MJCoding.m in Sources */,
 				682F26CA1F0C84C900B29A44 /* StatuTextView.m in Sources */,
+				68310F241F5EE61400D1CEDF /* ZTEAlbumManager.m in Sources */,
 				683038A21DCB2D87002BFD69 /* AFSoundItem.m in Sources */,
 				682720B91F1FB7C40038966C /* UIImage+Extension.m in Sources */,
 				683038781DCB27F0002BFD69 /* VoiceAdapter.m in Sources */,
@@ -3154,6 +3251,7 @@
 				68063AA41EFBBEB8009C41A8 /* FriendCell.m in Sources */,
 				681FF7631DB7520D00432D57 /* MJRefreshBackGifFooter.m in Sources */,
 				689855351EF580EA007B83BB /* FCUCell.m in Sources */,
+				68310F1B1F5E86A600D1CEDF /* ZTEImageCollecionController.m in Sources */,
 				68A5D1161D82919F00209916 /* NetWorking.m in Sources */,
 				68A5D1CC1D830F6B00209916 /* README.md in Sources */,
 				68063ACB1EFED8AD009C41A8 /* HtmlAdapter.m in Sources */,
@@ -3169,6 +3267,7 @@
 				683038AC1DCB2D87002BFD69 /* HSSessionModel.m in Sources */,
 				68310F0D1F5813E400D1CEDF /* ZTEPhotoBrowserCell.m in Sources */,
 				68E6833D1F2CACA90081BBE3 /* SDrawController.m in Sources */,
+				68310F331F62878200D1CEDF /* ZTEImagePreViewController.m in Sources */,
 				68A5D1D51D830F6B00209916 /* UIWebView+AFNetworking.m in Sources */,
 				681FF7281DB74BAC00432D57 /* BaseTableController.m in Sources */,
 				682F24281F09F2F600B29A44 /* UIView+WebCacheOperation.m in Sources */,
@@ -3199,6 +3298,7 @@
 				68063ACE1EFED926009C41A8 /* HtmlCell.m in Sources */,
 				682720971F1CA3740038966C /* ZTEAttachmentModel.m in Sources */,
 				681FF75B1DB7520D00432D57 /* MJRefreshAutoFooter.m in Sources */,
+				6889D58D1F6EA2450096356A /* ZTEPreViewNavBar.m in Sources */,
 				689855411EF58E19007B83BB /* FCYAdapter.m in Sources */,
 				681FF7611DB7520D00432D57 /* MJRefreshAutoNormalFooter.m in Sources */,
 				68063AB91EFCA4D4009C41A8 /* WBVisibleModel.m in Sources */,
@@ -3209,9 +3309,11 @@
 				683039321DD1A16C002BFD69 /* Reachability.m in Sources */,
 				689853F61EF3CBAB007B83BB /* AAUAdapter.m in Sources */,
 				681FF75D1DB7520D00432D57 /* MJRefreshComponent.m in Sources */,
+				68310F151F5E85BA00D1CEDF /* ZTEImagePickerController.m in Sources */,
 				683038551DC9D4B5002BFD69 /* TZPhotoPreviewCell.m in Sources */,
 				689853E51EF3C443007B83BB /* CellHeightMainController.m in Sources */,
 				68A5D1C71D830F6B00209916 /* AFSecurityPolicy.m in Sources */,
+				68310F1E1F5EAEFF00D1CEDF /* ZTEImageManager.m in Sources */,
 				68063A5E1EFB95F4009C41A8 /* AccoutModel.m in Sources */,
 				682720DB1F21CE3B0038966C /* ZTEActionCell.m in Sources */,
 				681FF7721DB754D600432D57 /* OnLineController.m in Sources */,
@@ -3334,7 +3436,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "/Users/lyy/Desktop/研究/iOS网络研究/封装_李炎炎_iOS/封装_李炎炎_iOS/PCH.pch";
 				INFOPLIST_FILE = "封装_李炎炎_iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3360,7 +3462,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "/Users/lyy/Desktop/研究/iOS网络研究/封装_李炎炎_iOS/封装_李炎炎_iOS/PCH.pch";
 				INFOPLIST_FILE = "封装_李炎炎_iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

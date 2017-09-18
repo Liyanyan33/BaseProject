@@ -54,6 +54,10 @@
     return [ZTEUIKit buttonWtihNormalText:normalText font:nil];
 }
 
++ (UIButton*)buttonWithnormalImage:(NSString *)normalImage{
+    return [ZTEUIKit buttonWtihNormalText:nil font:nil normalImage:normalImage];
+}
+
 + (UIButton*)buttonWtihNormalText:(NSString *)normalText font:(UIFont *)font{
     return [ZTEUIKit buttonWtihNormalText:normalText font:font normalTextColor:nil];
 }

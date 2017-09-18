@@ -12,6 +12,10 @@
 
 + (instancetype)pickView;
 
++ (instancetype)pickViewWithData:(NSArray*)dataArr;
+
++ (instancetype)pickViewWithData:(NSArray *)dataArr title:(NSString*)title;
+
 - (void)show;
 - (void)dismiss;
 

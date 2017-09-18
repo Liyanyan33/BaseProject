@@ -11,6 +11,7 @@
 #define topH 45
 
 @interface ZTEPickView ()<UIPickerViewDelegate,UIPickerViewDataSource>
+#pragma mark UI搭建
 @property (strong, nonatomic) UIView         *backView;
 @property (strong, nonatomic) UIView         *contentView;
 @property (strong, nonatomic) UIButton       *cancelBtn;
@@ -19,12 +20,30 @@
 @property (strong, nonatomic) UIPickerView   *pickerView;
 @property (strong, nonatomic) UIBezierPath   *bezierPath;
 @property (strong, nonatomic) CAShapeLayer   *shapeLayer;
+#pragma mark 数据
+@property(nonatomic,strong)NSArray *dataArr;
+@property(nonatomic,copy)NSString *title;
 @end
 
 @implementation ZTEPickView
 
 + (instancetype)pickView{
     return [[self alloc]init];
+}
+
++ (instancetype)pickViewWithData:(NSArray *)dataArr{
+    ZTEPickView *pick = [[ZTEPickView alloc]init];
+    pick.dataArr = dataArr;
+    [pick configView];
+    return pick;
+}
+
++ (instancetype)pickViewWithData:(NSArray *)dataArr title:(NSString *)title{
+    ZTEPickView *pick = [[ZTEPickView alloc]init];
+    pick.dataArr = dataArr;
+    pick.title = title;
+    [pick configView];
+    return pick;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -48,6 +67,11 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
     [self.backView addGestureRecognizer:tap];
+}
+
+- (void)configView{
+    self.addressLabel.text = self.title;
+    [self.pickerView reloadAllComponents];
 }
 
 - (void)show{
@@ -117,6 +141,11 @@
         }
     }
     return pickerLabel;
+}
+
+/** 点击事件 */
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    
 }
 
 //// 返回选择器中 每列每行的高度
