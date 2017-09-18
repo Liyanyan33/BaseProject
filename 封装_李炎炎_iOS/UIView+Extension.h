@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger,ZTEOscillatoryAnimationType){
+    ZTEOscillatoryAnimationToBigger,
+    ZTEscillatoryAnimationToSmaller,
+};
+
 @interface UIView (Extension)
 
 #pragma mark 布局相关
@@ -25,4 +30,6 @@
 
 #pragma mark 设置圆角边框
 - (void)setCornerRadius:(CGFloat)radius borderW:(CGFloat)borderW borderCorlor:(UIColor*)corlor;
+
++ (void)showOscillatoryAnimationWithLayer:(CALayer *)layer type:(ZTEOscillatoryAnimationType)type;
 @end

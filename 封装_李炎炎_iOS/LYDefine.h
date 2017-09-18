@@ -14,9 +14,7 @@
 #endif
 
 #ifdef DEBUG
-
 #define NNSLog(FORMAT, ...) fprintf(stderr,"%s\n",[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
-
 #else
 
 #define NNSLog(...)
@@ -68,9 +66,7 @@ blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 #define busyTitle @"网络繁忙请稍后...."
 
 #define  AXLocalizedString(key) NSLocalizedString(key,nil)
-
 #define  AXLogFunc AXLog(@"%s",__func__);
-
 #define axLong_dealloc AXLog(@"dealloc %@",self.class)
 
 // 弱引用 宏定义
@@ -91,6 +87,6 @@ blue:((CGFloat)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 #endif
 
 
-
+// __weak typeof(self) weakSelf = self;
 
 
