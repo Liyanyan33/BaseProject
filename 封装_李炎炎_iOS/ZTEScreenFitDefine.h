@@ -90,4 +90,11 @@ fontSizeScale_var = 2;\
  */
 #define ScaleScreenFitX(x,scale)  (ZTEScaleX > 1 ? (x * ZTEScaleX) : (x * ZTEScaleX * scale))
 
+/** 设备系统 */
+#define iOS7Later ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
+#define iOS8Later ([UIDevice currentDevice].systemVersion.floatValue >= 8.0f)
+#define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
+#define iOS9_1Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.1f)
+
+
 #endif /* ZTEScreenFitDefine_h */
