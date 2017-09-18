@@ -22,7 +22,6 @@
 @property(nonatomic,assign) BOOL isIgnorePreOperate;
 
 @property(nonatomic,assign) BOOL isNotFirstSetCurrentIndex;
-
 @end
 
 @implementation ZTEPhotoContentView
@@ -173,7 +172,12 @@
 
 #pragma mark UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
+    if (self.dataSource == nil) {
+        return;
+    }
+    [self showCells];
+    CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
+    self.currentIndex = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
 }
 
 #pragma mark setter getter

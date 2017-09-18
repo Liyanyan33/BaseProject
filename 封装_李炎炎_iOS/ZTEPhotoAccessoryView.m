@@ -58,7 +58,7 @@
 
 - (UIButton*)downImageBtn{
     if (!_downImageBtn) {
-        _downImageBtn = [ZTEUIKit buttonWtihNormalText:nil font:nil normalTextColor:nil normalImage:@"picture_download_icon.png"];
+        _downImageBtn = [ZTEUIKit buttonWtihNormalText:nil font:nil normalTextColor:nil normalImage:@"ZTEPhotoBrowser.bundle/picture_download_icon.png"];
         [_downImageBtn addTarget:self action:@selector(downImage:) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _downImageBtn;

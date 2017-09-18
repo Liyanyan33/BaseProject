@@ -78,6 +78,22 @@
     }
 }
 
+// 移除
+- (void)dismiss{
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
+    [UIView animateWithDuration:0.35f animations:^{
+        self.actionWindow.layer.opacity = .01f;
+    } completion:^(BOOL finished) {
+        [_actionWindow.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        _actionWindow.rootViewController = nil;
+        _actionWindow.hidden = YES;
+        [_actionWindow resignKeyWindow];
+        [_actionWindow removeFromSuperview];
+        
+        [[[UIApplication sharedApplication].delegate window] resignKeyWindow];
+    }];
+}
+
 #pragma mark 监听事件回调
 
 #pragma mark 代理回调 ZTEPhotoContentViewDataSource
@@ -90,6 +106,10 @@
     if (!cell) {
         cell = [[ZTEPhotoBrowserCell alloc]initWithReuseIdentifier:@"zte_photo_browser_cell"];
     }
+    __weak __typeof(self)weakSelf = self;
+    cell.cellSingleTapBlock = ^(){
+        [weakSelf dismiss];
+    };
     [cell configCellWithDataModel:self.photoModelArr[pageIndex]];
     return cell;
 }
@@ -121,6 +141,7 @@
 - (ZTEPhotoAccessoryView*)photoAccessoryView{
     if (!_photoAccessoryView) {
         _photoAccessoryView = [[ZTEPhotoAccessoryView alloc]init];
+        _photoAccessoryView.backgroundColor = [UIColor blackColor];
     }
     return _photoAccessoryView;
 }

@@ -5,6 +5,7 @@
 //  Created by lyy on 17/8/30.
 //  Copyright © 2017年 ZXJK. All rights reserved.
 //  自定义的图片浏览器
+// 重用机制完全自己手动实现 没有使用UICollectionView
 
 #import <UIKit/UIKit.h>
 

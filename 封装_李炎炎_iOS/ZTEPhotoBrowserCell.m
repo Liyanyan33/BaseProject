@@ -170,11 +170,16 @@
 
 #pragma mark 监听事件
 - (void)handleSingleTap:(UITapGestureRecognizer*)sender{
-    
+    NSLog(@"%s",__func__);
+    if (_cellSingleTapBlock) {
+        _cellSingleTapBlock();
+    }
 }
 
 - (void)handleDoubleTap:(UITapGestureRecognizer*)sender{
-    
+    if (_cellDoubleTapBlock) {
+        _cellDoubleTapBlock();
+    }
 }
 
 #pragma mark 懒加载
