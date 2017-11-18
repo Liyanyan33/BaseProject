@@ -17,6 +17,8 @@
 #import "NSString+Extension.h"
 #import "NSDate+Extension.h"
 #import "UIImage+Extension.h"
+#import "UIButton+Extension.h"
+#import "UILabel+Extension.h"
 
 #endif 
 

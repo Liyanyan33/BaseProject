@@ -7,6 +7,7 @@
 
 #import "ZTEImagePickerController.h"
 #import "ZTEAlbumTypeController.h"
+#import "ZTEAlbumManager.h"
 
 @interface ZTEImagePickerController ()
 
@@ -47,7 +48,7 @@
     if (self) {
         _selectedAssetArr = [[NSMutableArray alloc]init];
         _maxImageCount = maxImageCount;
-        
+        self.columnCount = columnCount;
         [self configDefaultSetting];
     }
     return self;
@@ -67,8 +68,10 @@
     }
 }
 
+// 默认配置
 - (void)configDefaultSetting {
     self.photoWidth = 828.0;
+    self.photoPreviewMaxWidth = 600;
     self.naviTitleColor = [UIColor whiteColor];
     self.naviTitleFont = [UIFont systemFontOfSize:17];
     self.barItemTextFont = [UIFont systemFontOfSize:15];
@@ -81,5 +84,31 @@
 #pragma mark 代理回调
 
 #pragma mark setter getter
+- (void)setColumnCount:(NSInteger)columnCount{
+    _columnCount = columnCount;
+    if (columnCount <=2) {
+        _columnCount = 2;
+    }
+    if (columnCount >= 6) {
+        _columnCount = 6;
+    }
+    // 告知 ZTEAlbumManager 图片的显示列数 --> 计算图片的显示宽度
+    [ZTEAlbumManager shareAlbumManager].columCount = _columnCount;
+}
 
+- (void)setPhotoWidth:(CGFloat)photoWidth{
+    _photoWidth = photoWidth;
+    [ZTEAlbumManager shareAlbumManager].photoWidth = _photoWidth;
+}
+
+- (void)setPhotoPreviewMaxWidth:(CGFloat)photoPreviewMaxWidth{
+    _photoPreviewMaxWidth = photoPreviewMaxWidth;
+    if (photoPreviewMaxWidth <= 500) {
+        _photoPreviewMaxWidth = 500;
+    }
+    if (photoPreviewMaxWidth >= 800) {
+        _photoPreviewMaxWidth = 800;
+    }
+    [ZTEAlbumManager shareAlbumManager].photoPreviewMaxWidth = _photoPreviewMaxWidth;
+}
 @end

@@ -75,7 +75,7 @@
 
 - (UIButton*)selectedConutBtn{
     if (!_selectedConutBtn) {
-        _selectedConutBtn = [ZTEUIKit buttonWtihNormalText:@"10" font:ScreenFitFont(14) normalTextColor:[UIColor whiteColor] normalImage:nil];
+        _selectedConutBtn = [UIButton buttonWtihNormalText:@"10" font:ScreenFitFont(14) normalTextColor:[UIColor whiteColor] normalImage:nil];
         _selectedConutBtn.backgroundColor = [UIColor greenColor];
         [_selectedConutBtn setCornerRadius:15 borderW:1 borderCorlor:[UIColor greenColor]];
     }

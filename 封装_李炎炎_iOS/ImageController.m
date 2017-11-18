@@ -18,7 +18,4 @@
     [super viewDidLoad];
     self.title = @"图片选择器 -- 图片浏览";
 }
-
-
-
 @end

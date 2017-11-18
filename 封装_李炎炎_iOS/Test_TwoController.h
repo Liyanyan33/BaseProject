@@ -9,5 +9,5 @@
 #import "BaseViewController.h"
 
 @interface Test_TwoController : BaseViewController
-
+@property (nonatomic, assign) BOOL hasSuspendView;
 @end

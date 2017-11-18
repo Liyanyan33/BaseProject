@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MBProgressHUD.h>
 @interface BaseViewController : UIViewController
 
 /** 网络监测 回调 显示横幅 */
@@ -25,4 +25,9 @@
 /** 搭建控制器的View 的内部控件 */
 - (void)createUI;
 
+- (void)showLoading;
+- (void)hideLoading;
+- (void)showSuccess:(UIView*)view;
+- (void)showError;
+- (void)showToast;
 @end

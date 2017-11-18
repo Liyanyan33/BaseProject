@@ -22,9 +22,14 @@
 @property(nonatomic,assign)NSInteger maxImageCount;
 /** 用户选择图片的最小数量 默认是0 */
 @property (nonatomic, assign) NSInteger minImagesCount;
+/** 图片显示的列数 */
+@property(nonatomic,assign)NSInteger columnCount;
 
 /** 导出图片的宽度，默认828像素宽 */
 @property (nonatomic, assign) CGFloat photoWidth;
+/** Default is 600px / 默认600像素宽 */
+@property (nonatomic, assign) CGFloat photoPreviewMaxWidth;
+
 /** 代理对象 */
 @property(nonatomic,weak)id<ZTEImagePickerControllerDelegate> imagePickerDelegate;
 /** 构造方法 */

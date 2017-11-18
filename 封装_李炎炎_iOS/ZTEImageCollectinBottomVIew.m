@@ -111,7 +111,7 @@
 }
 - (UIButton*)preViewBtn{
     if (!_preViewBtn) {
-        _preViewBtn = [ZTEUIKit buttonWtihNormalText:@"PreView" font:ScreenFitFont(16) normalTextColor:[UIColor blackColor]];
+        _preViewBtn = [UIButton buttonWtihNormalText:@"PreView" font:ScreenFitFont(16) normalTextColor:[UIColor blackColor]];
         [_preViewBtn addTarget:self action:@selector(preView:) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _preViewBtn;
@@ -119,7 +119,7 @@
 
 - (UIButton*)fullImageBtn{
     if (!_fullImageBtn) {
-        _fullImageBtn = [ZTEUIKit buttonWtihNormalText:@"full image" font:ScreenFitFont(16) normalTextColor:[UIColor lightGrayColor] normalImage:@"photo_original_def.png"];
+        _fullImageBtn = [UIButton buttonWtihNormalText:@"full image" font:ScreenFitFont(16) normalTextColor:[UIColor lightGrayColor] normalImage:@"photo_original_def.png"];
         [_fullImageBtn setImage:[UIImage imageNamed:@"photo_original_sel.png"] forState:(UIControlStateSelected)];
         [_fullImageBtn setTitleColor:[UIColor blackColor] forState:(UIControlStateSelected)];
         [_fullImageBtn addTarget:self action:@selector(clickFullBtn:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -130,14 +130,14 @@
 
 - (UILabel*)imageSizeLabel{
     if (!_imageSizeLabel) {
-        _imageSizeLabel = [ZTEUIKit labelWithText:@"(10M)" font:ScreenFitFont(15) textColor:[UIColor blackColor]];
+        _imageSizeLabel = [UILabel labelWithText:@"(10M)" font:ScreenFitFont(15) textColor:[UIColor blackColor]];
     }
     return _imageSizeLabel;
 }
 
 - (UIButton*)doneBtn{
     if (!_doneBtn) {
-        _doneBtn = [ZTEUIKit buttonWtihNormalText:@"Done" font:ScreenFitFont(16) normalTextColor:[UIColor colorWithRed:(83/255.0) green:(179/255.0) blue:(17/255.0) alpha:1.0] normalImage:@""];
+        _doneBtn = [UIButton buttonWtihNormalText:@"Done" font:ScreenFitFont(16) normalTextColor:[UIColor colorWithRed:(83/255.0) green:(179/255.0) blue:(17/255.0) alpha:1.0] normalImage:@""];
         [_doneBtn setTitleColor:[UIColor colorWithRed:(83/255.0) green:(179/255.0) blue:(17/255.0) alpha:0.5] forState:(UIControlStateDisabled)];
         [_doneBtn addTarget:self action:@selector(clickDone:) forControlEvents:(UIControlEventTouchUpInside)];
     }
@@ -154,7 +154,7 @@
 
 - (UILabel*)imageCountLabel{
     if (!_imageCountLabel) {
-        _imageCountLabel = [ZTEUIKit labelWithText:@"9" font:ScreenFitFont(15) textColor:[UIColor whiteColor]];
+        _imageCountLabel = [UILabel labelWithText:@"9" font:ScreenFitFont(15) textColor:[UIColor whiteColor]];
         _imageCountLabel.backgroundColor = [UIColor clearColor];
         _imageCountLabel.textAlignment = NSTextAlignmentCenter;
     }

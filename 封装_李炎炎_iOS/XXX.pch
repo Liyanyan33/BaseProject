@@ -1,0 +1,15 @@
+//
+//  XXX.pch
+//  封装_李炎炎_iOS
+//
+//  Created by lyy on 17/9/21.
+//  Copyright © 2017年 ZXJK. All rights reserved.
+//
+
+#ifndef XXX_pch
+#define XXX_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* XXX_pch */

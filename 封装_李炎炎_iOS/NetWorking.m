@@ -56,7 +56,6 @@
 }
 
 + (void)POSTWithUrl:(NSString*)url paramas:(NSDictionary*)paramas resultClass:(Class)resultClass success:(void(^)(id json))success failure:(void(^)(id error))failure{
-    NSLog(@" url = %@",url);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 10.0f;
     [manager POST:url parameters:paramas progress:^(NSProgress * _Nonnull downloadProgress) {

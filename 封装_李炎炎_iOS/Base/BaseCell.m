@@ -42,8 +42,7 @@
 }
 
 /**从 xib 文件创建cell */
-+ (instancetype)cellLoadXibWithTableView:(UITableView *)tableView
-{
++ (instancetype)cellLoadXibWithTableView:(UITableView *)tableView{
     BaseCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];

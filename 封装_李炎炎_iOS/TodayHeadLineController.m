@@ -9,6 +9,7 @@
 #import "TodayHeadLineController.h"
 #import "TodayHeadLineCell.h"
 #import "TodayHeadModel.h"
+#import <XHToast.h>
 
 /** 可拖拽cell 的移动方向 */
 typedef NS_ENUM(NSUInteger, DragCollectionCellMoveDirection){
@@ -63,6 +64,11 @@ typedef NS_ENUM(NSUInteger, DragCollectionCellMoveDirection){
     [self createUI];
     [self initData];
 }
+
+- (void)navBarRightClick{
+    [XHToast showBottomWithText:@"等待中....." duration:3.0];
+}
+
 
 #pragma mark private method
 - (void)createUI{

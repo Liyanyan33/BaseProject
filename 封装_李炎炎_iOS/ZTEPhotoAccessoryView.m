@@ -50,7 +50,7 @@
 #pragma mark 懒加载
 - (UILabel*)photoIndexLabel{
     if (!_photoIndexLabel) {
-        _photoIndexLabel = [ZTEUIKit labelWithText:@"1/10" font:ScreenFitFont(15) textColor:[UIColor whiteColor] textAlignment:NSTextAlignmentCenter];
+        _photoIndexLabel = [UILabel labelWithText:@"1/10" font:ScreenFitFont(15) textColor:[UIColor whiteColor] textAlignment:NSTextAlignmentCenter];
         _photoIndexLabel.backgroundColor = [UIColor clearColor];
     }
     return _photoIndexLabel;
@@ -58,7 +58,7 @@
 
 - (UIButton*)downImageBtn{
     if (!_downImageBtn) {
-        _downImageBtn = [ZTEUIKit buttonWtihNormalText:nil font:nil normalTextColor:nil normalImage:@"ZTEPhotoBrowser.bundle/picture_download_icon.png"];
+        _downImageBtn = [UIButton buttonWtihNormalText:nil font:nil normalTextColor:nil normalImage:@"ZTEPhotoBrowser.bundle/picture_download_icon.png"];
         [_downImageBtn addTarget:self action:@selector(downImage:) forControlEvents:(UIControlEventTouchUpInside)];
     }
     return _downImageBtn;

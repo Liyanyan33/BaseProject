@@ -9,6 +9,7 @@
 #import "UIViewController+Extension.h"
 
 @implementation UIViewController (Extension)
+
 + (UIViewController *)currentViewController
 {
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;

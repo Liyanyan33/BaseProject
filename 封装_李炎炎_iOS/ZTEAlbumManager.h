@@ -15,12 +15,15 @@
 
 /** 单例构造方法 */
 + (instancetype)shareAlbumManager;
-
-/// 对照片排序，按修改时间升序，默认是YES。如果设置为NO,最新的照片会显示在最前面，内部的拍照按钮会排在第一个
+/** 对照片排序，按修改时间升序，默认是YES。如果设置为NO,最新的照片会显示在最前面，内部的拍照按钮会排在第一个 */
 @property (nonatomic, assign) BOOL sortAscendingByModificationDate;
 
+/** 获取图片时 指定的图片宽度 */
+@property(nonatomic,assign)CGFloat photoWidth;
 /** 图片浏览的最大宽度 默认值为600 */
 @property(nonatomic,assign)CGFloat photoPreviewMaxWidth;
+/** 图片的显示列数 */
+@property(nonatomic,assign)NSInteger columCount;
 
 /** Get Album 获得相册 */
 - (void)getCameraRollAlbum:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage completion:(void (^)(ZTEAlbumModel *model))completion;

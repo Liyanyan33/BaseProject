@@ -8,6 +8,12 @@
 
 #import "UIView+Extension.h"
 
+typedef void(^TapBlock)(void);
+
+@interface UIView ()
+@property(nonatomic,copy)TapBlock tapBlock;
+@end
+
 @implementation UIView (Extension)
 
 - (void)setX:(CGFloat)x
@@ -140,5 +146,19 @@
             } completion:nil];
         }];
     }];
+}
+
+static char overviewKey;
+- (void)addTapGerstureBlock:(void (^)(void))tapBlock{
+    objc_setAssociatedObject(self, &overviewKey, tapBlock,OBJC_ASSOCIATION_COPY_NONATOMIC);
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
+    [self addGestureRecognizer:tap];
+}
+
+- (void)tap:(UITapGestureRecognizer*)sender{
+    TapBlock block = (TapBlock)objc_getAssociatedObject(self, &overviewKey);
+    if (block) {
+        block();
+    }
 }
 @end

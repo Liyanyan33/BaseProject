@@ -16,6 +16,7 @@
 #import "ZTEActionSheet.h"
 #import "ZTEPickView.h"
 #import <YYKit.h>
+#import "ZTESearchBar.h"
 
 @interface TestViewController ()<ZTEChatToolBarDelegate,UITextViewDelegate>
 @property(nonatomic,strong)ZTEChatToolBar *toolBar;
@@ -23,6 +24,7 @@
 @property(nonatomic,strong)ZTEDropMenu *menu;;
 @property(nonatomic,strong)ZTEActionSheet *acSheet;
 @property(nonatomic,strong)ZTEPickView *pickView;
+@property(nonatomic,strong)ZTESearchBar *searchBar;
 @end
 
 @implementation TestViewController
@@ -51,6 +53,7 @@
 - (void)createUI{
     [self.view addSubview:self.toolBar];
     [self.view addSubview:self.menu];
+    [self.view addSubview:self.searchBar];
 }
 
 - (void)createYYKitControl{
@@ -106,6 +109,15 @@
         [_menu setTitle:@[@"1",@"2",@"3",@"4"] rowHeight:44];
     }
     return _menu;
+}
+
+- (ZTESearchBar*)searchBar{
+    if (!_searchBar) {
+        _searchBar = [[ZTESearchBar alloc]initWithFrame:CGRectMake(20, 200, kScreenWidth - 40, 45)];
+        _searchBar.placeholder = @"请输入信息....";
+        _searchBar.placeholderColor = [UIColor redColor];
+    }
+    return _searchBar;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

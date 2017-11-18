@@ -14,8 +14,8 @@
 CGFloat  ZTEScreenWidth;
 /**  屏幕模式*/
 CGFloat  ZTEScreenScale;
-/** 图片的尺寸 */
-CGSize AssetGridThumbnailSize;
+/** 图片(网格)的尺寸 */
+CGSize ZTEAssetGridThumbnailSize;
 
 + (instancetype)shareAlbumManager{
     static ZTEAlbumManager *albumManager;
@@ -236,7 +236,7 @@ CGSize AssetGridThumbnailSize;
         // 设置获取图片的尺寸大小(对获取的目标图片进行裁剪)
         CGSize imageSize;
         if (imageWidth < ZTEScreenWidth && imageWidth < _photoPreviewMaxWidth) {
-            imageSize = AssetGridThumbnailSize;
+            imageSize = ZTEAssetGridThumbnailSize;
         }else{
             PHAsset *phAsset = (PHAsset*)asset;
             // 资源的像素尺寸的宽高比
@@ -261,8 +261,8 @@ CGSize AssetGridThumbnailSize;
         PHImageRequestOptions *imageRequestOption = [[PHImageRequestOptions alloc]init];
         //对请求的图像怎样缩放？有三种选择：(None: 不缩放；Fast: 尽快地提供接近或稍微大于要求的尺寸；Exact: 精准提供要求的尺寸)
         imageRequestOption.resizeMode = PHImageRequestOptionsResizeModeFast;
-        // 创建数据请求 最后已block参数形式 返回给我们需要的UIImage
-        int32_t imageRequestID = [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:imageSize contentMode:PHImageContentModeAspectFill options:imageRequestOption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        // 创建数据请求 最后以block参数形式 返回给我们需要的UIImage
+        [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:imageSize contentMode:PHImageContentModeAspectFill options:imageRequestOption resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
             if (result) {
                 image = result;
             }
@@ -278,7 +278,6 @@ CGSize AssetGridThumbnailSize;
                     completion(result,info);
                 }
             }
-            
             // 图片需要重新下载
             if ([info objectForKey:PHImageResultIsInCloudKey]&& !result &&networkAccessAllow) {
                 PHImageRequestOptions *imageRequestOptions = [[PHImageRequestOptions alloc]init];
@@ -305,7 +304,6 @@ CGSize AssetGridThumbnailSize;
               }];
             }
         }];
-        
     }else{
         
     }
@@ -490,4 +488,19 @@ CGSize AssetGridThumbnailSize;
     return bytes;
 }
 
+#pragma mark setter  getter
+- (void)setColumCount:(NSInteger)columCount{
+    _columCount = columCount;
+    CGFloat margin = 4;
+    CGFloat itemWH = (ZTEScreenWidth - 2 * margin - 4)/columCount - margin;
+    ZTEAssetGridThumbnailSize = CGSizeMake(itemWH, itemWH);
+}
+
+- (void)setPhotoWidth:(CGFloat)photoWidth{
+    _photoWidth = photoWidth;
+}
+
+- (void)setPhotoPreviewMaxWidth:(CGFloat)photoPreviewMaxWidth{
+    _photoPreviewMaxWidth = photoPreviewMaxWidth;
+}
 @end

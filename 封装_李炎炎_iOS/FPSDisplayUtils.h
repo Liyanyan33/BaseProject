@@ -9,4 +9,9 @@
 
 @interface FPSDisplayUtils: NSObject
 + (instancetype)shareFPSDisplay;
+
+- (void)addView;
+
+- (void)remove;
+
 @end

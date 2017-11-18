@@ -15,4 +15,6 @@
 /** 在导航控制器栈中 删除指定的视图控制器 */
 - (void)deletVCInNavStackWithVCName:(NSString*)vcName;
 
+@property(nonatomic,copy)NSString *message;
+
 @end

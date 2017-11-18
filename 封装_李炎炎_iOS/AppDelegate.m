@@ -5,13 +5,11 @@
 //  Created by lyy on 16/9/9.
 //  Copyright © 2016年 ZXJK. All rights reserved.
 //
-
 #import "AppDelegate.h"
 #import "LYNavController.h"
 #import "OnLineController.h"
 #import "TestController.h"
 #import "FPSDisplayUtils.h"
-
 
 @interface AppDelegate ()
 
@@ -29,7 +27,7 @@
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
 
-//    [FPSDisplayUtils shareFPSDisplay];
+    [[FPSDisplayUtils shareFPSDisplay] addView];
     return YES;
 }
 
@@ -53,4 +51,13 @@
     
 }
 
+- (UIInterfaceOrientationMask )application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    if (self.allowRotation) {
+        return UIInterfaceOrientationMaskAll;
+    }
+    if (self.settingModel.recording) {
+        return UIInterfaceOrientationMaskLandscapeRight;
+    }
+    return UIInterfaceOrientationMaskPortrait;
+}
 @end

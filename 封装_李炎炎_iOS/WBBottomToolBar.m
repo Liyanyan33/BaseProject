@@ -28,7 +28,7 @@
     _textArr = [self.dataSource bottomToolBarForTextArr:self];
     _imageArr = [self.dataSource bottomToolBarForImageArr:self];
     for (int i = 0; i < _textArr.count; i++) {
-        UIButton *btn = [ZTEUIKit buttonWtihNormalText:_textArr[i] font:ScreenFitFont(14) normalTextColor:[UIColor grayColor] normalImage:_imageArr[i]];
+        UIButton *btn = [UIButton  buttonWtihNormalText:_textArr[i] font:ScreenFitFont(14) normalTextColor:[UIColor grayColor] normalImage:_imageArr[i]];
         // 设置高亮状态下的背景图片
         [btn setBackgroundImage:[UIImage imageWithColor:RGBColor(240, 240, 240)] forState:(UIControlStateHighlighted)];
         // 设置图片的偏移量 图片向左偏移5个单位

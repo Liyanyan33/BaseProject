@@ -14,5 +14,5 @@
 
 +(UIImage *)ax_imageRectangleWithSize:(CGSize )aSzize color:(UIColor *)aColor;
 
-
+- (UIImage*)blurring;
 @end

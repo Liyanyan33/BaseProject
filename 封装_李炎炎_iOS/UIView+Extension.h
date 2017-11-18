@@ -32,4 +32,8 @@ typedef NS_ENUM(NSUInteger,ZTEOscillatoryAnimationType){
 - (void)setCornerRadius:(CGFloat)radius borderW:(CGFloat)borderW borderCorlor:(UIColor*)corlor;
 
 + (void)showOscillatoryAnimationWithLayer:(CALayer *)layer type:(ZTEOscillatoryAnimationType)type;
+
+#pragma 交互事件
+- (void)addTapGerstureBlock:(void(^)(void))tapBlock;
+
 @end

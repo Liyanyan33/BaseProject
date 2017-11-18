@@ -78,7 +78,6 @@
         [self.scrollView addSubview:tabBar_btn];
         [self.tabBarBtnArr addObject:tabBar_btn];
     }
-    
     self.scrollView.contentSize = CGSizeMake(44+20*titleArr.count, 44);
 }
 

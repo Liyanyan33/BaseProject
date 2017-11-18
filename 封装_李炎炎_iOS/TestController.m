@@ -78,6 +78,7 @@
     [_dataArr addObject:@"coreGraphics框架学习"];
     [_dataArr addObject:@"高仿QQ好友列表--可折叠列表实现"];
     [_dataArr addObject:@"高仿今日头条--频道的选择与删除(可拖拽)"];
+    [_dataArr addObject:@"渐进式导航栏"];
     [self onSuccessWithData:_dataArr];
     
     _vcNameArr = [[NSMutableArray alloc]init];
@@ -91,6 +92,7 @@
     [_vcNameArr addObject:@"CoreGraphicController"];
     [_vcNameArr addObject:@"QQFoldController"];
     [_vcNameArr addObject:@"TodayHeadLineController"];
+    [_vcNameArr addObject:@"AlphaController"];
 }
 
 - (void)switchVC{

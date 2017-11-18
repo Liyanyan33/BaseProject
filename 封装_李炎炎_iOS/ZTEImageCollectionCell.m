@@ -41,7 +41,7 @@
 
 - (void)configCellWithDataModel:(id)dataModel indexPath:(NSIndexPath *)indexPath{
     ZTEAssetModel *model = (ZTEAssetModel*)dataModel;
-    [[ZTEAlbumManager shareAlbumManager] getImageWithAsset:model.asset imageWidth:80.0f complettion:^(UIImage *image, NSDictionary *info) {
+    [[ZTEAlbumManager shareAlbumManager] getImageWithAsset:model.asset imageWidth:self.frame.size.width complettion:^(UIImage *image, NSDictionary *info) {
         self.icon.image = image;
     }];
     self.button.selected = model.isSelected;
@@ -74,7 +74,7 @@
 
 - (UIButton*)button{
     if (!_button) {
-        _button = [ZTEUIKit buttonWtihNormalText:@"" font:ScreenFitFont(16) normalTextColor:nil normalImage:@"photo_def_photoPickerVc.png"];
+        _button = [UIButton buttonWtihNormalText:@"" font:ScreenFitFont(16) normalTextColor:nil normalImage:@"photo_def_photoPickerVc.png"];
         [_button addTarget:self action:@selector(selectImage:) forControlEvents:(UIControlEventTouchUpInside)];
         [_button setImage:[UIImage imageNamed:@"photo_sel_photoPickerVc.png"] forState:(UIControlStateSelected)];
     }

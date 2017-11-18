@@ -47,7 +47,7 @@
 #pragma mark setter getter
 - (UIButton*)backBtn{
     if (!_backBtn) {
-        _backBtn = [ZTEUIKit buttonWithnormalImage:@"navi_back.png"];
+        _backBtn = [UIButton buttonWithnormalImage:@"navi_back.png"];
         _backBtn.tag = ZTEPreViewNavBarButtonTypeBack;
         [_backBtn addTarget:self action:@selector(buttonClick:) forControlEvents:(UIControlEventTouchUpInside)];
     }
@@ -56,7 +56,7 @@
 
 - (UIButton*)selectedBtn{
     if (!_selectedBtn) {
-        _selectedBtn = [ZTEUIKit buttonWithnormalImage:@"photo_def_previewVc.png"];
+        _selectedBtn = [UIButton buttonWithnormalImage:@"photo_def_previewVc.png"];
         _selectedBtn.tag = ZTEPreViewNavBarButtonTypeSelected;
         [_selectedBtn addTarget:self action:@selector(buttonClick:) forControlEvents:(UIControlEventTouchUpInside)];
     }

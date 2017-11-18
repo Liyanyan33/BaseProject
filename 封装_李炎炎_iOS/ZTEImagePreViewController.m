@@ -41,6 +41,7 @@
     [self.view addSubview:self.navBar];
     [self.view addSubview:self.bottomBar];
 }
+
 #pragma mark 监听事件回调
 
 #pragma mark 代理回调

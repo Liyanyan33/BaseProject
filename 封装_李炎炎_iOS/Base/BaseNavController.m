@@ -8,6 +8,7 @@
 
 #import "BaseNavController.h"
 #import "BaseViewController.h"
+#import "FPSDisplayUtils.h"
 
 @interface BaseNavController ()<UIGestureRecognizerDelegate>
 
@@ -33,14 +34,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 #pragma mark 添加滑动手势 返回上一级控制器功能 实现全屏侧滑
-    id target = self.interactivePopGestureRecognizer.delegate;
-    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:target action:@selector(handleNavigationTransition:)];
-    pan.delegate = self;
-    [self.view addGestureRecognizer:pan];
-    self.interactivePopGestureRecognizer.enabled = NO;
-    // 设置代理
+//    id target = self.interactivePopGestureRecognizer.delegate;
+//    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:target action:@selector(handleNavigationTransition:)];
+//    pan.delegate = self;
+//    [self.view addGestureRecognizer:pan];
+//    self.interactivePopGestureRecognizer.enabled = NO;
+//    // 设置代理
 //    self.interactivePopGestureRecognizer.delegate = self;
-
 }
 
 /**
@@ -49,7 +49,7 @@
  *  @param viewController 即将push进来的控制器
  */
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    
+    NSLog(@"count = %lu",(unsigned long)self.viewControllers.count);
     // 这时push进来的控制器viewController，不是第一个子控制器（不是根控制器）
     if (self.viewControllers.count > 0) {
 //         设置左边的箭头按钮
@@ -57,7 +57,21 @@
 
         viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(more:) image:@"navigationbar_more" highImage:@"navigationbar_more_highlighted"];
     }
+    
+    if (self.viewControllers.count > 0) {
+        [[FPSDisplayUtils shareFPSDisplay] remove];
+    }
+
     [super pushViewController:viewController animated:animated];
+}
+
+- (UIViewController *)popViewControllerAnimated:(BOOL)animated{
+    NSLog(@" popViewControllerAnimated count = %lu",(unsigned long)self.viewControllers.count);
+    if (self.viewControllers.count ==  2) {
+        [[FPSDisplayUtils shareFPSDisplay] addView];
+    }
+    [super popViewControllerAnimated:animated];
+    return nil;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer

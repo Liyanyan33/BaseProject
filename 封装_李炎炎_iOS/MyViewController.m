@@ -33,6 +33,10 @@
     self.txtLabel.attributedText = atts;
 }
 
+- (void)navBarRightClick{
+    [self showToast];
+}
+
 - (void)loadTextDetail{
     NSMutableDictionary *keyAndValueDictionary = [[NSMutableDictionary alloc] init];
     [NetWorking POSTWithUrl:@"http://jdcl-app-test.ztehealth.com/health/BaseData/queryAssistiveDevicesIntroduce" paramas:keyAndValueDictionary resultClass:nil success:^(id json) {

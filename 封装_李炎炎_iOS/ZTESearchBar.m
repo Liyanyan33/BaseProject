@@ -36,6 +36,7 @@
 //获取输入框
 - (UITextField *)searchBarTextFeild {
     UITextField * texFeild = nil;
+    NNSLog(@"%@",_searchBar.subviews);
     for (UIView* subview in [[_searchBar.subviews lastObject] subviews]) {
         if ([subview isKindOfClass:[UITextField class]]) {
             texFeild = (UITextField*)subview;
@@ -43,6 +44,7 @@
             [subview removeFromSuperview];
         }
     }
+    
     return texFeild;
 }
 
@@ -123,5 +125,4 @@
     _textBackgroudColor = textBackgroudColor;
     [[[_searchBar.subviews firstObject]subviews]lastObject].backgroundColor = textBackgroudColor;
 }
-
 @end

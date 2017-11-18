@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "AFNetworking.h"
+#import "MBHUD.h"
 
 #define KCOLOR_PINK [UIColor colorWithRed:171.0/250 green:9.0/250  blue:85.0/250  alpha:1]
 
@@ -127,5 +128,41 @@
 #pragma mark 点击View的任意一点 退出键盘
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
+}
+
+- (void)showLoading{
+   MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"loading";
+}
+
+
+- (void)hideLoading{
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        // Do something...
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    });
+}
+
+- (void)showSuccess:(UIView*)view{
+    if (view == nil){
+        view = [[UIApplication sharedApplication].windows lastObject];
+    }
+    MBProgressHUD *hud = [MBProgressHUD HUDForView:view];
+    if (hud == nil) {
+        hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    }
+    hud.label.text = @"成功";
+    // 再设置模式
+    hud.mode = MBProgressHUDModeCustomView;
+    // 隐藏时候从父控件中移除
+    hud.removeFromSuperViewOnHide = YES;
+    // 1秒之后再消失
+    [hud hideAnimated:YES afterDelay:1.0];
+}
+
+- (void)showToast{
+    [MBHUD showToast:self.view];
 }
 @end

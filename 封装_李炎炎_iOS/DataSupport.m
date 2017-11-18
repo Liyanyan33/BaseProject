@@ -46,7 +46,7 @@
     
     dispatch_semaphore_t lock = dispatch_semaphore_create(1);
     
-    for (int i = 0; i < 50; i ++) {
+    for (int i = 0; i < 200; i ++) {
         dispatch_group_async(group, concurrentQueue, ^{
             dispatch_semaphore_wait(lock, DISPATCH_TIME_FOREVER);
             [self createTestModel];

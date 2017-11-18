@@ -40,10 +40,10 @@
     return self;
 }
 
+
 - (void)initDisplayLabel {
     CGRect frame = CGRectMake(SCREEN_WIDTH - 100, SCREEN_HEIGHT - 50, 80, 30);
     self.displayLabel = [[UILabel alloc] initWithFrame: frame];
-    
     self.displayLabel.layer.cornerRadius = 5;
     self.displayLabel.clipsToBounds = YES;
     self.displayLabel.textAlignment = NSTextAlignmentCenter;
@@ -60,7 +60,15 @@
     
     [self initCADisplayLink];
     
+//    [[UIApplication sharedApplication].keyWindow addSubview:self.displayLabel];
+}
+
+- (void)addView{
     [[UIApplication sharedApplication].keyWindow addSubview:self.displayLabel];
+}
+
+- (void)remove{
+    [self.displayLabel removeFromSuperview];
 }
 
 - (void)initCADisplayLink {
